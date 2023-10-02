@@ -6,6 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="/Assets/css/bootstrap.min.css">
   <link rel="stylesheet" href="/Assets/css/style.css">
+  <script src="/Assets/js/inciarSesion.js"></script>
+
   <title>Inicio de sesion</title>
 </head>
 
@@ -18,7 +20,7 @@
         <h1>Iniciar sesión</h1>
         <br>
         <div class="form-floating mb-3">
-          <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com" autocomplete="off">
+          <input type="email" class="form-control" id="correo" placeholder="name@example.com" autocomplete="off">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-fill"
             viewBox="0 0 16 16">
             <path
@@ -28,7 +30,7 @@
         </div>
         
         <div class="form-floating">
-          <input type="password" class="form-control" id="floatingPassword" placeholder="Password" autocomplete="off">
+          <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-lock-fill"
             viewBox="0 0 16 16">
             <path
@@ -37,7 +39,7 @@
           <label for="floatingPassword">Contraseña </label>
         </div>
         <br>
-        <button type="button" class="btn btn-light">Iniciar Sesion</button>
+        <button  type="button" onclick="loging()" class="btn btn-light">Iniciar Sesion</button>
 
         <div class="registrar-link">
           <p>¿No tienes una cuenta ? <a href="./registro.html">Registar</a>
