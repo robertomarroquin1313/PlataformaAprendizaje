@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    color: rgba(255, 255, 255, .4);
+
+
+}
+.parallax-1{
+    background: url('../img/prueva2.jpg') no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+
+}
+.parallax-inner{
+    padding: 10% 0;
+}
+/* h2{
+    font-size:  32px;
+    color: #555;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 20px 0;
+} */
+
+h2{
+    background-position: center;
+}
+.contenedor-fluit{
+    width: 50%;
+    right:10px;
+    left: 375px;
+    font-size: 15px;
+    position: absolute;
+    top: 90x; 
+}
