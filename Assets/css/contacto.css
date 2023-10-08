@@ -37,10 +37,12 @@ h2{
     background-position: center;
 }
 .contenedor-fluit{
-    width: 50%;
-    right:10px;
-    left: 375px;
-    font-size: 15px;
-    position: absolute;
-    top: 90x; 
+    display:flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
 }
