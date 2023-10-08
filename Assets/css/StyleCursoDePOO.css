@@ -1,0 +1,75 @@
+.white-div {
+    background-color: white;
+    padding: 10px;
+         border: 1px solid gray;
+         
+       
+        }
+    .div-letra{
+        
+        color: black !important;
+        background-color:white;
+        border: 1px solid gray;
+
+    }
+       
+   /* Establece el tamaño deseado para las imágenes */
+   .img-large {
+       width: 1600%;
+       /* Ajusta el ancho al 100% del contenedor */
+       max-width: 1000px;
+       /* Establece un ancho máximo deseado */
+       height: auto;
+       /* Mantiene la proporción de aspecto */
+
+       
+   }
+   .color-div{
+    background-color: white;
+    color: black ;
+   
+   }
+   .img-dv{
+    border: gray solid;
+    
+   }
+         body {
+             background-color: white;
+           
+         }
+
+.navbar-dos {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-dos .navbar-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-dos .nav-item {
+    margin: 0 10px;
+}
+
+.navbar-dos .nav-link {
+    border-radius: 50%;
+    background-color: #ccc;
+    color: #333;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-dos .nav-link:hover {
+    background-color: #333;
+    color: white;
+}
+
+
+
+
