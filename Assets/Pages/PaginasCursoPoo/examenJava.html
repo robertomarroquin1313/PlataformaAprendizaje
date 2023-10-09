@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/css/styleExamenPoo.css">
+    <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Examen 1 </title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
+                    </a>
+                </li>
+            </ul>
+            <div class="navbar-nav ms-auto">
+    
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i> Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chalkboard"></i> Más Cursos
+                        </a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class=" text-center " "> 
+        <div class="info-title"><h4><span>Algunas reglas de este cuestionario</span></h4>
+        </div>
+        <div class="info-list">
+            <div class="info"><h5>1. Tendrás solo <span> 20 segundos</span> por cada pregunta.</h5></div>
+            <div class="info"><h5>2. Una vez que seleccione su respuesta, no se puede deshacer..</h5></div>
+            <div class="info"><h5>3. No puede seleccionar ninguna opción una vez que se acaba el tiempo.</h5></div>
+            <div class="info"><h5>4. No puedes salir del Quiz mientras estás jugando.</h5></div>
+            <div class="info"><h5>5. Obtendrás puntos en base a tus respuestas correctas.</h5></div>
+            <div class="info">
+                <h4>fecha de apertura 22/2/2023 0:00 cierra 22/2023 11:59</h4>
+            </div>
+        </div>
+    </div>
+    <div class="start_btn"><button>Iniciar prueba</button>
+
+
+
+
+<!-- Caja de Informacion-->
+<div class="info_box">
+    <div class="info-title"><span>Algunas reglas de este cuestionario</span></div>
+    <div class="info-list">
+        <div class="info">1. Tendrás solo <span> 20 segundos</span> por cada pregunta.</div>
+        <div class="info">2. Una vez que seleccione su respuesta, no se puede deshacer..</div>
+        <div class="info">3. No puede seleccionar ninguna opción una vez que se acaba el tiempo.</div>
+        <div class="info">4. No puedes salir del Quiz mientras estás jugando.</div>
+        <div class="info">5. Obtendrás puntos en base a tus respuestas correctas.</div>
+        
+    </div>
+    <div class="buttons">
+        <button class="quit">Salir</button>
+        <button class="restart">Continuar</button>
+    </div>
+
+</div>
+
+
+<div class="quiz_box">
+    <header>
+        <div class="title">Examen de Programacion</div>
+        <div class="timer">
+            <div class="time_left_txt">Tiempo restante</div>
+            <div class="timer_sec">20</div>
+        </div>
+        <div class="time_line"></div>
+    </header>
+    <section>
+        <div class="que_text">
+            <!-- Aqui se cargan las preguntas  -->
+        </div>
+        <div class="option_list">
+            <!-- Aqui se meten las respuestas 
+            -->
+        </div>
+    </section>
+
+    <!-- pie de página de la prueba -->
+    <footer>
+        <div class="total_que">
+            <!-- Aquí he insertado Número de conteo de preguntas de JavaScript -->
+        </div>
+        <button class="next_btn">Siguiente</button>
+    </footer>
+</div>
+
+<!-- Result Box -->
+<div class="result_box">
+    <div class="icon">
+
+        <img src="/Assets/img/java_poo.jpg"
+            class="avatar" alt="">
+
+
+    </div>
+    <div class="complete_text">¡Has completado el cuestionario!</div>
+    <div class="score_text">
+        <!-- Aquí he insertado Score Result de JavaScript-->
+    </div>
+    <div class="buttons">
+        <button class="restart">Cuestionario de repetición</button>
+        <button class="quit">Salir </button>
+    </div>
+</div>
+
+
+<!-- Dentro de este archivo JavaScript, solo he insertado preguntas y opciones. -->
+<script src="/Assets/js/preguntas.js"></script>
+
+<!-- Dentro de este archivo JavaScript he codificado todos los códigos de prueba -->
+<script src="/Assets/js/scriptPreguntas.js"></script>
+
+    
+</body>
+</html>
