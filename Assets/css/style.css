@@ -4,6 +4,16 @@
     align-items: center;
     min-height: 100vh;
 }
+*{
+    color: black;
+}
+
+/* body{
+    background: url('../img/prueva3.jpg') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+} */
 
 .wrapper {
     width: 420px;
