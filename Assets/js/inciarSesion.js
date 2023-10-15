@@ -1,20 +1,44 @@
 const usuario = [
     { correo: "juan@gmail.com", contraseña: "juan123" }
 ];
+const profesor = [{
+    correo: "edwar@gmail.com", contraseña: "edwar123"
+    
+}];
+const admin = [{
+    correo: "roberto@gmail.com", contraseña: "roberto123"
+}];
 
 function loging() {
     let user = document.getElementById("correo").value;
     let password = document.getElementById("password").value;
 
     const encontrado = usuario.find(datos => datos.correo === user && datos.contraseña === password);
+    const encontradoProfesor = profesor.find(datos => datos.correo === user && datos.contraseña === password);
+     const encontradoAdmin = admin.find(datos => datos.correo === user && datos.contraseña === password);
 
     if (encontrado) {
-        window.location = "/Assets/Pages/catalogo.html";
-    } else {
+        window.location = "/Assets/Pages/CursoPooJava.html";
+         setCookie("tipoUsuario", "alumno", 2);
+    } else if (encontradoAdmin) {
+        window.location = "/Assets/Pages/catalogo.html";   
+    } else if (encontradoProfesor) {
+        window.location = "/Assets/Pages/CursoPooJava.html";
+         setCookie("tipoUsuario", "profesor", 1);
+    }
+    else {
         alert("Usuario o contraseña incorrectos");
     }
 }
+////crear el cookie sino no funcionba 
 
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + "; " + expires;
+}
+/*
 class Persona {
     constructor(correo, contraseña) { 
         this.correo = correo;
@@ -38,7 +62,7 @@ agregarBtn.addEventListener('click', () => {
        
         console.log(usuario);
     }
-});
+});*/
 
 
 
