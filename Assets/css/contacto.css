@@ -5,7 +5,9 @@
     font-family: 'Poppins', sans-serif;
 
 } */
-
+body{
+    background-color: #E5E8E8;
+}
 
 h1{
     font-size: 100px;
