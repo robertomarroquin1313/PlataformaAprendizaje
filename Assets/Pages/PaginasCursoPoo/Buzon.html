@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Java</title>
+        <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
+       <link rel="stylesheet" href="/Assets/css/StyleBuzon.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i> Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chalkboard"></i> Más Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" style="padding-top: 70px;">
+        <h1>Buzon</h1>
+        <p>Apertura: domingo, 30 de julio de 2023, 00:00
+        Cierre: viernes, 15 de septiembre de 2023, 23:59</p>
+        <br>
+    </div>
+    <div class="conteiner" id="contenido">
+        <table class="table table-bordered">
+            <tbody>
+                <tr>
+                    <th>Estado de la entrega</th>
+                    <td>Enviado para calificar</td>
+                </tr>
+                <tr>
+                    <th>Estado de la calificación</th>
+                    <td>Sin calificar</td>
+                </tr>
+                <tr>
+                    <th>Tiempo restante</th>
+                    <td>La tarea fue enviada 47 días 10 horas antes</td>
+                </tr>
+                <tr>
+                    <th>Última modificación</th>
+                    <td>domingo, 30 de julio de 2023, 12:59</td>
+                </tr>
+                <tr>
+                    <th>Archivos enviados</th>
+                    <td><a href="#">Mapa conceptual(1).pdf</a></td>
+                </tr>
+                <tr>
+                    <th>Comentarios de la entrega</th>
+                    <td>Comentarios (0)</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+       <br>
+       
+      
+        
+        
+    </div><div class="container">
+        <div class="d-flex justify-content-end">
+            <button type="button" class="button ml-2" id="agregar" style="height: 50px;"> <!-- Ancho fijo de 120px -->
+                <span class="button__text">Add Item</span>
+                <span class="button__icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" viewBox="0 0 24 24" stroke-width="2"
+                        stroke-linejoin="round" stroke-linecap="round" stroke="currentColor" height="24" fill="none"
+                        class="svg">
+                        <line y2="19" y1="5" x2="12" x1="12"></line>
+                        <line y2="12" y1="12" x2="19" x1="5"></line>
+                    </svg>
+                </span>
+            </button>
+            <button class="noselect mx-5" id="delete"  style="height: 50px;"> 
+                <span class="text">Delete</span>
+                <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path
+                            d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z">
+                        </path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

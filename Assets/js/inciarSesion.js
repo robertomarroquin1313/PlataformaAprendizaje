@@ -18,19 +18,19 @@ function loging() {
      const encontradoAdmin = admin.find(datos => datos.correo === user && datos.contraseña === password);
 
     if (encontrado) {
-        window.location = "/Assets/Pages/CursoPooJava.html";
+        window.location = "/Assets/Pages/Avance.html";
          setCookie("tipoUsuario", "alumno", 2);
     } else if (encontradoAdmin) {
-        window.location = "/Assets/Pages/catalogo.html";   
+        window.location = "/Assets/Pages/Avance.html";   
     } else if (encontradoProfesor) {
-        window.location = "/Assets/Pages/CursoPooJava.html";
+        window.location = "/Assets/Pages/Avance.html";
          setCookie("tipoUsuario", "profesor", 1);
     }
     else {
         alert("Usuario o contraseña incorrectos");
     }
 }
-////crear el cookie sino no funcionba 
+////crear el cookie sino no funciona
 
 function setCookie(name, value, days) {
     const date = new Date();
@@ -38,7 +38,7 @@ function setCookie(name, value, days) {
     const expires = "expires=" + date.toUTCString();
     document.cookie = name + "=" + value + "; " + expires;
 }
-/*
+/*prubas fallidas :(
 class Persona {
     constructor(correo, contraseña) { 
         this.correo = correo;
