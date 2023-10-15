@@ -50,4 +50,7 @@ p{
 .btn-inicio button{
     border-radius: 80px;
 }
-
+a{
+    text-decoration-line: none;
+    color: #E5E8E8;
+}
