@@ -12,10 +12,11 @@ body{
 .parallax-inner h1{
     font-size: 100px;
     text-align: center;
-    color: rgba(255, 255, 255, .4);
+    color: #E5E8E8;
+    /* color: rgba(255, 255, 255, .4); */
 }
 .parallax-1{
-    background: url('../img/prueva2.jpg') no-repeat;
+    background: url('https://images.unsplash.com/photo-1583508915901-b5f84c1dcde1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed; 
@@ -47,4 +48,8 @@ h2{
     width: 60%;
     justify-content: center;
 }
+.btn-enviar button{
+    width: 200px;
+    height: 50px;
 
+}
