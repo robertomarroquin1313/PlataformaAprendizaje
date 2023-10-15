@@ -9,12 +9,10 @@ body{
     background-color: #E5E8E8;
 }
 
-h1{
+.parallax-inner h1{
     font-size: 100px;
     text-align: center;
     color: rgba(255, 255, 255, .4);
-
-
 }
 .parallax-1{
     background: url('../img/prueva2.jpg') no-repeat;
