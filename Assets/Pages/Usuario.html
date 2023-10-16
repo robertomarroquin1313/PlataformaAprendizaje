@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
     <link rel="stylesheet" href="/Assets/css/StyleCursoDePOO.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="../css/EditarUsuario-st.css">
+    <link rel="stylesheet" href="../css/Usuario-st.css">
 
     <title>Personalizacion de perfil</title>
 </head>
@@ -46,51 +46,109 @@
             </div>
         </div>
     </nav>
-    <br>
-    <h1>Personaliazcion de usuario</h1>
     <br><br>
-    <main>
-        <div class="container-fluid">
-            <h1>Editar perfil</h1>
-            <form method="post" action="#" enctype="multipart/form-data">
-                <div>
-                    <img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/systemusers_104569.png" alt="avatar"
-                        id="img" />
-                    <input type="file" name="foto" id="foto" accept="image/*" />
-                    <label for="foto">Cambiar foto</label>
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" class="form-label mt-4">Nombre:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Edward Josue">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" class="form-label mt-4">Apellidos:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Morales Ramirez">
-                </div>
-                <div class="form-group">
-                    <label for="exampleInputEmail1" class="form-label mt-4">Dirección de correo:</label>
-                    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Simulacion@gmail.com">
-                </div>
-                <div class="form-group">
-                    <label for="exampleSelect1" class="form-label mt-4">Visibilidad del correo electrónico:</label>
-                    <select class="form-select" id="exampleSelect1">
-                        <option>Oculto</option>
-                        <option>Visible solo para participantes de mis cursos</option>
-                        <option>visible para todos</option>
-                    </select>
-                </div>
-                <center>
-                    <div>
-                        <button type="submit" class="Guardar"> <a href="../Pages/Usuario.html">Guardar
-                                cambios</a></button>
-                    </div>
-                </center>
-            </form>
+    <div class="container-fluid">
+        <div class="usuario">
+            <img src="https://cdn.icon-icons.com/icons2/1508/PNG/512/systemusers_104569.png" alt="avatar" id="img" />
+          
+            <h1>Edward Jose Morales Ramirez</h1>
         </div>
-    </main>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Informacion:</h2>                     
+                        <br>
+                        <div>
+                            <p>Correo:</p> Simulacion@gmail.com
+                        </div>
+                        <div>
+                            <p>Pais:</p> El Salvador
+                        </div>
+                        <div>
+                            <p>Zona horaria:</p> America/El_Salvador
+                        </div>
+                        <div>
+                            <a href="../Pages/EditarUsuario.html">Editar Perfil</a>
+                        </div>
+                        
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Privacidad y Políticas:</h2>
+                        <br>
+                        <div>
+                            <a href="#">Resumen de retención de datos</a>
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Actividad de accesos:</h2>
+                        <br>
+                        <div>
+                            <p>Primer acceso al sitio:</p> lunes, 11 de enero de 2021, 07:53 (2 años 277 días)
+                        </div>
+                        <br>
+                        <div>
+                            <p>Último acceso al sitio:</p> omingo, 15 de octubre de 2023, 16:08 (15 segundos)
+                        </div>
+
+                    </div>
+                    <br>
+
+                </div>
+                <br>
+            </div>
+            <br>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Destalles de cursos:</h2>
+                        <br>
+                        <div>
+                            <a href="#">Programacion Orientada A Objetos</a>
+                        </div>
+                        <div>
+                            <a href="#">Master en TypeScript, JavaScript Moderno, ES2023, APIs HTML5</a>
+                        </div>
+                        <div>
+                            <a href="#">Configuración de Redes Informáticas 2023</a>
+                        </div>
+                        <div>
+                            <a href="#">Análisis y Diseño de Sistemas ADS 2023</a>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card">
+                    <div class="card-body">
+                        <h2>Informes:</h2>
+                        <br>
+                        <div>
+                            <a href="#">Calificaciones</a>
+                        </div>
+                        <div>
+                            <a href="#">Resumen de Calificaciones</a>
+                        </div>
+
+                    </div>
+                    <br>
+
+                </div>
+
+            </div>
+            <br>
+
+        </div>
+
+
+    </div>
     <script src="script.js"></script>
 
     <script src="script.js"></script>
