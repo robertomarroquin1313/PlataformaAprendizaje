@@ -21,7 +21,8 @@ function loging() {
         window.location = "/Assets/Pages/Avance.html";
          setCookie("tipoUsuario", "alumno", 2);
     } else if (encontradoAdmin) {
-        window.location = "/Assets/Pages/Avance.html";   
+        window.location = "/Assets/Pages/Avance.html"; 
+        setCookie("tipoUsuario", "profesor", 1);
     } else if (encontradoProfesor) {
         window.location = "/Assets/Pages/Avance.html";
          setCookie("tipoUsuario", "profesor", 1);
