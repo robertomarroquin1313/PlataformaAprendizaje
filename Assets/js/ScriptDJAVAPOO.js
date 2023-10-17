@@ -15,6 +15,43 @@
             }
         });
  });*/
+$(document).ready(function () {
+    $(".ocultar-boton").click(function () {
+        var componente = $(this).closest(".contenido-para-ocultar");
+        var oculto = componente.data("oculto");
+
+        if (oculto) {
+            alert("Contenido visible para los alumnos");
+            $(this).css("background-color", "");
+            $(this).text("Ocultar ");
+            $(this).append('<i class="far fa-eye"></i>');
+        } else {
+            alert("Contenido oculto para los estudiantes");
+            $(this).css("background-color", "red");
+            $(this).text("Mostrar ");
+            $(this).append('<i class="far fa-eye-slash"></i>');
+        }
+
+        componente.data("oculto", !oculto);
+    });
+ });
+
+ $(document).ready(function () {
+    $(".eliminar").click(function () {
+        var confirmacion = confirm("¿Estás seguro de que deseas eliminar este componente?");
+
+        if (confirmacion) {
+            $(this).closest('.componente-comun').remove();
+        }
+    });
+});
+
+
+
+
+
+
+
  const botonAgregar = document.getElementById("agregarFormulario");
 const formularioFlotante = document.getElementById("formularioFlotante");
 
