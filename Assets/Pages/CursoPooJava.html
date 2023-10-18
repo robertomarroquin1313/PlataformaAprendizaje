@@ -359,36 +359,61 @@
 </div>
 
         <!--componente para el video-->
-        <div  class="contenido-para-ocultar componente-comun" data-componente="comun" >
-            <div class="botones-profesor text-center toggle-buttons" style="display: none">
-                <button class="btn btn-primary ocultar-boton"">
-                    <i class="far fa-eye"></i> Ocultar
-                </button>
-                <button class="btn btn-danger eliminar">
-                    <i class="fas fa-trash-alt"></i> Eliminar
-                </button>
-                <button class="btn btn-success" >
-                    <i class="fas fa-pencil-alt"></i> Modificar
-                </button>
-            </div>
-            <div class="container color-div">
-                <div class="container img-large">
-                    <div class="row justify-content-center mb-4">
-                        <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
-                            <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
-                        </div>
-                    </div>
-                </div>
-                <div class="white-div mb-4 d-flex justify-content-between align-items-center">
-                    <div class="container text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tcza2FEz4u4?si=lLvymj0MpA3diKC0"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
-                    </div>
+<div class="contenido-para-ocultar componente-comun" data-componente="comun">
+    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        <button class="btn btn-primary ocultar-boton">
+            <i class="far fa-eye"></i> Ocultar
+        </button>
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <button class="btn btn-success editar">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="container color-div">
+        <div class="container img-large">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                    <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
                 </div>
             </div>
         </div>
+        <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+            <div class="container text-center">
+                <div id="videoContainer">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0wMOptm9Q3U?si=e7IZwHRbk0Ry0AZs"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Formulario para editar el video -->
+<div id="editarVideo" class="editarVideo text-center" style="display:none">
+    <div class="box" id="regresar">
+        <div class="arrow right"></div>
+        <div class="text">Regresar</div>
+    </div>
+    <h3 style="color: white;">Cambiar video o actualizarlo</h3>
+    <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
+    <input type="text" id="nuevoEnlaceVideo">
+    <br>
+    <button id="guardar" class="my-2">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+            </svg> Cambiar
+        </span>
+    </button>
+</div>
+
+
+
 
         <!--componete del examen-->
 
@@ -438,6 +463,7 @@
        <button id="agregarFormulario" class=" botones-profesor btn btn-success custom-button" style="display: none">
     <i class="fas fa-plus"></i> Agregar
 </button>
+<!--div flotante-->
 <div id="formularioFlotante" class="formulario-flotante" style="display: none">
    
     <h3><span style="color: white;">creacion de componetes</span></h3>
@@ -458,11 +484,14 @@
         <input type="datetime-local" id="fechaEntrega" placeholder="Fecha de entrega" class="form-control bg-dark text-light">
         <br>
         <button id="guardarCambios" class="btn btn-success">
+            
             Guardar Cambios
         </button>
     </div>
 
 </div>
+
+
 <!---
 <div id="formulario"  style="display: none;">
     <button id="foro" class="btn btn-primary   "style="background-color:black; color: white;"><i class="fas fa-comments"></i> Foro</button>
