@@ -124,7 +124,7 @@
         transform: rotate(360deg);
     }
 }
-.editarVideo {
+.editarVideo,.editarlink {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -220,7 +220,7 @@
 #tituloEditable::placeholder {
     color:white;
 }
-#guardar {
+#guardar,#guardarlink {
     border: 2px solid #24b4fb;
     background-color: #24b4fb;
     border-radius: 0.9em;
@@ -229,7 +229,7 @@
     font-size: 16px;
 }
 
-#guardar span {
+#guardar,#guardarlink span {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -237,7 +237,7 @@
     font-weight: 600;
 }
 
-#guardar:hover {
+#guardar, #guardarlink:hover {
     background-color: #0071e2;
 }
 #nuevoEnlaceVideo{
