@@ -117,3 +117,93 @@ let questions = [
     
   }
 ];
+//funcinoes para cambiar las preguntas
+// Obten el boton modifcar-examen es ek qye esta eb el formulario
+const examenModificarBtn = document.getElementById("examen-cambiar");
+
+// Obtén el formulario de edición por su ID es ek id del frlario
+const editarExamenForm = document.getElementById("editar-examen");
+
+// Agrega un evento de clic al boton mididicar
+examenModificarBtn.addEventListener("click", function () {
+    // Cambia la visibilidad del formulario
+    if (editarExamenForm.style.display === "none" || editarExamenForm.style.display === "") {
+        editarExamenForm.style.display = "block"; // Muestra el formulario
+    } else {
+        editarExamenForm.style.display = "none"; // Oculta el formulario
+    }
+});
+
+// Obten el selct para la cantidad
+const cantidadPreguntasSelect = document.getElementById("cantidad-preguntas");
+
+// Obten el contenedor de preguntas donde agregarAS los inputs
+const preguntasContainer = document.getElementById("contenedor-preguntas");
+
+// Agregar un evento cambiar
+cantidadPreguntasSelect.addEventListener("change", function () {
+    // Obtiene la cantidad seleccionada
+    const cantidadPreguntas = parseInt(cantidadPreguntasSelect.value);
+
+    // Limpia el contenedor de preguntas
+    preguntasContainer.innerHTML = "";
+
+    // Genera y agrega dinámicamente los nuevos inputs de preguntas, respuestas y opciones de respuesta
+    for (let i = 0; i < cantidadPreguntas; i++) {
+        const preguntaDiv = document.createElement("div");
+        const preguntaInput = document.createElement("input");
+        preguntaInput.setAttribute("type", "text");
+        preguntaInput.setAttribute("placeholder", `Pregunta ${i + 1}`);
+        preguntaDiv.appendChild(preguntaInput);
+
+        // Agregar respuesta
+        const respuestaInput = document.createElement("input");
+        respuestaInput.setAttribute("type", "text");
+        respuestaInput.setAttribute("placeholder", `Respuesta ${i + 1}`);
+        preguntaDiv.appendChild(respuestaInput);
+
+        // Agregar opciones de respuesta
+        for (let j = 0; j < 4; j++) {
+            const opcionInput = document.createElement("input");
+            opcionInput.setAttribute("type", "text");
+            opcionInput.setAttribute("placeholder", `Opción ${j + 1}`);
+            preguntaDiv.appendChild(opcionInput);
+        }
+
+        preguntasContainer.appendChild(preguntaDiv);
+    }
+});
+
+
+const guardarPreguntasButton = document.getElementById("guardar-preguntas-examen");
+guardarPreguntasButton.addEventListener("click", function () {
+    // Obtén las preguntas ingresadas
+    const preguntas = [];
+    const preguntaDivs = preguntasContainer.querySelectorAll("div");
+    preguntaDivs.forEach((preguntaDiv, index) => {
+        const inputs = preguntaDiv.querySelectorAll("input");
+        const pregunta = {
+            numb: index + 1,
+            question: inputs[0].value, // El primer input es la pregunta
+            answer: inputs[1].value, // El segundo input es la respuesta
+            options: [...inputs].slice(2).map(input => input.value) // Las demás entradas son opciones
+        };
+        preguntas.push(pregunta);
+    });
+
+    // Reemplaza las preguntas del examen con las nuevas preguntas
+    questions = preguntas; 
+
+    // Limpia el contenedor de preguntas
+    preguntasContainer.innerHTML = "";
+    // Actualiza el arreglo questions
+    questions = preguntas;
+    //eletta
+    alert("Las preguntas del examen se han actualizado.");
+
+    // Cierra el formulario 
+    editarExamenForm.style.display = "none";
+
+    // Imprime el arreglo questions en la consola 
+    console.log("Preguntas actualizadas:", questions);
+});
