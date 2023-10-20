@@ -5,10 +5,9 @@
 }
 
 .contenedor-fluit{
-    display: flex;
+    width: 80%;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+
 }
 .cards-wrapper{
     display: flex;
