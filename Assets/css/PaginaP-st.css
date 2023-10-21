@@ -3,11 +3,12 @@
         display: flex;
     }    
 }
-
+.text{
+    display: flex;
+}
 .contenedor-fluid{
     width: 80%;
     justify-content: center;
-
 }
 .cards-wrapper{
     display: flex;
@@ -18,11 +19,16 @@
     width: calc(100%/3);
 }
 .img-wrapper{
-    height: 15vw;
+    height: 13vw;
     margin: 0 auto;
     /* display: flex;
     align-items: center;
     justify-content: center; */
+}
+.card-titulo{
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    margin: 0 .5em;
+    width: calc(100%/3);
 }
 
 @media screen and (max-width: 576px) {
@@ -33,10 +39,12 @@
 .img-wrapper img{
    max-width: 100%;
    max-height: 100%;
-
 }
-
-
+.card-M{
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    margin: 0 .5em;
+    width: calc(100%/3);
+}
 .carousel-inner{
     padding: 1em;
 }
