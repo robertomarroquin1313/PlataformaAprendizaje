@@ -17,7 +17,10 @@
 .container-fluid{
     width: 100%;
     justify-content: center;
-    background: #5D6D7E;
+}
+.container-fluid img{
+    width: 80%;
+    height: 400px; 
 }
 .cards-wrapper{
     display: flex;
