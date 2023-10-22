@@ -10,39 +10,36 @@
     <title> Curso de Java con Poo</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-    <div class="container-fluid">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
-                </a>
-            </li>
-        </ul>
-        <div class="navbar-nav ms-auto">
-          
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-book"></i> Cursos
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-chalkboard"></i> Más Cursos
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-user"></i> Cuenta
-                    </a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i> Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chalkboard"></i> Más Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
 
 
@@ -146,7 +143,7 @@
     </nav>-->
 
 
-    <div class="container container-fluid text-center">
+    <div class="container container-fluid text-center" style="padding-top: 70px;">
         <h1 style="color: red;">Introducción a la programación orientada a objetos en Java </h1>
     </div>
     <div class="container">
@@ -271,7 +268,7 @@
             <button class="btn btn-danger eliminar">
                 <i class="fas fa-trash-alt"></i> Eliminar
             </button>
-            <button class="btn btn-success editar-enlace"> <!-- Cambié la clase a "editar-enlace" -->
+            <button class="btn btn-success editar-enlace">
                 <i class="fas fa-pencil-alt"></i> Modificar
             </button>
         </div>
@@ -393,6 +390,7 @@
         <button class="btn btn-success editar">
             <i class="fas fa-pencil-alt"></i> Modificar
         </button>
+       
     </div>
     <div class="container color-div">
         <div class="container img-large">
@@ -426,6 +424,26 @@
     <input type="text" id="nuevoEnlaceVideo">
     <br>
     <button id="guardar" class="my-2">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+            </svg> Cambiar
+        </span>
+    </button>
+</div>
+<!--comom no pude por medio generalizando hice esto de crear otra forma forzandolo -->
+<!-- Formulario para editar el video -->
+<div id="formularioEdicionVideo" class="editarVideo text-center" style="display: none;">
+    <div class="box" id="regresarEdicionVideo">
+        <div class="arrow right"></div>
+        <div class="text">Regresar</div>
+    </div>
+    <h3 style="color: white;">Cambiar video o actualizarlo</h3>
+    <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
+    <input type="text" id="nuevaURLVideo" placeholder="Nueva URL del video">
+    <br>
+    <button id="guardarEdicionVideo" class="my-2">
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -470,7 +488,7 @@
                     </a>
                         
                         
-                        <button id="checkboxButton" class="btn btn-checkbox">
+                        <button  id="checkboxButton" class="btn btn-checkbox" href="/Assets/Pages/PaginasCursoPoo/examenJava.html">
                             Marcar como hecho <i class="fas fa-check-circle"></i>
                         </button>
             
@@ -523,6 +541,8 @@
     <button id="examen" class="btn btn-danger " style="background-color:black; color: white;"id="agregarDiv">
         <i class="fas fa-plus"></i> Examen
     </button>
+    <button id="lectura"> <i class="fas fa-question-circle"></i>Lectura</button>
+    <button id="buzon"><i class="fas fa-file"></i>buzon</button>
     <br>
     <br>
     <h2 style="color: white;" id="txt">Parametros de los componentes</h2>
@@ -555,7 +575,7 @@
 </div>-->
 
    
-        
+        <!--aqui se cargaran los nuevos componetes-->
         <div id="contenedorDivs"></div>
 
 
@@ -564,6 +584,13 @@
 
 
     </div>
+    <!--links de componetes requeridos -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
     <script src="/Assets/js/inciarSesion.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
@@ -573,6 +600,7 @@
  
    
 </body>
+<!--pie de pagina -->
 <footer style="background-color:#19191a; padding: 20px 0; color: aliceblue;" >
     <div class="container">
         <div class="row justify-content-center">
@@ -603,4 +631,5 @@
         </div>
     </div>
 </footer>
+<!--fin de pie de pagina-->
 </html>

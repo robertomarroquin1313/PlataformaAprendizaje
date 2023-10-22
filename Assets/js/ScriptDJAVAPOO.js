@@ -3,6 +3,7 @@
 function editarVideo() {
     $("#editarVideo").show();
 }
+///fin de editar video
 
 // Función para guardar cambios en videos
 function guardarVideo() {
@@ -10,16 +11,22 @@ function guardarVideo() {
     $("#videoContainer").html(nuevoCodigoIframe);
     $("#editarVideo").hide();
 }
+///fin de guardar video
 
-// Función para regresar (ocultar la edición de video)
+// Función para regresar 
 function regresarVideo() {
     $("#editarVideo").hide();
 }
+///fin de refresar
+///mosra el formulario de la edicion de links 
+function mostrarLinks() {
+     $("#editarlink").show();
+}
 
 
-////Abrir fomrulario flotante para cabiar los links.
+////Abrir fomrulario flotante para cabiar los links./*
 $(document).ready(function () {
-    // Agregar un controlador de eventos para el botón "Modificar" en cada componente
+    
     $(".editar-enlace").click(function () {
         var componente = $(this).closest(".contenido-para-ocultar");
         var enlaceActual = componente.find(".lectura-link").attr("href");
@@ -38,11 +45,8 @@ $(document).ready(function () {
     
 
 });
-
-
-
 ///fin del formualrio flotabte
-
+///funcion de agregar csas dentro del div neuvsos componetes
 ///funcines dentro del froumulario flotante  desde la creacion hasta la edicion o personalizacion
 
 $(document).ready(function () {
@@ -60,7 +64,7 @@ $(document).ready(function () {
         }
     });
 
-    $("#foro, #videos, #examen").click(function () {
+    $("#foro, #videos, #examen,#lectura,#buzon").click(function () {
         if (!componenteVisible) {
             componenteVisible = true;
             $("#tituloEditable, #fechaEntrega, #guardarCambios, #txt").show();
@@ -122,7 +126,7 @@ $(document).ready(function () {
         <button class="btn btn-danger eliminar">
             <i class="fas fa-trash-alt"></i> Eliminar
         </button>
-        <button class="btn btn-success editar">
+        <button class="btn btn-success editar-video-componente" onclick="editarVideo()" >
             <i class="fas fa-pencil-alt"></i> Modificar
         </button>
     </div>
@@ -185,6 +189,85 @@ $(document).ready(function () {
                     </div>
                 </div>
                 `;
+            } else if(botonPresionado==="lectura"){
+                 nuevoComponente = `       
+<div class="contenido-para-ocultar componente-comun" data-componente="comun">
+    <div class="container color-div">
+    <div class="componente examen">
+                            <h3 contenteditable="true" style="color:red;">${titulo}</h3>
+                            <p>Fecha de cierre: ${fechaEntrega}</p>
+                        </div>
+        <div class="botones-profesor text-center toggle-buttons" style="display: block">
+            <button class="btn btn-primary ocultar-boton">
+                <i class="far fa-eye"></i> Ocultar
+            </button>
+            <button class="btn btn-danger eliminar">
+                <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+            <button class="btn btn-success" onclick=" mostrarLinks()">
+                <i class="fas fa-pencil-alt"></i> Modificar
+            </button>
+        </div>
+        <div class="container img-large">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                    <img src="/Assets/img/Lectura Principal.png" alt="Tu Imagen" class="img-fluid img-large">
+                </div>
+            </div>
+        </div>
+        <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" class="btn btn-primary lectura-link" target="_blank">
+                <i class="fas fa-question-circle"></i> Lectura
+            </a>
+        </div>
+    </div>
+</div>
+                `;
+                
+            }
+            else if (botonPresionado ==="buzon") {
+                       nuevoComponente = `       
+
+   
+                        
+<div class="contenido-para-ocultar componente-comun" data-componente="comun">
+<div class="container color-div">
+ <div class="componente examen">
+                            <h3 contenteditable="true" style="color:red;">${titulo}</h3>
+                            <p>Fecha de cierre: ${fechaEntrega}</p>
+                        </div>
+    <div class="botones-profesor text-center toggle-buttons" style="display: block">
+        <button class="btn btn-primary ocultar-boton"  >
+                <i class=" far fa-eye"></i> Ocultar
+        </button>
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <button class="btn btn-success" onclick="modificarElemento2(this)">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="container img-large ">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+            </div>
+        </div>
+    </div>
+<div class="white-div mb-4 d-flex justify-content-between align-items-center">
+<a href="#" class="btn btn-primary">
+    <i class="fas fa-file"></i> subir archivo
+</a>
+
+    <button id="checkboxButton" class="btn btn-checkbox">
+        Marcar como hecho <i class="fas fa-check-circle"></i>
+    </button>
+</div>
+</div>
+
+      
+                `;
+
             }
 
             $("#contenedorDivs").append(nuevoComponente);
@@ -203,7 +286,7 @@ $(document).ready(function () {
         });
     });
 
-    // Función para ocultar/mostrar contenido (con delegación de eventos)
+    // Función para ocultar
     $(document).on("click", ".ocultar-boton", function () {
         var componente = $(this).closest(".contenido-para-ocultar");
         var oculto = componente.data("oculto");
@@ -223,7 +306,7 @@ $(document).ready(function () {
         componente.data("oculto", !oculto);
     });
 
-    // Función para eliminar componente (con delegación de eventos)
+    // Función para eliminar componente 
     $(document).on("click", ".eliminar", function () {
         var confirmacion = confirm("¿Estás seguro de que deseas eliminar este componente?");
         if (confirmacion) {
@@ -234,18 +317,18 @@ $(document).ready(function () {
    $(document).on("click", ".editar", editarVideo);
 
     $("#guardar").click(guardarVideo);
-
     $("#regresar").click(regresarVideo);
-    $("#guardarCambios").click(editarVideo);
 
-$("#guardar").click(guardarVideo);
 
-$("#regresar").click(regresarVideo);
+
+
 
 });
 
+
 ////fin de la fucionde crear compnente
-///fomrulario foltate 
+
+///fomrulario foltate  de los componetes, para crearlos de moment solo deje 5
  const botonAgregar = document.getElementById("agregarFormulario");
 const formularioFlotante = document.getElementById("formularioFlotante");
 

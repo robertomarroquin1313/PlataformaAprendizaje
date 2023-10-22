@@ -11,18 +11,17 @@
     <title>Examen 1 </title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">
-                        <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
-                    </a>
-                </li>
-            </ul>
-            <div class="navbar-nav ms-auto">
-    
-                <ul class="navbar-nav">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fas fa-book"></i> Cursos
@@ -33,8 +32,6 @@
                             <i class="fas fa-chalkboard"></i> Más Cursos
                         </a>
                     </li>
-                </ul>
-                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="fas fa-user"></i> Cuenta
@@ -44,7 +41,7 @@
             </div>
         </div>
     </nav>
-    <div class=" text-center " "> 
+    <div class=" text-center" style="padding-top: 70px;"> 
         <div class="info-title"><h4><span>Algunas reglas de este cuestionario</span></h4>
         </div>
         <div class="info-list">
@@ -67,12 +64,7 @@
 <div class="start_btn">
     <button class="custom_button">Iniciar prueba</button>
 </div>
-
 <div id="editar-examen" class="editar-examen text-center" style="display: none">
-    <div class="box" id="regresar">
-        <div class="arrow right"></div>
-        <div class="text">Regresar</div>
-    </div>
     <h3 style="color: white;">Cambiar Preguntas</h3>
     <span style="color: white;">Deberá seleccionar cuantas preguntas quiere ingresar:</span>
     <select id="cantidad-preguntas">
@@ -84,15 +76,25 @@
     </select>
     <div id="contenedor-preguntas"></div>
     <br>
-    <button id="guardar-preguntas-examen" class="my-2">
-        <span>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                <path fill="none" d="M0 0h24v24H0z"></path>
-                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
-            </svg> Agregar
-        </span>
-    </button>
+    <div class="container text-xl-center">
+        <div class="text-center d-flex justify-content-center">
+            <button id="guardar-preguntas-examen" class="btn btn-primary" style="margin-right: 10px;">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                    </svg> Agregar
+                </span>
+            </button>
+            <button class="btn btn-secondary" id="rgresar">
+                <span>
+                    <i class="fas fa-arrow-left"></i> Regresar
+                </span>
+            </button>
+        </div>
+    </div>
 </div>
+
 
 
 
@@ -165,6 +167,12 @@
 
 <!-- Dentro de este archivo JavaScript, solo he insertado preguntas y opciones. -->
 <script src="/Assets/js/preguntas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
 
 <!-- Dentro de este archivo JavaScript he codificado todos los códigos de prueba -->
 <script src="/Assets/js/scriptPreguntas.js"></script>

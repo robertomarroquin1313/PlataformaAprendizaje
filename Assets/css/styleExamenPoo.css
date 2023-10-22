@@ -441,3 +441,53 @@ footer button.next_btn {
         box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
         border-radius: 40px;
 }
+
+#guardar-preguntas-examen {
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 17px;
+}
+
+
+#guardar-preguntas-examen span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+}
+
+
+#guardar-preguntas-examen:hover {
+    background-color: #0071e2;
+
+
+}
+.inputs-examen {
+    background-color: black;
+    border: 2px solid #0071e2;
+    color: wheat;
+    border-radius: 30px;
+    padding: 2px; /* Espacio dentro del borde */
+    margin: 2px; /* Espacio fuera del borde */
+}
+#rgresar{
+border: 2px solid #e80f5e;
+    background-color: #d40853;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size:17px;
+
+   
+    
+    top: 10px;
+   
+    right: 10px;
+  
+         
+
+}

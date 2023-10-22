@@ -151,13 +151,16 @@ cantidadPreguntasSelect.addEventListener("change", function () {
     // Genera y agrega dinámicamente los nuevos inputs de preguntas, respuestas y opciones de respuesta
     for (let i = 0; i < cantidadPreguntas; i++) {
         const preguntaDiv = document.createElement("div");
+
         const preguntaInput = document.createElement("input");
+        preguntaInput.classList.add("inputs-examen"); // Agregar una clase CSS al input
         preguntaInput.setAttribute("type", "text");
         preguntaInput.setAttribute("placeholder", `Pregunta ${i + 1}`);
         preguntaDiv.appendChild(preguntaInput);
 
         // Agregar respuesta
         const respuestaInput = document.createElement("input");
+        respuestaInput.classList.add("inputs-examen"); // Agregar una clase CSS al input
         respuestaInput.setAttribute("type", "text");
         respuestaInput.setAttribute("placeholder", `Respuesta ${i + 1}`);
         preguntaDiv.appendChild(respuestaInput);
@@ -165,6 +168,7 @@ cantidadPreguntasSelect.addEventListener("change", function () {
         // Agregar opciones de respuesta
         for (let j = 0; j < 4; j++) {
             const opcionInput = document.createElement("input");
+            opcionInput.classList.add("inputs-examen"); // Agregar una clase CSS al input
             opcionInput.setAttribute("type", "text");
             opcionInput.setAttribute("placeholder", `Opción ${j + 1}`);
             preguntaDiv.appendChild(opcionInput);
@@ -173,6 +177,7 @@ cantidadPreguntasSelect.addEventListener("change", function () {
         preguntasContainer.appendChild(preguntaDiv);
     }
 });
+
 
 
 const guardarPreguntasButton = document.getElementById("guardar-preguntas-examen");
