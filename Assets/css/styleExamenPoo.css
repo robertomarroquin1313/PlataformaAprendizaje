@@ -471,8 +471,8 @@ footer button.next_btn {
     border: 2px solid #0071e2;
     color: wheat;
     border-radius: 30px;
-    padding: 2px; /* Espacio dentro del borde */
-    margin: 2px; /* Espacio fuera del borde */
+    padding: 2px; 
+    margin: 2px; 
 }
 #rgresar{
 border: 2px solid #e80f5e;
