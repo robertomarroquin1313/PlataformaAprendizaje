@@ -14,9 +14,10 @@
     width: 80%;
     justify-content: center;
 }
-.container-fluit{
-    width: 60%;
+.container-fluid{
+    width: 100%;
     justify-content: center;
+    background: #5D6D7E;
 }
 .cards-wrapper{
     display: flex;
