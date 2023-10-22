@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foro</title>
     <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
     <link rel="stylesheet" href="/Assets/css/styleForo.css">
+    <link rel="stylesheet" href="/Assets/js/foro.js">
+    <link rel="stylesheet" href="/Assets/css/foro-st.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
@@ -47,7 +51,8 @@
     <div id="contenido">
         <h2>Investigación Teórica sobre Servidores Web y DHCP en Software Libre (Linux)</h2>
         <div class="description">
-            <p>Descripción: En este foro de investigación teórica, exploraremos los conceptos fundamentales relacionados con
+            <p>Descripción: En este foro de investigación teórica, exploraremos los conceptos fundamentales relacionados
+                con
                 la implementación de servidores web y servidores DHCP en entornos de software libre, específicamente
                 utilizando
                 sistemas operativos Linux. Realizarán investigaciones teóricas para comprender cómo funcionan
@@ -63,7 +68,8 @@
                     <li>Servidores DHCP en sistemas operativos Linux.</li>
                     <li>Ventajas y desventajas de la implementación de servidores web en Linux.</li>
                     <li>Importancia de la administración de servidores DHCP en redes de código abierto.</li>
-                    <li>Cualquier otro tema relacionado con servidores web y DHCP en entornos de software libre que sea de
+                    <li>Cualquier otro tema relacionado con servidores web y DHCP en entornos de software libre que sea
+                        de
                         interés.</li>
                 </ul>
                 <li>Investigación Teórica: Los estudiantes investigarán su tema seleccionado en profundidad. Deben
@@ -75,29 +81,68 @@
                     <li>Una introducción al tema y su importancia.</li>
                     <li>Una explicación detallada de los conceptos clave relacionados con el tema.</li>
                 </ul>
-                <li>Publicación en el Foro: Cada estudiante publicará su infografía en el foro, destacando los aspectos más
+                <li>Publicación en el Foro: Cada estudiante publicará su infografía en el foro, destacando los aspectos
+                    más
                     importantes de su investigación y proporcionando una visión general del tema.</li>
                 <li>Plazo de Entrega: Todas las publicaciones y respuestas deben completarse antes de la fecha límite
                     especificada en el curso.</li>
             </ul>
         </div>
         <p>Nota: Recuerden que los foros validan su asistencia teórica.</p>
-<div class="botones-container">
-    <button class="btn button2">Responder</button>
-  
-</div>
-
+        <div class="botones-container">
+            <button class="btn button2" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                data-bs-whatever="@mdo">Responder</button>
+        </div>
 
     </div>
-    
+    <div class="container-fluid">
+
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar foro</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="remover">
+                            <div class="mb-3">
+                                <label for="titulo" class="col-form-label">Titulo:</label>
+                                <input type="text" class="form-control" id="titulo" autocomplete="off">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="col-form-label">Mensage:</label>
+                                <textarea class="form-control" id="mensaje" autocomplete="off"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                            >Salir</button>
+                        <input type="button" id="btnxd" value="Crear foro" class="btn btn-primary btn-block"
+                            data-bs-dismiss="modal"  onclick="limpiar();">
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+        <br>
+    </div>
+    <div class="contenedor-fluid">
+        <div id="product-list">
+        </div>
+    </div>
+
+
 </body>
+<script src="/Assets/js/foro.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
     crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
     integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
     crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
 
 </html>
