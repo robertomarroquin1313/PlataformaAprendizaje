@@ -1,5 +1,7 @@
 const defaultFile = 'https://cdn.icon-icons.com/icons2/1508/PNG/512/systemusers_104569.png';
 
+//Especificamos las constantes de file y img, estos nos ayudaran a buscar el documento
+// y transformarlo a url 
 const file = document.getElementById( 'foto' );
 const img = document.getElementById( 'img' );
 file.addEventListener( 'change', e => {

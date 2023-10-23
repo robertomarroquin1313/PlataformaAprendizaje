@@ -1,0 +1,6 @@
+.contenedor-fluid{
+    width: 1200px;
+    max-width: 9000px;
+    margin: 0 auto;
+    padding: 20px;
+}
