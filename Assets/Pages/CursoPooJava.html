@@ -36,6 +36,7 @@
                             <i class="fas fa-user"></i> Cuenta
                         </a>
                     </li>
+                   
                 </ul>
             </div>
         </div>
@@ -235,15 +236,11 @@
         <div  class="contenido-para-ocultar componente-comun" data-componente="comun">
         <div class="container color-div">
             <div class="botones-profesor text-center toggle-buttons" style="display: none">
-                <button class="btn btn-primary ocultar-boton">
-                    <i class=" far fa-eye"></i> Ocultar
-                </button>
+             
                 <button class="btn btn-danger eliminar">
                     <i class="fas fa-trash-alt"></i> Eliminar
                 </button>
-                <button class="btn btn-success" onclick="modificarElemento2(this)">
-                    <i class="fas fa-pencil-alt"></i> Modificar
-                </button>
+               
             </div>
             <div class="container img-large ">
                 <div class="row justify-content-center mb-4">
@@ -253,7 +250,7 @@
                 </div>
             </div>
             <div class="white-div mb-4">
-                <a href="#" class="btn btn-primary">
+                <a href="/Assets/Pages/PaginasCursoPoo/Asitencia.html" class="btn btn-primary">
                     <i class="fas fa-question-circle"></i> Asistencia
                 </a>
             </div>
@@ -391,7 +388,7 @@
             <i class="fas fa-pencil-alt"></i> Modificar
         </button>
        
-    </div>
+   
     <div class="container color-div">
         <div class="container img-large">
             <div class="row justify-content-center mb-4">
@@ -419,6 +416,8 @@
         <div class="arrow right"></div>
         <div class="text">Regresar</div>
     </div>
+    <br>
+    <br>
     <h3 style="color: white;">Cambiar video o actualizarlo</h3>
     <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
     <input type="text" id="nuevoEnlaceVideo">
@@ -460,6 +459,7 @@
 
 <div class="contenido-para-ocultar componente-comun" data-componente="comun">
     <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        
         <button class="btn btn-primary ocultar-boton"">
                     <i class=" far fa-eye"></i> Ocultar
         </button>
@@ -535,24 +535,34 @@
 <!--div flotante-->
 <div id="formularioFlotante" class="formulario-flotante" style="display: none">
    
-    <h3><span style="color: white;">creacion de componetes</span></h3>
-     <button id="foro" class="btn btn-primary   "style="background-color:black; color: white;"><i class="fas fa-comments"></i> Foro</button>
-    <button id="videos" class="btn btn-danger"style="background-color:black; color: white;"><i class="fas fa-video"></i> Videos</button>
-    <button id="examen" class="btn btn-danger " style="background-color:black; color: white;"id="agregarDiv">
-        <i class="fas fa-plus"></i> Examen
+    <h3><creacion style="color: white;"></i><span class="sp">creacion de componetes</span></h3>
+    <!--botones-->
+    <button id="foro" data-label="Register" class="rainbow-hover">
+        <i class="fas fa-comments"></i><span class="sp">foros</span>
     </button>
-    <button id="lectura"> <i class="fas fa-question-circle"></i>Lectura</button>
-    <button id="buzon"><i class="fas fa-file"></i>buzon</button>
+
+    
+    <button id="videos" class="rainbow-hover"><i class="fas fa-video"></i><span class="sp"> Videos</span></button>
+    <button id="examen" class="rainbow-hover" >
+        <i class="fas fa-plus"></i> <span class="sp">Examen</span>
+    </button>
+    <button id="lectura"  class="rainbow-hover"> <i class="fas fa-question-circle"></i><span class="sp">Lectura</span></span></button>
+    <button id="buzon"  class="rainbow-hover"><i class="fas fa-file"></i><span class="sp">buzon</span></button>
     <br>
     <br>
-    <h2 style="color: white;" id="txt">Parametros de los componentes</h2>
+    <div id="mensaje" >
+      <h4 id="txt" class="sp"></h4>    
+    </div>
+    
+    <br>
+    <h2 style="color: white;" id="txt" class="sp">Parametros de los componentes</h2>
     <br>
     <div class="container-fluid text-xl-center">
    
         
-        <input id="tituloEditable" type="text" placeholder="Título del Componente" class="form-control bg-dark text-light">
+        <input id="tituloEditable" type="text" placeholder="Título del Componente" class="form-control bg-dark sp text-light">
         <br>
-        <input type="datetime-local" id="fechaEntrega" placeholder="Fecha de entrega" class="form-control bg-dark text-light">
+        <input type="datetime-local" id="fechaEntrega" placeholder="Fecha de entrega" class="form-control sp bg-dark text-light">
         <br>
         <button id="guardarCambios" class="btn btn-success">
             
@@ -619,7 +629,7 @@
         </div>
         <div class="row justify-content-center mt-4">
             <div class="col-md-6 text-center">
-                <p>Email: info@walmart.com</p>
+                <p>Email: infoITCA@gmail.com</p>
             </div>
         </div>
         <div class="row justify-content-center mt-4">

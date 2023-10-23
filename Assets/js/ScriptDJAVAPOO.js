@@ -1,9 +1,35 @@
+///funciones para cuando seleccione un componete sepa cual es//
+var mensajes = {
+    "foro": "Seleccionaste la opción 'Foro'.",
+    "videos": "Seleccionaste la opción 'Videos'.",
+    "examen": "Seleccionaste la opción 'Examen'.",
+    "lectura": "Seleccionaste la opción 'Lectura'.",
+    "buzon": "Seleccionaste la opción 'Buzón'."
+};
+// Función para mostrar un mensaje con efecto de transición
 
+// Resto del código JavaScript (como se mostró en la respuesta anterior)
+
+function mostrarMensaje(id) {
+    var mensajeDiv = document.getElementById("txt");
+    mensajeDiv.textContent = mensajes[id];
+}
+var botones = document.querySelectorAll(".rainbow-hover");
+botones.forEach(function (boton) {
+    boton.addEventListener("click", function () {
+        var id = boton.getAttribute("id");
+        mostrarMensaje(id);
+    });
+});
+//fin 
 // Función para editar videos
 function editarVideo() {
     $("#editarVideo").show();
 }
+
+
 ///fin de editar video
+//
 
 // Función para guardar cambios en videos
 function guardarVideo() {
@@ -227,8 +253,6 @@ $(document).ready(function () {
             }
             else if (botonPresionado ==="buzon") {
                        nuevoComponente = `       
-
-   
                         
 <div class="contenido-para-ocultar componente-comun" data-componente="comun">
 <div class="container color-div">
@@ -324,8 +348,6 @@ $(document).ready(function () {
 
 
 });
-
-
 ////fin de la fucionde crear compnente
 
 ///fomrulario foltate  de los componetes, para crearlos de moment solo deje 5

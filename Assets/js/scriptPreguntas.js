@@ -1,3 +1,9 @@
+///funcion para cerra cerrar el formulario de ecicion de preguntas
+ function closeForm() {
+        var editarExamenDiv = document.getElementById("editar-examen");
+        editarExamenDiv.style.display = "none";
+    }    
+
 //seleccionando todos los elementos requeridos para el examen 
 const start_btn = document.querySelector(".start_btn button");
 const info_box = document.querySelector(".info_box");
