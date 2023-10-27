@@ -8,7 +8,14 @@
 body{
     background-color: #E5E8E8;
 }
-
+.d-flex a{
+    background-color:#566573;
+    border-radius: 10px;
+    padding: 15px 20px;
+   
+    color: white;
+     text-decoration: none ;
+   }
 .parallax-inner h1{
     font-size: 100px;
     text-align: center;
