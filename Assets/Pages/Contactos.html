@@ -63,7 +63,7 @@
     <center>
         <div class="contenedor-fluit">
             <div class="cont">
-                <form class="formulario">
+                <form class="formulario" id="formulario">
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="Nombre" placeholder="Nombre" autocomplete="off">
                         <label for="Nombre">Nombre</label>
@@ -86,7 +86,10 @@
         </div>
     </center>
     <script>
+
+
         const EnviarComentario = () => {
+
             //ID de los impust
             var Nombre = document.querySelector("#Nombre").value;
             var correo = document.querySelector("#Correo").value;
@@ -113,11 +116,15 @@
                         if (EnviarMensaje) {
                             swal("Gracias por tu comentario!!", {
                                 icon: "success",
-                            });
+                
+                            })
+                            document.querySelector("#formulario").reset();
                         } else {
-                            swal("Menjase cancelado",{
-                                icon: "error",
-                            } );       
+                            swal("Menjase cancelado", {
+                                icon: "error"
+                                
+                            });
+                            document.querySelector("#formulario").reset();
                         }
                     });
             }
