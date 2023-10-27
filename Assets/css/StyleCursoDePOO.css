@@ -353,3 +353,7 @@
     transition: 0.3s;
     transform: scale(0.93);
 }
+.video-container {
+    display: block;
+    /* Asegura que el video esté visible para todos */
+}

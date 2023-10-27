@@ -372,11 +372,10 @@
     </div>
 </div>
 </div>
-
-        <!--componente para el video-->
-        
-<div class="contenido-para-ocultar componente-comun" data-componente="comun">
-    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+<!-- Contenido del video -->
+<div class="contenido-para-ocultar componente-comun text-center" data-component-identifier="elemento-1"
+    style="display: block;">
+    <div class="botones-profesor text-center toggle-buttons">
         <button class="btn btn-primary ocultar-boton">
             <i class="far fa-eye"></i> Ocultar
         </button>
@@ -386,28 +385,34 @@
         <button class="btn btn-success editar">
             <i class="fas fa-pencil-alt"></i> Modificar
         </button>
-       
-   
-    <div class="container color-div">
-        <div class="container img-large">
-            <div class="row justify-content-center mb-4">
-                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
-                    <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+    </div>
+    <div class="elemento-contenedor">
+        <div class="video-container">
+            <div class="container color-div">
+                <div class="container img-large">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                            <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="white-div mb-4 d-flex justify-content-between align-items-center">
-            <div class="container text-center">
-                <div id="videoContainer">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/0wMOptm9Q3U?si=e7IZwHRbk0Ry0AZs"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+                    <div class="container text-center">
+                        <div id="videoContainer">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/0wMOptm9Q3U?si=e7IZwHRbk0Ry0AZs"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+   
 
 <!-- Formulario para editar el video -->
 <div id="editarVideo" class="editarVideo text-center" style="display:none">
@@ -430,8 +435,9 @@
         </span>
     </button>
 </div>
+
 <!--comom no pude por medio generalizando hice esto de crear otra forma forzandolo -->
-<!-- Formulario para editar el video -->
+<!-- Formulario para editar el video -
 <div id="formularioEdicionVideo" class="editarVideo text-center" style="display: none;">
     <div class="box" id="regresarEdicionVideo">
         <div class="arrow right"></div>
@@ -449,7 +455,7 @@
             </svg> Cambiar
         </span>
     </button>
-</div>
+</div>-->
 
 
 
@@ -465,9 +471,10 @@
         <button class="btn btn-danger eliminar">
             <i class="fas fa-trash-alt"></i> Eliminar
         </button>
-        <button class="btn btn-success" id="examen-cambiar">
+        <a class="btn btn-success" href="/Assets/Pages/PaginasCursoPoo/examenJava.html">
             <i class="fas fa-pencil-alt"></i> Modificar
-        </button>
+        </a>
+
     </div>
             <div class="container color-div">
                 <div class="container img-large ">
@@ -497,32 +504,7 @@
                 </div>
            
                 </div>
-                <!--formjlario para editar las preguntas -->
-            <div id="editar-examen" class="editar-examen text-center" style="display: none">
-                <div class="box" id="regresar">
-                    <div class="arrow right"></div>
-                    <div class="text">Regresar</div>
-                </div>
-                <h3 style="color: white;">Cambiar Preguntas</h3>
-                <span style="color: white;">Deberá seleccionar cuantas preguntas quiere ingresar:</span>
-                <select id="cantidad-preguntas">
-                    <option value="5">5</option>
-                    <option value="10">10</option>
-                    <option value="20">20</option>
-                    <option value="30">30</option>
-                    <option value="40">40</option>
-                </select>
-            <div id="contenedor-preguntas"></div>
-                <br>
-                <button id="guardar-preguntas-examen" class="my-2">
-                    <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
-                        </svg> Agregar
-                    </span>
-                </button>
-            </div>
+               
 
 
 <!--bton para agregar componentes solo vusti desde lavista de admin y profsro -->
@@ -605,7 +587,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="/Assets/js/ScriptDJAVAPOO.js"></script>
-  <script src="/Assets/js/preguntas.js"></script>
+ 
  
    
 </body>
