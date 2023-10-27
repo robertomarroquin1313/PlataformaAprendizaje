@@ -28,9 +28,12 @@ body{
   }
   
   form img{
-    width: 200px;
     border-radius: 50%;
     border: 6px solid #AAA;
+    max-width: 200px;
+    max-height: 200px;
+    min-height: 200px;
+    min-width: 200px;
   }
   
   form div:first-child{
