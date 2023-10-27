@@ -116,14 +116,16 @@
                         if (EnviarMensaje) {
                             swal("Gracias por tu comentario!!", {
                                 icon: "success",
-                
+
                             })
+                            // Que Limpie los campos de el formulario atraves del ID
                             document.querySelector("#formulario").reset();
                         } else {
                             swal("Menjase cancelado", {
                                 icon: "error"
-                                
+
                             });
+                            // Que Limpie los campos de el formulario atraves del ID
                             document.querySelector("#formulario").reset();
                         }
                     });
