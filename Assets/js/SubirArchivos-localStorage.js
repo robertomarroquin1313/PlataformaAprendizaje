@@ -89,9 +89,3 @@ window.addEventListener("load", () => {
         }
     }
 })
-document.getElementById('delete').addEventListener('click', function (e) {
-        filewrapper.innerHTML = ""; // Borra todos los elementos de filewrapper
-        filewrapper2.innerHTML = ""; // Borra todos los elementos de filewrapper2
-        storedElements.length = 0; // Borra el arreglo de elementos
-        localStorage.removeItem('storedElements'); // Borra los datos en localStorage
-});
