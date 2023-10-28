@@ -7,9 +7,6 @@ var mensajes = {
     "buzon": "Seleccionaste la opción 'Buzón'."
 };
 // Función para mostrar un mensaje con efecto de transición
-
-
-
 function mostrarMensaje(id) {
     var mensajeDiv = document.getElementById("txt");
     mensajeDiv.textContent = mensajes[id];
@@ -64,10 +61,13 @@ function mostrarLinks() {
      $("#editarlink").show();
 }
 
-
-////Abrir fomrulario flotante para cabiar los links./*
 $(document).ready(function () {
-    
+    // Recuperar enlace del almacenamiento local
+    var enlaceGuardado = localStorage.getItem("lectura-link");
+    if (enlaceGuardado) {
+        $(".lectura-link").attr("href", enlaceGuardado);
+    }
+
     $(".editar-enlace").click(function () {
         var componente = $(this).closest(".contenido-para-ocultar");
         var enlaceActual = componente.find(".lectura-link").attr("href");
@@ -78,14 +78,17 @@ $(document).ready(function () {
         var nuevoEnlace = $("#nuevoLink").val();
         var componente = $(".editarlink:visible").closest(".contenido-para-ocultar");
         componente.find(".lectura-link").attr("href", nuevoEnlace);
+        
+        // Guardar el nuevo enlace en el almacenamiento local
+        localStorage.setItem("lectura-link", nuevoEnlace);
+        
         $("#editarlink").hide();
     });
     $("#regresar-link").click(function () {
         $("#editarlink").hide();
     });
-    
-
 });
+
 ///fin del formualrio flotabte
 ///funcion de agregar csas dentro del div neuvsos componetes
 ///funcines dentro del froumulario flotante  desde la creacion hasta la edicion o personalizacion
@@ -501,6 +504,7 @@ $(document).ready(function () {
     $("#guardarCambios").click(function () {
         var titulo = $("#tituloEditable").val();
         var fechaEntrega = $("#fechaEntrega").val();
+        var link = $("#link").val();
         var botonPresionado = $(".boton-seleccionado").attr("id"); // Obtener el tipo del botón presionado
         var nuevoComponente = "";
 
@@ -514,10 +518,10 @@ $(document).ready(function () {
         <button class="btn btn-danger eliminar">
             <i class="fas fa-trash-alt"></i> Eliminar
         </button>
-        <button class="btn btn-success editar">
-            <i class="fas fa-pencil-alt"></i> Modificar
-        </button>
-    </div>
+       <button class="btn btn-success" onclick="mostrarFormulario2(this)">
+    <i class="fas fa-pencil-alt"></i> Modificar
+</button>
+
 
     <div class="elemento-contenedor">
         <div class="video-container">
@@ -537,11 +541,7 @@ $(document).ready(function () {
                 <div class="white-div mb-4 d-flex justify-content-between align-items-center">
                     <div class="container text-center">
                         <div id="videoContainer">
-                            <iframe width="560" height="315"
-                                src="https://www.youtube.com/embed/0wMOptm9Q3U?si=e7IZwHRbk0Ry0AZs"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                allowfullscreen></iframe>
+                            ${link}
                         </div>
                     </div>
                 </div>
@@ -745,9 +745,14 @@ $(document).ready(function () {
         }
         return "";
     }
+    ///funcion para editar los links de los videos de los componnetes nuevos(Pruebas)
+    
+    
+    
+
 });
 
-////fin de la fucionde crear compnente
+////fin de la fucionde crear compnente///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///fomrulario foltate  de los componetes, para crearlos de moment solo deje 5
  const botonAgregar = document.getElementById("agregarFormulario");
@@ -1107,15 +1112,41 @@ window.onload = function () {
     $("#preloader").fadeOut();
     $("body").removeClass("ocul");
 }
+///////////////////////////////////////////////////////////////////////////////editar video 
+/*
+function mostrarFormulario2(botonEditar) {
+    // Obtén el elemento padre del botón (el componente que deseas editar)
+    const componente = botonEditar.closest(".contenido-para-ocultar");
 
+    // Extrae el enlace de video actual del componente (puedes usar un atributo personalizado)
+    const enlaceVideoActual = componente.getAttribute("data-enlace-video");
 
+    // Rellena el formulario con el enlace de video actual
+    const enlaceVideoInput = document.getElementById("nuevoEnlaceVideo2");
+    enlaceVideoInput.value = enlaceVideoActual;
 
+    // Muestra el formulario
+    document.getElementById("editarVideo2").style.display = "block";
 
-    
+    // Guarda una referencia al componente que se está editando
+    document.getElementById("editarVideo2").dataset.componenteAEditar = componente;
+}
 
+// Función para guardar los cambios en el componente
+function guardarCambios2() {
+    const nuevoEnlaceVideo = document.getElementById("nuevoEnlaceVideo2").value;
 
+    // Obtiene el componente que se está editando
+    const componenteAEditar = document.getElementById("editarVideo2").dataset.componenteAEditar;
 
+    // Actualiza el enlace de video en el componente
+    componenteAEditar.setAttribute("data-enlace-video", nuevoEnlaceVideo);
 
+    // Oculta el formulario
+    document.getElementById("editarVideo2").style.display = "none";
+}*/
+
+ 
 
 //fin de pruebas
 
