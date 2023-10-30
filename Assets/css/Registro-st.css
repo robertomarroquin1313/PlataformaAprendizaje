@@ -4,7 +4,11 @@
     align-items: center;
     min-height: 100vh;
 }
-
+body{
+    background: url('https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80') no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 .wrapper {
     width: 1100px;
     background: transparent;
@@ -14,7 +18,7 @@
     color: #fff;
     border-radius: 10px;
     padding: 30px 40px;
-    display: inline-block;
+
 }
 
 .wrapper h1 {
@@ -22,7 +26,6 @@
 }
 
 .wrapper .btn {
-
     width: 50%;
     height: 45px;
     background: #fff;
@@ -42,8 +45,14 @@
     text-align: center;
     margin-top: 20px;
 }
+.wrapper .input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 10px 0;
+}
 
-.wrapper input {
+.input-box input  {
     width: 100%;
     height: 100%;
     background: transparent;
@@ -51,21 +60,42 @@
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
+    color: white;
+    padding: 20px 45px 20px 20px;
 }
 
-.form-floating svg {
-    position: absolute;
-    right: 10px;
-    top: 35%;
-    transform: translate(-50%);
-    font-size: 70px;
+.form-floating{
+    background:transparent;
 }
+
 
 .d-flex a{
     color:#fff ;
     text-decoration-line: none;
 }
+
 .form-check input{
     width: 2%;
-    height: 20px;
+    height: 15px;
 }   
+
+.input-box svg {
+    position: absolute;
+    right:20px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+}
+
+
+.d-flex a{
+    color:#fff ;
+    text-decoration-line: none;
+}
+p{
+    color:white;
+    font-size: 15px;
+}
+.input-box input::placeholder{
+    color: white;
+}
