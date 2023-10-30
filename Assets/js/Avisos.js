@@ -14,7 +14,7 @@ class Agregarforo {
     <div class = 'card  mb-4 '>
       <div class =  'card-body'>
        <a href="#" name= "delete">Eliminar</a>
-       <strong><h6>Re:Foro de participación DS21</h6></strong>
+       <strong><h6>Re:Respuesta a Aviso DS21</h6></strong>
        <p> de <a href="#" name= "usuario">Nombre de usuario</a> Viernes - 6 de octubre de 2023, 21:09</p>
       <strong><h4>${Agregarforo.titulo}</h4></strong><br>
     ${Agregarforo.mensaje}
