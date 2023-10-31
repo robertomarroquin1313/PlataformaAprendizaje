@@ -475,8 +475,8 @@ $(document).ready(function () {
 
     cargarComponentesDesdeLocalStorage();
 
-    // Manejador de clic para mostrar/ocultar el formulario
-    $("#agregarFormulario").click(function () {
+   // Manejador de clic para mostrar/ocultar el formulario
+  $("#agregarFormulario").click(function () {
         formularioVisible = !formularioVisible;
         if (formularioVisible) {
             $("#formularioFlotante").show();
@@ -487,6 +487,7 @@ $(document).ready(function () {
             $("#tituloEditable, #fechaEntrega, #guardarCambios, #txt").hide();
         }
     });
+    
 
     // Manejador de clic para botones de tipo 
     $("#foro, #videos, #examen, #lectura, #buzon").click(function () {
@@ -505,6 +506,7 @@ $(document).ready(function () {
         var titulo = $("#tituloEditable").val();
         var fechaEntrega = $("#fechaEntrega").val();
         var link = $("#link").val();
+        var linkPagina = $("#link").val();
         var botonPresionado = $(".boton-seleccionado").attr("id"); // Obtener el tipo del botón presionado
         var nuevoComponente = "";
 
@@ -651,7 +653,7 @@ $(document).ready(function () {
             </div>
         </div>
         <div class="white-div mb-4 d-flex justify-content-between align-items-center">
-            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" class="btn btn-primary lectura-link" target="_blank">
+            <a href="${linkPagina}" class="btn btn-primary lectura-link" target="_blank">
                 <i class="fas fa-question-circle"></i> Lectura
             </a>
         </div>
@@ -752,7 +754,7 @@ $(document).ready(function () {
 
 });
 
-////fin de la fucionde crear compnente///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////fin de la fucionde crear compnente///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///fomrulario foltate  de los componetes, para crearlos de moment solo deje 5
  const botonAgregar = document.getElementById("agregarFormulario");
@@ -1112,7 +1114,7 @@ window.onload = function () {
     $("#preloader").fadeOut();
     $("body").removeClass("ocul");
 }
-///////////////////////////////////////////////////////////////////////////////editar video 
+///////////////////////////////////////////////////////////////////////////////editar video
 /*
 function mostrarFormulario2(botonEditar) {
     // Obtén el elemento padre del botón (el componente que deseas editar)
@@ -1145,14 +1147,97 @@ function guardarCambios2() {
     // Oculta el formulario
     document.getElementById("editarVideo2").style.display = "none";
 }*/
-
- 
-
 //fin de pruebas
+//funcion de pra ocultar compentes
+// Cuando el estudiante oculta el componente
+///////////////////////////////////////// Función para ocultar el componente/////////////////////////////////////////////////////////////////////////////////////////////
+$(document).off("click", ".ocultar-boton-componentes").on("click", ".ocultar-boton-componentes", function () {
+    // Marcar el componente como oculto en el localStorage
+    const componenteID = $(this).closest(".contenido-para-ocultar").data("component-identifier");
+    const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
+    // Verificar si el componente ya existe en la lista
+    if (!componentesOcultos.includes(componenteID)) {
+        componentesOcultos.push(componenteID);
+        localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
+        alert("Componente ocultado para estudiantes");
+    } else {
+        alert("El componente ya está oculto para estudiantes");
+    }
+    // Ocultar el componente y mostrar el botón "Mostrar" inmediatamente
+    const $componente = $(this).closest(".ocultar-elemento");
+    $componente.hide();
+    $componente.find(".mostrar-boton").show();
+});
 
+///////////////////////////////////////////////////////////////fin de funcion elimanr ////////////////////////////////////////////////
+//no pude toco caragarlos en una tabla/////fucnon para cargar en la tabla 
+function actualizarTablaComponentesOcultos() {
+    // Obtener componentes ocultos 
+    const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
+    // Limpiar la tabla
+    $('#tabla-componentes-ocultos tbody').empty();
+    // Crear filas en la tabla para los componentes ocultos
+    componentesOcultos.forEach((componenteID) => {
+        const $componente = $(`.contenido-para-ocultar[data-component-identifier="${componenteID}"]`);
+        const nombreComponente = $componente.data('component-name'); // Obtener el nombre
+        const fila = `
+            <tr data-component-identifier="${componenteID}">
+                <td>${nombreComponente}</td>
+                <td>
+                    <button class="mostrar-componente">Mostrar</button>
+                </td>
+                <td>
+                    <button class="eliminar-componente">Eliminar</button>
+                </td>
+            </tr>
+        `;
+        $('#tabla-componentes-ocultos tbody').append(fila);
+    });
+}
+actualizarTablaComponentesOcultos();
 
+$(document).on("click", ".mostrar-boton-ocultos", function () {
+    const $formularioOcultos = $("#formulario-ocultos");
+    if ($formularioOcultos.is(":visible")) {
+        $formularioOcultos.hide();
+    } else {
+        $formularioOcultos.show();
+        actualizarTablaComponentesOcultos();
+    }
+});
+$(document).on("click", ".cerrar", function () {
+    $("#formulario-ocultos").hide();
+});
+/////////////////////////////////
+$(document).on("click", ".ocultar-boton", function () {
+    // Marcar el componente como oculto en el localStorage
+    const componenteID = $(this).closest(".contenido-para-ocultar").data("component-identifier");
+    const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
+    componentesOcultos.push(componenteID);
+    localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
+    alert("Componente ocultado para estudiantes");
+});
+///////////////////////////////////////funcion para volver a mostrar
+$(document).off("click", ".mostrar-componente");
 
+// Cuando se hace clic en mostrar
+$(document).on("click", ".mostrar-componente", function () {
+    // Eliminar el componente de la lista de ocultos en el localStorage
+    const componenteID = $(this).closest("tr").data("component-identifier");
+    const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
+    const index = componentesOcultos.indexOf(componenteID);
+    if (index > -1) {
+        componentesOcultos.splice(index, 1);
+        localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
+    }
 
+    // Mostrar el componente y ocultar el botón mostrar
+    const $componente = $(`.contenido-para-ocultar[data-component-identifier="${componenteID}"]`);
+    $componente.show();
+    $(this).hide(); // Ocultar el botón mostrar de la tabla 
+    actualizarTablaComponentesOcultoscacion();
+
+});
 
 
 

@@ -506,13 +506,14 @@
     </button>
 </div>-->
         <!--componete del examen-->
-
-<div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-7" style="display: block;">
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-7"  data-component-name="Nombre del Componente examen" style="display: block;">
     <div class="botones-profesor text-center toggle-buttons" style="display: none">
         
-        <button class="btn btn-primary ocultar-boton"">
-                    <i class=" far fa-eye"></i> Ocultar
-        </button>
+<button class="btn btn-primary ocultar-boton-componentes">
+    <i class="far fa-eye"></i> Ocultar
+</button>
+
+
         <button class="btn btn-danger eliminar">
             <i class="fas fa-trash-alt"></i> Eliminar
         </button>
@@ -549,6 +550,29 @@
                 </div>
            
                 </div>
+                <!--bton del formulari nuevo-->
+                <div class="text-center"> 
+                <button class="btn btn-primary mostrar-boton-ocultos">
+                    <i class="far fa-eye-slash"></i> Mostrar
+                </button>
+                </div>
+                <!--valio verdura, no pode hacer ocultar toca hacer el plan C-->
+                <!--cmponete para ver los ocultos-->
+        <div class="formulario-ocultos" id="formulario-ocultos" style="display: none;">
+            <h1 class="text-xl-center">Gestión de componentes ocultos</h1>
+            <table id="tabla-componentes-ocultos">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Mostrar</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+                    <button class="cerrar">Cerrar</button>
+        </div>
+            
                
 
 
@@ -576,22 +600,25 @@
     <button id="buzon"  class="rainbow-hover"><i class="fas fa-file"></i><span class="sp">buzon</span></button>
     <br>
     <br>
-    <div id="mensaje" >
-      <h4 id="txt" class="sp"></h4>    
-    </div>
+   
     
     <br>
     <h2 style="color: white;" id="txt" class="sp">Parametros de los componentes</h2>
     <br>
-    <div class="container-fluid text-xl-center">
+    <div id="mensaje">
+        <h4 id="txt" class="sp"></h4>
+    </div>
+    <div class="container-fluid text-xl-center" id="inputs" >
    
         
         <input id="tituloEditable" type="text" placeholder="Título del Componente" class="form-control bg-dark sp text-light">
         <br>
         <input type="datetime-local" id="fechaEntrega" placeholder="Fecha de entrega" class="form-control sp bg-dark text-light">
         <br>
-        <input type="text" id="link">
-        <button id="guardarCambios" class="btn btn-success">
+        <input type="text" id="link"  class="sp form-control"  placeholder="Links" >
+        <br>
+        
+        <button id="guardarCambios" class="btn btn-success" >
             
             Guardar Cambios
         </button>
