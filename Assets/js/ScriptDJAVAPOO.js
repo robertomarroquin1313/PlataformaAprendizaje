@@ -1151,49 +1151,56 @@ function guardarCambios2() {
 //funcion de pra ocultar compentes
 // Cuando el estudiante oculta el componente
 ///////////////////////////////////////// Función para ocultar el componente/////////////////////////////////////////////////////////////////////////////////////////////
-$(document).off("click", ".ocultar-boton-componentes").on("click", ".ocultar-boton-componentes", function () {
-    // Marcar el componente como oculto en el localStorage
+
+
+$(document).on("click", ".ocultar-boton-componentes", function () {
     const componenteID = $(this).closest(".contenido-para-ocultar").data("component-identifier");
     const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
+
     // Verificar si el componente ya existe en la lista
     if (!componentesOcultos.includes(componenteID)) {
         componentesOcultos.push(componenteID);
         localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
         alert("Componente ocultado para estudiantes");
+
+        // Ocultar el componente y mostrar el botón "Mostrar" inmediatamente
+        const $componente = $(this).closest(".ocultar-elemento");
+        $componente.hide();
+        $componente.find(".mostrar-boton").show();
     } else {
         alert("El componente ya está oculto para estudiantes");
     }
-    // Ocultar el componente y mostrar el botón "Mostrar" inmediatamente
-    const $componente = $(this).closest(".ocultar-elemento");
-    $componente.hide();
-    $componente.find(".mostrar-boton").show();
 });
 
-///////////////////////////////////////////////////////////////fin de funcion elimanr ////////////////////////////////////////////////
-//no pude toco caragarlos en una tabla/////fucnon para cargar en la tabla 
 function actualizarTablaComponentesOcultos() {
-    // Obtener componentes ocultos 
     const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
-    // Limpiar la tabla
     $('#tabla-componentes-ocultos tbody').empty();
-    // Crear filas en la tabla para los componentes ocultos
+
     componentesOcultos.forEach((componenteID) => {
         const $componente = $(`.contenido-para-ocultar[data-component-identifier="${componenteID}"]`);
-        const nombreComponente = $componente.data('component-name'); // Obtener el nombre
+        const nombreComponente = $componente.data('component-name');
         const fila = `
             <tr data-component-identifier="${componenteID}">
                 <td>${nombreComponente}</td>
                 <td>
-                    <button class="mostrar-componente">Mostrar</button>
+                    <button class="mostrar-componente"> <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+            </svg> mostrar
+        </span></button>
                 </td>
                 <td>
-                    <button class="eliminar-componente">Eliminar</button>
+                    <button class="eliminar-componente eliminar"><svg viewBox="0 0 448 512" class="svgIcon">
+                    <path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
+                    </button>
                 </td>
             </tr>
         `;
         $('#tabla-componentes-ocultos tbody').append(fila);
     });
 }
+
 actualizarTablaComponentesOcultos();
 
 $(document).on("click", ".mostrar-boton-ocultos", function () {
@@ -1204,48 +1211,72 @@ $(document).on("click", ".mostrar-boton-ocultos", function () {
         $formularioOcultos.show();
         actualizarTablaComponentesOcultos();
     }
+    
 });
+
 $(document).on("click", ".cerrar", function () {
     $("#formulario-ocultos").hide();
 });
-/////////////////////////////////
-$(document).on("click", ".ocultar-boton", function () {
-    // Marcar el componente como oculto en el localStorage
-    const componenteID = $(this).closest(".contenido-para-ocultar").data("component-identifier");
-    const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
-    componentesOcultos.push(componenteID);
-    localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
-    alert("Componente ocultado para estudiantes");
-});
-///////////////////////////////////////funcion para volver a mostrar
-$(document).off("click", ".mostrar-componente");
+/*
+function eliminarFila(componenteID) {
+    // Eliminar la fila de la tabla
+    $(`tr[data-component-identifier="${componenteID}"]`).remove();
+}
 
-// Cuando se hace clic en mostrar
-$(document).on("click", ".mostrar-componente", function () {
-    // Eliminar el componente de la lista de ocultos en el localStorage
+$(document).on("click", ".eliminar-componente", function () {
     const componenteID = $(this).closest("tr").data("component-identifier");
+
+    // Eliminar el componente del localStorage si es necesario
+
+    // Llamar a la función para eliminar la fila
+    eliminarFila(componenteID);
+});*/
+function eliminarFila(componenteID) {
+    // Eliminar la fila de la tabla
+    $(`tr[data-component-identifier="${componenteID}"]`).remove();
+
+    // Eliminar el componente del localStorage
     const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
     const index = componentesOcultos.indexOf(componenteID);
     if (index > -1) {
         componentesOcultos.splice(index, 1);
         localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
     }
+}
 
-    // Mostrar el componente y ocultar el botón mostrar
-    const $componente = $(`.contenido-para-ocultar[data-component-identifier="${componenteID}"]`);
-    $componente.show();
-    $(this).hide(); // Ocultar el botón mostrar de la tabla 
-    actualizarTablaComponentesOcultoscacion();
-
+$(document).on("click", ".eliminar-componente", function () {
+    const componenteID = $(this).closest("tr").data("component-identifier");
+    
+    // Llamar a la función para eliminar la fila y la clase del localStorage
+    eliminarFila(componenteID);
 });
 
+$(document).on("click", ".mostrar-componente", function () {
+   const componenteID = $(this).closest("tr").data("component-identifier");
+    const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
+    const index = componentesOcultos.indexOf(componenteID);
 
+    if (index > -1) {
+        componentesOcultos.splice(index, 1);
+        localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
 
+        // Mostrar el componente
+        const $componente = $(`.contenido-para-ocultar[data-component-identifier="${componenteID}"]`);
+        $componente.show();
 
+        // Eliminar la fila de la tabla
+        $(this).closest("tr").remove();}
+});
 
+$(document).ready(function () {
+    const usuarioEsEstudiante = true;
 
+    if (usuarioEsEstudiante) {
+        const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
 
-
-
-
-
+        componentesOcultos.forEach((componenteID) => {
+            const $componente = $(`.contenido-para-ocultar[data-component-identifier="${componenteID}"]`);
+            $componente.hide();
+        });
+    }
+});

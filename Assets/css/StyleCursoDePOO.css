@@ -70,7 +70,15 @@
     top: 300px;
     right: 10px;
 }
-
+.mostrar-boton-ocultos{
+    position: fixed;
+        top: 200px;
+        right: 10px;        
+}
+.mostrar-boton-ocultos::hover{
+    background: #0071e2;
+    color: wheat;
+}
 #formulario {
     position: fixed;
     top: 50%;
@@ -78,12 +86,60 @@
     transform: translate(-50%, -50%);
 }
 #agregarFormulario,
-#formulario .btn {
+#formulario.btn,.mostrar-boton-ocultos {
     border-radius: 50%;
     width: 70px;
     height: 70px;
     padding: 0;
     border: 1px solid #f3f1f1;
+}
+.mostrar-boton-ocultos{
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100px;
+        height: 100px;
+       
+        border: none;
+        background: #333;
+        color: #e5e5e5;
+        font-weight: 600;
+        font-size: 13px;
+        width: 70px;
+            /* Tamaño más pequeño para el botón */
+            height: 70px;
+            /* Tamaño más pequeño para el botón */
+            border-radius:70%;
+            /* Hace que el botón sea redondo */
+           
+                cursor: pointer;
+        
+}
+.mostrar-boton-ocultos::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -10px;
+    top: -10px;
+    border-radius: 50%;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: linear-gradient(35deg, rgb(47, 190, 238), rgb(218, 57, 143), rgb(139, 255, 23));
+    filter: blur(10px);
+}
+.mostrar-boton-ocultos:hover::after {
+    animation: rotcirclegr 1s linear infinite;
+}
+
+@keyframes rotcirclegr {
+    to {
+        transform: rotate(360deg);
+    }
+}
+.mostrar-boton-ocultos:hover {
+    background: linear-gradient(35deg, rgb(47, 190, 238), rgb(218, 57, 143), rgb(139, 255, 23));
+    color: #e5e5e5;
+  
 }
 .custom-button {
     display: flex;
@@ -119,6 +175,7 @@
     animation: rotcirclegr 1s linear infinite;
 }
 
+
 @keyframes rotcirclegr {
     to {
         transform: rotate(360deg);
@@ -136,7 +193,7 @@
 
     width: 400px;
     /* Ancho */
-    height: 400px;
+    height: 500px;
     /* Alto (mismo valor que el ancho para hacerlo cuadrado) */
     padding: 40px;
     margin: 20px auto;
@@ -170,6 +227,7 @@
         box-sizing: border-box;
         box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
         border-radius: 10px;
+
 
 }
 .formulario-flotante {
@@ -244,30 +302,41 @@
 #tituloEditable::placeholder {
     color:white;
 }
-#guardar,#guardarlink {
+#guardar,
+#guardarlink,
+.mostrar-componente {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: 2px solid #24b4fb;
     background-color: #24b4fb;
     border-radius: 0.9em;
     padding: 0.8em 1.2em 0.8em 1em;
     transition: all ease-in-out 0.2s;
     font-size: 16px;
+    display: block;
+        margin: 0 auto;
+    
 }
+/* Estilos para centrar el botón */
 
-#guardar,#guardarlink span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+#guardar,
+#guardarlink,
+.mostrar-componente span {
     color: #fff;
     font-weight: 600;
 }
 
-#guardar, #guardarlink:hover {
+#guardar,
+#guardarlink,
+.mostrar-componente:hover {
     background-color: #0071e2;
 }
-#nuevoEnlaceVideo{
+#nuevoEnlaceVideo,#nuevoTitulo,#nuevaFechaHora{
     position: relative;
-    width: 350px; 
-    height: 100px;
+    width: 250px; 
+    height: 50px;
     background-color: #1b263e;
     border: 2px solid white;
     border-radius: 30px;
@@ -623,7 +692,160 @@
    height: 70px;
       
 }
-body{
- background-color: white !important;
 
+.cerrar {
+    background-color: #f1e6e600;
+    color: #0a0a0a;
+    width: 8.5em;
+    height: 2.9em;
+    border: #121111 0.2em solid;
+    border-radius: 11px;
+    text-align: right;
+    transition: all 0.6s ease;
 }
+
+.cerrar:hover {
+    background-color: #0b0b0b;
+    color: #f6eded
+}
+
+.cerrar svg {
+    width: 1.6em;
+    margin: -0.2em 0.8em 1em;
+    position: absolute;
+    display: flex;
+    transition: all 0.6s ease;
+}
+
+.cerrar:hover svg {
+    transform: translateX(5px);
+}
+
+.text-cerrar {
+    margin: 0 1.5em
+}
+
+.eliminar-componente {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(20, 20, 20);
+    border: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    transition-duration: .3s;
+    overflow: hidden;
+    position: absolute;
+}
+
+.svgIcon {
+    width: 12px;
+    transition-duration: .3s;
+}
+
+.svgIcon path {
+    fill: white;
+}
+
+.eliminar-componente:hover {
+    width: 140px;
+    border-radius: 50px;
+    transition-duration: .3s;
+    background-color: rgb(255, 69, 69);
+    align-items: center;
+}
+
+.eliminar-componente:hover .svgIcon {
+    width: 50px;
+    transition-duration: .3s;
+    transform: translateY(60%);
+}
+
+.eliminar-componente::before {
+    position: absolute;
+    top: -20px;
+    content: "Delete";
+    color: white;
+    transition-duration: .3s;
+    font-size: 2px;
+}
+
+.eliminar-componente:hover::before {
+    font-size: 13px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition-duration: .3s;
+}/*
+.salir {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: rgb(255, 65, 65);
+}
+
+
+.sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sign svg {
+    width: 17px;
+}
+
+.sign svg path {
+    fill: white;
+}
+
+
+.text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+}
+
+
+.salir:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+}
+
+.salir:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+}
+
+.salir:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+}
+
+
+.salir:active {
+    transform: translate(2px, 2px);
+}*/

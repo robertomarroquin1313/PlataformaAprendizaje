@@ -9,7 +9,7 @@
     <title> Curso de Java con Poo</title>
 </head>
 
-<body class="ocul"><div>
+<body class="ocul">
     <nav class="navbar navbar-expand-lg  fixed-top custom-navbar">
         <div class="container">
             <a class="navbar-brand" href="#">
@@ -36,6 +36,19 @@
                             <i class="fas fa-user"></i> Cuenta
                         </a>
                     </li>
+                    <!--<li>
+                        <button class="salir">
+                        
+                            <div class="sign"><svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                                    </path>
+                                </svg></div>
+                        
+                            <div class="text">Logout</div>
+                        </button>
+
+                    </li>-->
                    
                 </ul>
             </div>
@@ -222,12 +235,12 @@
 
 
 <!--componere de los anuncios-->
-    <div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-1" style="display: block;">
+    <div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-1"  data-component-name="Componente anuncios" style="display: block;">
          <div class="container color-div">
            <div class="botones-profesor text-center toggle-buttons" style="display: none">
-            <button class="btn btn-primary ocultar-boton">
-                <i class=" far fa-eye"></i> Ocultar
-            </button>
+        <button class="btn btn-primary ocultar-boton-componentes">
+            <i class="far fa-eye"></i> Ocultar
+        </button>
             <button class="btn btn-danger eliminar">
                 <i class="fas fa-trash-alt"></i> Eliminar
             </button>
@@ -251,9 +264,13 @@
         </div>
         
         <!--componete de la asistencia-->
-        <div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-2" style="display: block;">
+        <div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-2"  data-component-name="Componente asistencia" style="display: block;">
         <div class="container color-div">
+           
             <div class="botones-profesor text-center toggle-buttons" style="display: none">
+                <button class="btn btn-primary ocultar-boton-componentes">
+                    <i class="far fa-eye"></i> Ocultar
+                </button>
             <button class="btn btn-danger eliminar">
                 <i class="fas fa-trash-alt"></i> Eliminar
             </button>
@@ -274,12 +291,12 @@
             </div>
         </div>
             <!--compomente de la lectura-->
-<div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-3" style="display: block;">
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-3" data-component-name="Componente lectura" style="display: block;">
     <div class="container color-div">
         <div class="botones-profesor text-center toggle-buttons" style="display: none">
-            <button class="btn btn-primary ocultar-boton">
-                <i class="far fa-eye"></i> Ocultar
-            </button>
+        <button class="btn btn-primary ocultar-boton-componentes">
+            <i class="far fa-eye"></i> Ocultar
+        </button>
             <button class="btn btn-danger eliminar">
                 <i class="fas fa-trash-alt"></i> Eliminar
             </button>
@@ -326,12 +343,12 @@
 
 
 <!--componete del archivo-->
-<div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-4" style="display: block;">
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-4" data-component-name="Componente archivo" style="display: block;">
 <div class="container color-div">
     <div class="botones-profesor text-center toggle-buttons" style="display: none">
-        <button class="btn btn-primary ocultar-boton"  >
-                <i class=" far fa-eye"></i> Ocultar
-        </button>
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
     <button class="btn btn-danger eliminar">
         <i class="fas fa-trash-alt"></i> Eliminar
     </button>
@@ -359,12 +376,12 @@
 </div>
 
 <!--conponete del foro-->
-<div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-5" style="display: block;">
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-5" data-component-name="Componente foro" style="display: block;">
 <div class="container color-div">
     <div class="botones-profesor text-center toggle-buttons" style="display: none">
-        <button class="btn btn-primary ocultar-boton""  >
-                <i class=" far fa-eye"></i> Ocultar
-        </button>
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
         <button class="btn btn-danger eliminar">
             <i class="fas fa-trash-alt"></i> Eliminar
         </button>
@@ -393,12 +410,13 @@
 </div>
 </div>
 
+
 <!-- Contenido del video -->
-<div class="contenido-para-ocultar componente-comun" data-component-identifier="elemento-6" style="display: block;">
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-6" data-component-name="Componente video" style="display: block;">
     <div class="botones-profesor text-center toggle-buttons">
-        <button class="btn btn-primary ocultar-boton">
-            <i class="far fa-eye"></i> Ocultar
-        </button>
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
         <button class="btn btn-danger eliminar">
             <i class="fas fa-trash-alt"></i> Eliminar
         </button>
@@ -444,13 +462,15 @@
     <br>
     <h3 style="color: white;">Cambiar video o actualizarlo</h3>
     <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
+    <br>
     <input type="text" id="nuevoEnlaceVideo">
     <br>
     <input type="text" id="nuevoTitulo" placeholder="nuevo titulo">
     <br>
     <input type="datetime-local" id="nuevaFechaHora">
 
-    <button id="guardar" class="my-2" >
+   <div class="text-center">
+    <button id="guardar" class="my-2">
         <span>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                 <path fill="none" d="M0 0h24v24H0z"></path>
@@ -458,6 +478,7 @@
             </svg> Cambiar
         </span>
     </button>
+   </div>
 </div>
 <!--para evitar probkemas con los nuevos como los del html del DOM
 <div id="editarVideo2" class="editarVideo text-center" style="display:none">
@@ -506,7 +527,7 @@
     </button>
 </div>-->
         <!--componete del examen-->
-<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-7"  data-component-name="Nombre del Componente examen" style="display: block;">
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-7"  data-component-name="Componente examen" style="display: block;">
     <div class="botones-profesor text-center toggle-buttons" style="display: none">
         
 <button class="btn btn-primary ocultar-boton-componentes">
@@ -551,30 +572,46 @@
            
                 </div>
                 <!--bton del formulari nuevo-->
-                <div class="text-center"> 
-                <button class="btn btn-primary mostrar-boton-ocultos">
-                    <i class="far fa-eye-slash"></i> Mostrar
-                </button>
+              
+                <div >
+                    <button class="btn mostrar-boton-ocultos botones-profesor" style="display: no;">
+                        <i class="far fa-eye-slash"></i> Mostrar
+                    </button>
                 </div>
                 <!--valio verdura, no pode hacer ocultar toca hacer el plan C-->
                 <!--cmponete para ver los ocultos-->
         <div class="formulario-ocultos" id="formulario-ocultos" style="display: none;">
             <h1 class="text-xl-center">Gestión de componentes ocultos</h1>
-            <table id="tabla-componentes-ocultos">
+            <table id="tabla-componentes-ocultos"  class="table">
                 <thead>
                     <tr>
-                        <th>Componente</th>
-                        <th>Mostrar</th>
-                        <th>Eliminar</th>
+                        <th scope="col">Componente</th>
+                        <th scope="col">Mostrar</th>
+                        <th scope="col">Eliminar</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody
+                class="table-group-divider">
+            </tbody>
             </table>
-                    <button class="cerrar">Cerrar</button>
+            <div class="text-center">
+                <button class="cerrar">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+                    
+                    
+                    <div class="text-cerrar">
+                        Cerrar
+                    </div>
+                </button>
+            </div>
+                    
         </div>
             
                
-
 
 <!--bton para agregar componentes -->
 
@@ -628,6 +665,7 @@
 
 
 
+
 <!---
 <div id="formulario"  style="display: none;">
     <button id="foro" class="btn btn-primary   "style="background-color:black; color: white;"><i class="fas fa-comments"></i> Foro</button>
@@ -647,7 +685,7 @@
     
 
 
-    </d>
+
     <!--links de componetes requeridos -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -664,7 +702,7 @@
  
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-</div></body>
+</body>
 <!--pie de pagina -->
 <footer style="background-color:#19191a; padding: 20px 0; color: aliceblue;" >
     <div class="container">
