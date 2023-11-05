@@ -36,6 +36,13 @@
                             <i class="fas fa-user"></i> Cuenta
                         </a>
                     </li>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell"></i>
+                                <span class="notification-badge" style="color: red;">5</span>
+                            </a>
+                        </li>
                     <!--<li>
                         <button class="salir">
                         
@@ -624,7 +631,7 @@
    
     <h3><creacion style="color: white;"></i><span class="sp">creacion de componetes</span></h3>
     <!--botones-->
-    <button id="foro" data-label="Register" class="rainbow-hover">
+    <button id="foro" data-label="Register" class="rainbow-hover text-xl-center">
         <i class="fas fa-comments"></i><span class="sp">foros</span>
     </button>
 
@@ -645,6 +652,7 @@
     <div id="mensaje">
         <h4 id="txt" class="sp"></h4>
     </div>
+    <hr class="sp">
     <div class="container-fluid text-xl-center" id="inputs" >
    
         
@@ -652,7 +660,9 @@
         <br>
         <input type="datetime-local" id="fechaEntrega" placeholder="Fecha de entrega" class="form-control sp bg-dark text-light">
         <br>
-        <input type="text" id="link"  class="sp form-control"  placeholder="Links" >
+        <div class="links-oculto" style="display: block;">
+            <input type="text" id="link" class="sp form-control" placeholder="Links">
+        </div>
         <br>
         
         <button id="guardarCambios" class="btn btn-success" >

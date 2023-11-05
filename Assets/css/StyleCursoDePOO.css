@@ -318,9 +318,6 @@
         margin: 0 auto;
     
 }
-/* Estilos para centrar el botón */
-
-
 #guardar,
 #guardarlink,
 .mostrar-componente span {
@@ -431,10 +428,10 @@
 .sp {
     background: linear-gradient(90deg,
             #866ee7,
-            #ea60da,
-            #ed8f57,
-            #fbd41d,
-            #2cca91);
+            #cf1aba,
+            #e21377,
+            #dc0bce,
+            #db04c2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -849,3 +846,4 @@
 .salir:active {
     transform: translate(2px, 2px);
 }*/
+/*editar bton estilo*/

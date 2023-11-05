@@ -1,41 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
-  <link rel="stylesheet" href="Assets/css/style.css">
-  
-  <title>FREE LEARNING - HOME</title>
+  <title>plataforma de aprendisaje</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet">
+   <link rel="stylesheet" href="Assets/css/IndexStylos.css">
+  <script src="https://kit.fontawesome.com/9b8103ef2f.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
-
 <body>
-  <header>
-    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">Posible logo</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarColor01">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">acerca de </a>
-            </li>
-
-          </ul>
-          <form class="d-flex">
-            <button class="btn btn-secondary my-2 my-sm-0" type="button" ><a href="./Assets/Pages/InicioSesion.html">Iniciar Sesion</a></button>
-
-          </form>
-        </div>
+  <header class="encabezado" id="inicio">
+    <div class="contenido-navegacion">
+      <div class="logo">
+        <h2>ITCA <span>FEDEPAE</span></h2>
       </div>
-    </nav>
+  
+      <nav class="navegacion ocultar">
+        <a href="#inicio">Inicio</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="hamburguesa">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  
+  
+    <img class="encabezado-imagen" src="Assets/img/universiadad.jpg">
+  
+    <div class="contenido-encabezado contenedor">
+      <div class="texto-encabezado">
+        <h1 style="color: black;">Estamos a la <br>
+          vanguardia <br>
+          
+           de la tecnologia</h1>
+      </div>
+  
+      <form class="formulario-encabezado">
+        <h2>Mas informacion sobre las carreras</h2>
+        <div class="input-encabezado">
+          <input type="text" placeholder="Nombre">
+        </div>
+        <div class="input-encabezado">
+          <input type="mail" placeholder="Correo">
+        </div>
+        <div class="input-encabezado">
+          <input type="tel" placeholder="Telefono">
+        </div>
+  
+        <div class="boton-encabezado">
+          <input class="btn azul" type="submit" value="Cotizar">
+        </div>
+      </form>
+    </div>
   </header>
 
-  <br><br><br><br><br><br>
-     <center>Posible carrucel</center>
-</body>
+  
+  <div class="ventajas">
+    <div class="contenido-ventajas contenedor">
+      <div class="ventaja">
+        <i class="fas fa-clock"></i>
+        <h3>Entregas en tiempo y forma</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sit quo voluptatem nostrum quis,
+          voluptatum a. Culpa error eligendi, deleniti aliquam fuga ut harum in numquam dolorum amet possimus
+        </p>
+      </div>
+      <div class="ventaja">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Diseño de interfaces modernas</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sit quo voluptatem nostrum quis,
+          voluptatum a. Culpa error eligendi, deleniti aliquam fuga ut harum in numquam dolorum amet possimus
+        </p>
+      </div>
+      <div class="ventaja">
+        <i class="fas fa-code"></i>
+        <h3>Software de calidad</h3>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsa sit quo voluptatem nostrum quis,
+          voluptatum a. Culpa error eligendi, deleniti aliquam fuga ut harum in numquam dolorum amet possimus
+        </p>
+      </div>
+    </div>
+  </div>
+  
+  <!---
+  <section class="servicios contenedor" id="servicios">
+    <h2>Servicios</h2>
+    <div class="contenido-servicios">
+      <div class="servicio">
+        <i class="fas fa-headphones-alt"></i>
+        <h3>Soporte</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam similique architecto deserunt pariatur, ab
+          soluta sequi voluptatem nostrum debitis rem illo repellendus sint nobis molestias eum vitae earum consequatur
+          dignissimos.</p>
+      </div>
+      <div class="servicio">
+        <i class="fas fa-mobile-alt"></i>
+        <h3>Desarollo movil</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam similique architecto deserunt pariatur, ab
+          soluta sequi voluptatem nostrum debitis rem illo repellendus sint nobis molestias eum vitae earum consequatur
+          dignissimos.</p>
+      </div>
+      <div class="servicio">
+        <i class="fas fa-cogs"></i>
+        <h3>Software personalizable</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam similique architecto deserunt pariatur, ab
+          soluta sequi voluptatem nostrum debitis rem illo repellendus sint nobis molestias eum vitae earum consequatur
+          dignissimos.</p>
+      </div>
+      <div class="servicio">
+        <i class="fas fa-paint-brush"></i>
+        <h3>Diseño web</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam similique architecto deserunt pariatur, ab
+          soluta sequi voluptatem nostrum debitis rem illo repellendus sint nobis molestias eum vitae earum consequatur
+          dignissimos.</p>
+      </div>
+      <div class="servicio">
+        <i class="fas fa-code"></i>
+        <h3>Ingenieria de software</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam similique architecto deserunt pariatur, ab
+          soluta sequi voluptatem nostrum debitis rem illo repellendus sint nobis molestias eum vitae earum consequatur
+          dignissimos.</p>
+      </div>
+      <div class="servicio">
+        <i class="fas fa-database"></i>
+        <h3>Bases de datos</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam similique architecto deserunt pariatur, ab
+          soluta sequi voluptatem nostrum debitis rem illo repellendus sint nobis molestias eum vitae earum consequatur
+          dignissimos.</p>
+      </div>
+    </div>
+  </section>
+-->
 
+  
+
+
+  <div class="container" style="margin-top: 350px;">
+    <div id="slide">
+      <div class="item" style="background-image: url(Assets/img/universiadad.jpg);">
+        <div class="content">
+          <div class="name">Instalaciones del campus</div>
+          <div class="des">Las instalciones del campues son de las mas maodernas</div>
+          <button>Ver mas</button>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(Assets/img/ingenieroC.jpg);">
+        <div class="content">
+          <div class="name">Ingenieria</div>
+          <div class="des">Contamos con las carreras de ingienerias mas demandadas de la region</div>
+          <button>ver mas</button>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(Assets/img/medicina.jpg);">
+        <div class="content">
+          <div class="name">Doctorados en medicina</div>
+          <div class="des">Poseemos las intslciones mas modernas para el estudio de medicina y sus diferentes ramas</div>
+          <button>ver mas</button>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(Assets/img/ing.jpg);">
+        <div class="content">
+          <div class="name">ingeinerias en informatica</div>
+          <div class="des">Las inginerias de informatica que estan cambiando el mundo</div>
+          <button>See more</button>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(Assets/img/meca.jpg);">
+        <div class="content">
+          <div class="name">Mecanica automotriz</div>
+          <div class="des">con las instalciones mas modernas y seguras del pais</div>
+          <button>ver mas</button>
+        </div>
+      </div>
+      <div class="item" style="background-image: url(Assets/img/abo.jpg);">
+        <div class="content">
+          <div class="name">Leyes</div>
+          <div class="des">con las mejores intalciones y profesores en leyes</div>
+          <button>See more</button>
+        </div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+      <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+  </div>
+  <script src="Assets/js/IndexScript.js"></script>
+  <footer class="pie-de-pagina">
+    <div class="contenido-pie contenedor">
+      <div class="redes-sociales">
+     
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+      </div>
+      <div class="enlaces-pie">
+        <a href="#">Términos y condiciones</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Contacto</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>

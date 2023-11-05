@@ -1,3 +1,21 @@
+self.addEventListener('fetch', (event) => {
+  // Usar la función preload para cargar recursos en caché
+  const promise = self.caches.open('my-cache').then((cache) => {
+    return cache.match(event.request);
+  });
+
+  event.respondWith(
+    // Esperar a que la promesa se resuelva antes de responder con el recurso
+    promise.then((response) => {
+      return response || fetch(event.request);
+    })
+  );
+
+  // Asegurarse de que el Service Worker no sea desactivado antes de que se resuelva la promesa
+  event.waitUntil(promise);
+});
+
+
 ///funciones para cuando seleccione un componete sepa cual es//
 var mensajes = {
     "foro": "Seleccionaste la opción 'Foro'.",
@@ -93,7 +111,6 @@ $(document).ready(function () {
 ///funcion de agregar csas dentro del div neuvsos componetes
 ///funcines dentro del froumulario flotante  desde la creacion hasta la edicion o personalizacion
 /*
-
 $(document).ready(function () {
     var formularioVisible = false;
     var componenteVisible = false;
@@ -449,6 +466,7 @@ ultimoComponente++;
 });*/
 
 ///funcin para crear componentes. tenia problemas se me hixo un desorden y me toco reorganizar todo es el de abajo me creaba componenetes extras era por el control de coponentes.
+
 $(document).ready(function () {
     var formularioVisible = false;
     var componenteVisible = false;
@@ -753,6 +771,328 @@ $(document).ready(function () {
     
 
 });
+/*
+$(document).ready(function () {
+    var formularioVisible = false;
+    var componenteVisible = false;
+    var ultimoComponente = 8; // Inicializa el contador para aumentar los ID de los componentes nuevos
+    var tipoComponenteActual = null; // Variable para rastrear el tipo de componente seleccionado
+
+    // Obtener el tipo de usuario de la cookie
+    const tipoUsuario = getCookie("tipoUsuario");
+
+    function cargarComponentesDesdeLocalStorage() {
+        var componentesGuardados = JSON.parse(localStorage.getItem('componentes')) || [];
+        componentesGuardados.forEach(function (componenteHTML) {
+            var componente = $(componenteHTML);
+            var botonesProfesor = componente.find('.botones-profesor');
+
+            if (tipoUsuario !== 'profesor') {
+                botonesProfesor.hide();
+            }
+
+            $("#contenedorDivs").append(componente);
+        });
+    }
+
+    cargarComponentesDesdeLocalStorage();
+
+    $("#agregarFormulario").click(function () {
+        formularioVisible = !formularioVisible;
+        if (formularioVisible) {
+            $("#formularioFlotante").show();
+            $("#tituloEditable, #fechaEntrega, #guardarCambios, #txt").show();
+            componenteVisible = false;
+        } else {
+            $("#formularioFlotante").hide();
+            $("#tituloEditable, #fechaEntrega, #guardarCambios, #txt").hide();
+        }
+        tipoComponenteActual = null; // Restablecer el tipo de componente
+    });
+
+    $("#foro, #videos, #examen, #lectura, #buzon").click(function () {
+        $(".boton-tipo").removeClass("boton-seleccionado");
+        $(this).addClass("boton-seleccionado");
+
+        if (!componenteVisible) {
+            componenteVisible = true;
+            $("#tituloEditable, #fechaEntrega, #guardarCambios, #txt").show();
+            tipoComponenteActual = $(this).attr("id"); // Almacena el tipo de componente actual
+        }
+    });
+
+    $("#guardarCambios").click(function () {
+        var titulo = $("#tituloEditable").val();
+        var fechaEntrega = $("#fechaEntrega").val();
+        var link = $("#link").val();
+        var linkPagina = $("#link").val();
+        var nuevoComponente = "";
+
+        if (tipoComponenteActual === "videos") {
+            nuevoComponente = `
+                <!-- Contenido del video -->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-6" data-component-name="Componente video" style="display: block;">
+    <div class="botones-profesor text-center toggle-buttons">
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <button class="btn btn-success editar">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="elemento-contenedor">
+        <div class="video-container">
+            <div class="container color-div">
+                <div class="container img-large">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                            <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+                        </div>
+                    </div>
+                </div>
+                 <div class="componente videos">
+                                <h3 contenteditable="true">${titulo}</h3>
+                                <p>Fecha de entrega: ${fechaEntrega}</p>
+                            </div>
+                <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+                    <div class="container text-center">
+                        <div id="videoContainer">
+                            ${link}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+            `;
+        } else if (tipoComponenteActual === "foro") {
+            nuevoComponente = `
+               
+<!--conponete del foro-->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-5" data-component-name="Componente foro" style="display: block;">
+<div class="container color-div">
+     <div class="botones-profesor text-center toggle-buttons">
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <button class="btn btn-success">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="container img-large ">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                <img src="/Assets/img/foro.png" alt="Tu Imagen" class="img-fluid img-large">
+            </div>
+        </div>
+    </div>
+     <div class="componente videos">
+                                <h3 contenteditable="true">${titulo}</h3>
+                                <p>Fecha de entrega: ${fechaEntrega}</p>
+                            </div>
+    <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+
+        <a href="/Assets/Pages/PaginasCursoPoo/foro.html" class="btn btn-primary">
+            <i class="fas fa-comments"></i> Foro
+        </a>
+
+
+        <button id="checkboxButton" class="btn btn-checkbox">
+            Marcar como hecho <i class="fas fa-check-circle"></i>
+        </button>
+    </div>
+</div>
+</div>
+            `;
+        }
+        else if (tipoComponenteActual === "examen") {
+            nuevosComponentes =
+                `
+                 <!--componete del examen-->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-7"  data-component-name="Componente examen" style="display: block;">
+    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        
+<button class="btn btn-primary ocultar-boton-componentes">
+    <i class="far fa-eye"></i> Ocultar
+</button>
+
+
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <a class="btn btn-success" href="/Assets/Pages/PaginasCursoPoo/examenJava.html">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </a>
+
+    </div>
+            <div class="container color-div">
+                <div class="container img-large ">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                            <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+                        </div>
+                    </div>
+                </div>
+                <div class="componente videos">
+                                <h3 contenteditable="true">${titulo}</h3>
+                                <p>Fecha de entrega: ${fechaEntrega}</p>
+                            </div>
+                <div class=" container text-center">
+                    <h2 style="color: red;"> Examen sumativo 1</h2>
+
+                </div>
+                <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+                    <a href="/Assets/Pages/PaginasCursoPoo/examenJava.html" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> Examen
+                    </a>
+                        
+                        
+                        <button  id="checkboxButton" class="btn btn-checkbox" href="/Assets/Pages/PaginasCursoPoo/examenJava.html">
+                            Marcar como hecho <i class="fas fa-check-circle"></i>
+                        </button>
+            
+                   
+                    </div>
+            
+                </div>
+           
+                </div>
+            `;
+            
+        } else if (tipoComponenteActual === "lectura") {
+            nuevosComponentes =
+                `
+              
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-3" data-component-name="Componente lectura" style="display: block;">
+    <div class="container color-div">
+        <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        <button class="btn btn-primary ocultar-boton-componentes">
+            <i class="far fa-eye"></i> Ocultar
+        </button>
+            <button class="btn btn-danger eliminar">
+                <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+            <button class="btn btn-success editar-enlace">
+                <i class="fas fa-pencil-alt"></i> Modificar
+            </button>
+        </div>
+        <div class="container img-large">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                    <img src="/Assets/img/Lectura Principal.png" alt="Tu Imagen" class="img-fluid img-large">
+                </div>
+            </div>
+        </div>
+         <div class="componente videos">
+                                <h3 contenteditable="true">${titulo}</h3>
+                                <p>Fecha de entrega: ${fechaEntrega}</p>
+                            </div>
+        <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+            <a href="${linkPagina}" class="btn btn-primary lectura-link" target="_blank">
+                <i class="fas fa-question-circle"></i> Lectura
+            </a>
+        </div>
+    </div>
+</div>
+
+            `;
+           
+        } else if (tipoComponenteActual === "buzon") {
+            nuevosComponentes =
+                `
+               
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-4" data-component-name="Componente archivo" style="display: block;">
+<div class="container color-div">
+    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
+    <button class="btn btn-danger eliminar">
+        <i class="fas fa-trash-alt"></i> Eliminar
+    </button>
+        <button class="btn btn-success" onclick="modificarElemento2(this)">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="container img-large ">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+            </div>
+        </div>
+    </div>
+     <div class="componente videos">
+                                <h3 contenteditable="true">${titulo}</h3>
+                                <p>Fecha de entrega: ${fechaEntrega}</p>
+                            </div>
+<div class="white-div mb-4 d-flex justify-content-between align-items-center">
+<a href="#" class="btn btn-primary">
+    <i class="fas fa-file"></i> subir archivo
+</a>
+
+    <button id="checkboxButton" class="btn btn-checkbox">
+        Marcar como hecho <i class="fas fa-check-circle"></i>
+    </button>
+</div>
+</div>
+</div>
+
+            `;
+            
+        }
+        tipoComponenteActual = null;
+
+        // Agregar el nuevo componente al contenedor
+        $("#contenedorDivs").append(nuevoComponente);
+        guardarComponenteEnLocalStorage(nuevoComponente);
+        ultimoComponente++;
+        $("#tituloEditable").val("");
+        $("#fechaEntrega").val("");
+        $("#formularioFlotante").hide();
+        formularioVisible = false;
+        componenteVisible = false;
+    });
+
+    $(document).on("click", ".eliminar", function () {
+        if (window.confirm("¿Seguro que deseas eliminar este componente?")) {
+            $(this).closest(".contenido-para-ocultar").remove();
+            const componentesGuardados = JSON.parse(localStorage.getItem('componentes')) || [];
+            const componenteID = $(this).closest(".contenido-para-ocultar").data("component-identifier");
+            const nuevosComponentes = componentesGuardados.filter((componente) => !componente.includes(componenteID));
+            localStorage.setItem('componentes', JSON.stringify(nuevosComponentes));
+        }
+    });
+
+    function guardarComponenteEnLocalStorage(componente) {
+        var componentesGuardados = JSON.parse(localStorage.getItem('componentes')) || [];
+        componentesGuardados.push(componente);
+        localStorage.setItem('componentes', JSON.stringify(componentesGuardados));
+    }
+
+    function getCookie(name) {
+        const cookieName = name + "=";
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            let cookie = cookies[i];
+            while (cookie.charAt(0) === ' ') {
+                cookie = cookie.substring(1);
+            }
+            if (cookie.indexOf(cookieName) === 0) {
+                return cookie.substring(cookieName.length, cookie.length);
+            }
+        }
+        return "";
+    }
+});*/
+
 
 ////////////////////////////////////////////////////fin de la fucionde crear compnente///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1280,3 +1620,17 @@ $(document).ready(function () {
         });
     }
 });
+//////////////////////////////////////////////////funcion del formilariode aagregar para esconde el input de links /////////////////////
+/*$(document).ready(function () {
+    $("#videos, #lectura").click(function () {
+        $(".links-oculto").show();
+    });
+
+    $("#foro, #examen, #buzon").click(function () {
+        $(".links-oculto").hide();
+    });
+});*/
+
+
+
+
