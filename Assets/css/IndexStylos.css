@@ -10,7 +10,7 @@
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    /* scroll-behavior: smooth; */
+
 }
 
 body {
@@ -99,18 +99,19 @@ a {
     }
 }
 
-/*encabezado*/
+
 /* Encabezado */
 
 
 .encabezado-imagen {
     width: 100%;
-    height: auto;
+    height: 100vh;
     max-height: 100vh;
     display: block;
     background-repeat: no-repeat;
     background-size: cover;
-  background-position: center center;
+    background-position: center top;
+
 background-attachment: fixed;
     z-index: 1;
 
@@ -130,10 +131,11 @@ background-attachment: fixed;
     top: 0;
     left: 0;
     z-index: -1;
+    display: block;
   
 }
 
-/* Resto de tus estilos */
+
 
 .formulario-encabezado {
     position: absolute;
@@ -179,6 +181,7 @@ background-attachment: fixed;
     color: var(--azulClaro);
 }
 
+
 .contenido-navegacion {
     display: flex;
     align-items: center;
@@ -189,13 +192,15 @@ background-attachment: fixed;
     top: 0;
     width: 100%;
     z-index: 3;
+    height: 70px;
+   
 }
 
 .navegacion {
     background-color: var(--blanco);
     position: absolute;
     left: 0;
-    top: 70px;
+    top: 40px;
     width: 100%;
     animation: desplazamiento .5s ease-in-out;
 }
@@ -205,20 +210,20 @@ background-attachment: fixed;
         display: inline;
     }
 }
-
 .navegacion a {
     display: block;
     font-size: 2rem;
     padding: 1.1rem;
     color: var(--oscuro);
     text-decoration: none;
-    transition: background-color .3s ease-in-out;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
 
 }
 
 .navegacion a:hover {
-    background-color: var(--azulClaro);
-    color: var(--blanco);
+    border-color: var(--azulClaro);
+    color: var(--azulClaro);
 }
 
 @media(min-width: 768px) {
@@ -271,8 +276,13 @@ background-attachment: fixed;
 .texto-encabezado h1 {
     font-size: 3rem;
     text-align: center;
-    color: var(--blanco);
+
     padding-top: 8rem;
+   
+            color: var(--blanco);
+            text-shadow: 10px 5px 9px rgba(0, 0, 0, 0.5);
+    
+        
 }
 
 @media(min-width: 768px) {
@@ -357,7 +367,7 @@ background-attachment: fixed;
 /*Seccion servicios*/
 .servicios {
     
-    background-color: white;
+    background-color: transparent;
    
 
    
@@ -366,7 +376,7 @@ background-attachment: fixed;
 .servicios h2 {
     font-size: 5rem;
     text-align: center;
-    color: var(--azulClaro);
+    color: var(--blanco);
 }
 
 @media(min-width: 768px) {
@@ -401,12 +411,13 @@ background-attachment: fixed;
 
 .servicio h3 {
     font-size: 2.2rem;
-    color: var(--azulOscuro);
+    color: var(--blanco);
 }
 
 .servicio p {
     font-size: 1.8rem;
     text-align: center;
+    color: var(--blanco);
 }
 
 @media(min-width: 768px) {
@@ -427,28 +438,24 @@ background-attachment: fixed;
 }
 /*////////////////////*/
 
-
 .container {
     position: relative;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 1300px;
-    height: 600px;
-    padding: 50px;
-    background-color: #f5f5f5;
-   
-
+    max-width: 100%;
+    width: 900px;
+    height: 500px;
+    background-color: transparent;
 }
 
 #slide {
     width: max-content;
     margin-top: 50px;
 }
-
 .item {
-    width: 200px;
-    height: 300px;
+    width: 250px;
+    height: 350px;
     background-position: 50% 50%;
     display: inline-block;
     transition: 0.5s;
@@ -458,9 +465,12 @@ background-attachment: fixed;
     top: 50%;
     transform: translate(0, -50%);
     border-radius: 20px;
-    box-shadow: 0 30px 50px #505050;
+    margin-right: 20px;
 }
 
+.item:last-child {
+    margin-right: 0;
+}
 .item:nth-child(1),
 .item:nth-child(2) {
     left: 0;
@@ -596,10 +606,46 @@ footer {
     
 }
 .name {
-    color: black;
+   
+    font-family: var(--parrafos);
+    
+    filter: blur(50px);
+   
 }
 .des{
-    color: black;
+   
     font-weight: bold;
     font-size: 25px;
+    font-family: var(--parrafos);
+    filter: blur(50px);
+   
 }
+.name,
+.des {
+    color: white;
+    text-shadow: 10px 5px 9px rgba(0, 0, 0, 0.5);
+}
+
+.item img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    
+    display: block;
+       
+        margin: 0 auto;object-fit: cover;
+        border-radius: 20px;
+}
+.reveal{
+ 
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+.reveal.active{
+
+    transform: translateY(0px);
+        opacity: 1;
+}
+
