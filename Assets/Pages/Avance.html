@@ -4,1423 +4,815 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/9b8103ef2f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="/Assets/css/avance.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="/Assets/js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="/Assets/css/swiper-bundle.min.css">
+    <title>Cursos</title>
 </head>
 
 <body>
-  
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-book"></i> Cursos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-chalkboard"></i> Más Cursos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-user"></i> Cuenta
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<header class="encabezado" id="inicio">
+    <div class="contenido-navegacion">
+        <div class="logo">
+            <h2 style="color: black;">ITCA <span>FEDEPAE</span></h2>
         </div>
-    </nav>
-    <br>
-    <br>
-    <br>
-
-
-<!----
-<di
-v class="contenedor-fluid">
-    <div class="card">
-        <div class="card-header">
-            <p><h1 class="text-xl-center">Cursos Ingresados recientemente</h1></p>
-        </div>
-        <div class="card-body">
-            <div class="contenedor-cards-fluid">
-                <div id="carouselExample" class="carousel slide">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <center>
-                                <div class="cards-wrapper">
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="card" id="re">
-                                                <svg class="App1-logo" viewBox="0 0 841.9 595.3"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <svg class="App1-logo" viewBox="0 0 841.9 595.3" xmlns="http://www.w3.org/2000/svg">
-                                                        <g fill="#61DAFB">
-                                                            <path
-                                                                d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16-13 24-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6zM320.8 78.4z">
-                                                            </path>
-                                                            <circle r="45.7" cy="296.5" cx="420.9"></circle>
-                                                            <path d="M520.5 78.1z"></path>
-                                                        </g>
-                                                    </svg>
-                                                </svg>
-                                                <div class="header">Bienvenido  a React</div>
-                                            <button class="cartBtn">
-                                                <br>
-                                                <svg class="cart" fill="white" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
-                                                    </path>
-                                                </svg>
-                                                Comprar
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" class="product">
-                                                    <path
-                                                        d="M211.8 0c7.8 0 14.3 5.7 16.7 13.2C240.8 51.9 277.1 80 320 80s79.2-28.1 91.5-66.8C413.9 5.7 420.4 0 428.2 0h12.6c22.5 0 44.2 7.9 61.5 22.3L628.5 127.4c6.6 5.5 10.7 13.5 11.4 22.1s-2.1 17.1-7.8 23.6l-56 64c-11.4 13.1-31.2 14.6-44.6 3.5L480 197.7V448c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64V197.7l-51.5 42.9c-13.3 11.1-33.1 9.6-44.6-3.5l-56-64c-5.7-6.5-8.5-15-7.8-23.6s4.8-16.6 11.4-22.1L137.7 22.3C155 7.9 176.7 0 199.2 0h12.6z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card" id="js">
-                                                <svg class="App2-logo" xmlns="http://www.w3.org/2000/svg" aria-label="JavaScript" role="img" viewBox="0 0 512 512">
-                                                    <rect width="512" height="512" rx="15%" fill="#f7df1e"></rect>
-                                                    <path fill="#25241c"
-                                                        d="M324 370c10 17 24 29 47 29c20 0 33-10 33 -24c0-16 -13 -22 -35 -32l-12-5c-35-15 -58 -33 -58 -72c0-36 27 -64 70 -64c31 0 53 11 68 39l-37 24c-8-15 -17 -21 -31 -21c-14 0-23 9 -23 21c0 14 9 20 30 29l12 5c41 18 64 35 64 76c0 43-34 67 -80 67c-45 0-74 -21 -88 -49zm-170 4c8 13 14 25 31 25c16 0 26-6 26 -30V203h48v164c0 50-29 72 -72 72c-39 0-61 -20 -72 -44z">
-                                                    </path>
-                                                </svg>
-                                                <div class="header">
-                                                    <center>Bienvenido<br> JavaScript</center>
-                                                </div>
-                                                <button class="App2-button" ><a style="color: yellow;" href="/Assets/Pages/CursoPooJava.html">Empezar ahora</a></button>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                        <div class="card" id="c">
-                                            <svg xml:space="preserve" viewBox="0 0 306 344.35" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                xmlns="http://www.w3.org/2000/svg" id="Layer_1" version="1.1" class="App3-logo">
-                                                <path d="M302.107,258.262c2.401-4.159,3.893-8.845,3.893-13.053V99.14c0-4.208-1.49-8.893-3.892-13.052L153,172.175
-                                        	L302.107,258.262z" fill="#00599C"></path>
-                                                <path d="M166.25,341.193l126.5-73.034c3.644-2.104,6.956-5.737,9.357-9.897L153,172.175L3.893,258.263
-                                        	c2.401,4.159,5.714,7.793,9.357,9.896l126.5,73.034C147.037,345.401,158.963,345.401,166.25,341.193z" fill="#004482">
-                                                </path>
-                                                <path d="M302.108,86.087c-2.402-4.16-5.715-7.793-9.358-9.897L166.25,3.156c-7.287-4.208-19.213-4.208-26.5,0
-                                        	L13.25,76.19C5.962,80.397,0,90.725,0,99.14v146.069c0,4.208,1.491,8.894,3.893,13.053L153,172.175L302.108,86.087z"
-                                                    fill="#659AD2"></path>
-                                                <g>
-                                                    <path d="M153,274.175c-56.243,0-102-45.757-102-102s45.757-102,102-102c36.292,0,70.139,19.53,88.331,50.968
-                                        		l-44.143,25.544c-9.105-15.736-26.038-25.512-44.188-25.512c-28.122,0-51,22.878-51,51c0,28.121,22.878,51,51,51
-                                        		c18.152,0,35.085-9.776,44.191-25.515l44.143,25.543C223.142,254.644,189.294,274.175,153,274.175z" fill="#131c25">
-                                                    </path>
-                                                </g>
-                                                <g>
-                                                    <polygon points="255,166.508 243.666,166.508 243.666,155.175 232.334,155.175 232.334,166.508 221,166.508 
-                                        		221,177.841 232.334,177.841 232.334,189.175 243.666,189.175 243.666,177.841 255,177.841" fill="#131c25"></polygon>
-                                                </g>
-                                                <g>
-                                                    <polygon points="297.5,166.508 286.166,166.508 286.166,155.175 274.834,155.175 274.834,166.508 263.5,166.508 
-                                        		263.5,177.841 274.834,177.841 274.834,189.175 286.166,189.175 286.166,177.841 297.5,177.841" fill="#131c25">
-                                                    </polygon>
-                                                </g>
-                                            </svg>
-                                            <div class="header">Bienvenidoa C++</div>
-                                            
-                                            <button class="cartBtn2">
-                                                <svg class="cart" fill="white" viewBox="0 0 576 512" height="1em" xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z">
-                                                    </path>
-                                                </svg>
-                                                Comprar
-                                                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512" class="product">
-                                                    <path
-                                                        d="M211.8 0c7.8 0 14.3 5.7 16.7 13.2C240.8 51.9 277.1 80 320 80s79.2-28.1 91.5-66.8C413.9 5.7 420.4 0 428.2 0h12.6c22.5 0 44.2 7.9 61.5 22.3L628.5 127.4c6.6 5.5 10.7 13.5 11.4 22.1s-2.1 17.1-7.8 23.6l-56 64c-11.4 13.1-31.2 14.6-44.6 3.5L480 197.7V448c0 35.3-28.7 64-64 64H224c-35.3 0-64-28.7-64-64V197.7l-51.5 42.9c-13.3 11.1-33.1 9.6-44.6-3.5l-56-64c-5.7-6.5-8.5-15-7.8-23.6s4.8-16.6 11.4-22.1L137.7 22.3C155 7.9 176.7 0 199.2 0h12.6z">
-                                                    </path>
-                                                </svg>
-                                            </button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </center>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="cards-wrapper">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/Assets/img/curso1.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="cards-wrapper">
-                                <div class="card" style="width: 18rem;">
-                                    <img src="/Assets/img/curso1.jpg" class="card-img-top" alt="...">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make
-                                            up the bulk of the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
-                </div>
-            </div>
+        <nav class="navegacion ocultar">
+           
+            <a href="/index.html">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#contacto">Contacto</a>
+            <a href="/Assets/Pages/InicioSesion.html">Cerrar sesión</a>
+        </nav>
+        <div class="hamburguesa">
+            <span></span><span></span><span></span>
         </div>
     </div>
-</di>
+</header>
 
-    <br><br><br>
-
-    <div class="contenedor-fluit">
-        <div class="card">
-            <div class="card-header">
-                <P>Cursos Ingresados recientemente</P>
-            </div>
-            <div class="card-body">
-                <div class="multiple-card-slider">
-                    <div id="carouselExampleControls" class="carousel" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 1</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 2</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 3</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 4</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 5</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 6</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 7</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 8</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Card title 9</h5>
-                                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                                            the card's content.</p>
-                                        <a href="#" class="btn btn-primary">Learn More</a>
-                                    </div>
-                                </div>
-                            </div>
+     
+    <!--/////////////////////////////////////////////////////////////////-->
+    <div class="content-text" style="padding-top: 200px;">
+        <p>Mis cursos</p>
+    </div>
+    <section class="container">
+        <div class="card__container swiper">
+            <div class="card__content">
+                <div class="swiper-wrapper">
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/jscript.webp" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
                         </div>
-                        <button class="carousel-control-prev btn-black" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de JavaScript</h3>
+                            <p class="card__description">
+                                Curso de javScript profecional
+                            </p>
+                            <div class="card__indicator">
+                                <span class="card__indicator-amount" style="color: white;">progreso</span> 90% /
+                                <span class="card__indicator-percentage" style="color: white;">100%</span>
+                            </div>
+                            <div class="card__progress">
+                                <progress max="100" value="90" style="width: 100%; height: 8px; background: #fff; border: none;"></progress>
+                            </div>
+                            <br>
+                            <a href="/Assets/Pages/CursoPooJava.html" class="card__button" >Continuar</a>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide" >
+                        <div class="card__image">
+                            <img src="/Assets/img/java__poo.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de JAVA</h3>
+                            <p class="card__description">
+                              Curso de java con poo.
+                            </p>
+                            <br>
+                            <div class="card__indicator">
+                                <span class="card__indicator-amount" style="color: white;">progreso</span> 45% /
+                                <span class="card__indicator-percentage" style="color: white;">100%</span>
+                            </div>
+                           
+                            <div class="card__progress">
+                                <progress max="100" value="40" style="width: 100%; height: 8px; background: #fff; border: none;"></progress>
+                            </div>
+                            <br>
+                         
+                           
+    
+                            <a href="/Assets/Pages/CursoPooJava.html" class="card__button">Continuar</a>
+                        </div>
+                        
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/ruby.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Ruby</h3>
+                            <p class="card__description">
+                               Curso avanzado de Ruby
+                            </p>
+                            <br>
+                            <br>
+                            <div class="card__indicator">
+                                <span class="card__indicator-amount" style="color: white;">progreso</span> 100% /
+                                <span class="card__indicator-percentage" style="color: white;">100%</span>
+                            </div>
+                            <div class="card__progress">
+                                <progress max="100" value="100" style="width: 100%; height: 8px; background: #fff; border: none;"></progress>
+                            </div>
+                            <br>
+                         
+    
+                            <a href="#" class="card__button">Cntinuar</a>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/sql.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de SQL </h3>
+                            <p class="card__description">
+                               Curso de SQL avanzador para estudiantes.
+                            </p>
+                            <div class="card__indicator">
+                                <span class="card__indicator-amount" style="color: white;">progreso</span> 45% /
+                                <span class="card__indicator-percentage" style="color: white;">100%</span>
+                            </div>
+                            <div class="card__progress">
+                                <progress max="100" value="40" style="width: 100%; height: 8px; background: #fff; border: none;"></progress>
+                            </div>
+                            <br>
+    
+                            <a href="#" class="card__button">Continuar</a>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/c.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name"> Curso de C#</h3>
+                            <p class="card__description">
+                                Curso para principiantes de c#
+                            </p>
+                            <br>
+                            <div class="card__indicator">
+                                <span class="card__indicator-amount" style="color: white;">progreso</span> 70% /
+                                <span class="card__indicator-percentage" style="color: white;">100%</span>
+                            </div>
+                            <div class="card__progress">
+                                <progress max="100" value="70" style="width: 100%; height: 8px; background: #fff; border: none;"></progress>
+                            </div>
+                            <br>
+    
+                            <a href="#" class="card__button">Continuar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+    
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
+            </div>
+    
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <!--segun para la venta -->
+    <div class="content-text">
+        <p>Más Contenido Similar</p>
+    </div>
+
+
+    <section class="container reveal" >
+        <div class="card__container swiper">
+            <div class="card__content">
+                <div class="swiper-wrapper">
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/python.png" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Python</h3>
+                          
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                    <div style="text-align: center;">
+                        <button class="Btn-pre" >
+                            <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                <path
+                                    d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                </path>
+                            </svg>
+                            GO PREMIUM
                         </button>
-                        <button class="carousel-control-next btn-black" type="button" data-bs-target="#carouselExampleControls"
-                            data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-
                     </div>
+
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/excel.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Excel</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                            
+                            
+    
+                            
+    
+    
+    
+                            
+                        </div>
+    
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/ruby.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Ruby</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/go.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de GO </h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/php.png" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name"> Curso de PHP</h3>
+                            <br>
+                            <br>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-
             </div>
-        </div>
-    </div>*-->
-    <div class="card">
-        <div class="card__wrapper">
-            <div class="card___wrapper-acounts">
-                <div class="card__score">+3</div>
-                <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                        <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                        <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                        <path fill="#393c54"
-                            d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                        </path>
-                        <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                        <path fill="#00adfe"
-                            d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                        </path>
-                        <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z"></path>
-                        <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                        <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                        <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                            d="m64 83v12"></path>
-                        <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                        <path fill="#ffd8c9"
-                            d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                        <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                            d="m64 64.75v6.5"></path>
-                        <path fill="#515570"
-                            d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                        </path>
-                        <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                        <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                        <path opacity=".7" fill="#ff8475"
-                            d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z"></path>
-                        <path opacity=".7" fill="#f85565"
-                            d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z"></path>
-                        <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                        <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                            d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                        <path
-                            style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                            d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                        <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                        <g stroke-linecap="round" fill="none">
-                            <path stroke-linejoin="round" stroke="#515570" d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                            </path>
-                            <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                            <path stroke-miterlimit="10" stroke="#f85565"
-                                d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                        </g>
-                    </svg></div>
-                <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                        <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                        <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                        <path fill="#7f3838"
-                            d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"></path>
-                        <path opacity=".4" fill="#393c54"
-                            d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                        </path>
-                        <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                        <path fill="#4bc190"
-                            d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                        </path>
-                        <path opacity=".3" fill="#356cb6"
-                            d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                        </path>
-                        <path opacity=".3" fill="#356cb6"
-                            d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"></path>
-                        <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                        <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                            d="m64 88.75v9.75"></path>
-                        <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                        <path fill="#ffd8c9"
-                            d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                        <path fill="#bc5b57"
-                            d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                        </path>
-                        <path
-                            style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                            d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                        <path
-                            style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                            d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                        <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                        <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                        <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42"></ellipse>
-                        <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58"></ellipse>
-                        <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                            <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                            <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                            <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                        </g>
-                        <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                        <path fill="#f85565"
-                            d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                        </path>
-                    </svg></div>
+    
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
             </div>
-            <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20"
-                    fill="none">
-                    <g fill="#000">
-                        <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                        <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                        </path>
-                        <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                    </g>
-                </svg></div>
+    
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
-        <br>
-        <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-        <div class="card__title">Curso de Java</div>
-       
-        <div class="card__subtitle">En este curso se arendera java con POO.</div>
-        <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                class="card__indicator-percentage">De 100%</span></div>
-        <div class="card__progress"><progress max="100" value="40"></progress>
-        <div class="txt-center">
-            <button>empezar</button>
-        </div>
-
-        </div>
+    </section>
+    <div class="content-text reveal">
+        <p>Cursos recomendados para ti</p>
     </div>
-
-<div class="carousel-container">
-    <div class="carousel">
-        <div class="card"> <div class="card">
-            <div class="card__wrapper">
-                <div class="card___wrapper-acounts">
-                    <div class="card__score">+</div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                            <path fill="#393c54"
-                                d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                            <path fill="#00adfe"
-                                d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                            </path>
-                            <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z"></path>
-                            <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                            <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 83v12"></path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 64.75v6.5"></path>
-                            <path fill="#515570"
-                                d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                            </path>
-                            <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                            <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                            <path opacity=".7" fill="#ff8475"
-                                d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z"></path>
-                            <path opacity=".7" fill="#f85565"
-                                d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                            <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                            <g stroke-linecap="round" fill="none">
-                                <path stroke-linejoin="round" stroke="#515570" d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                </path>
-                                <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                    d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                <path stroke-miterlimit="10" stroke="#f85565"
-                                    d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                            </g>
-                        </svg></div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                            <path fill="#7f3838"
-                                d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"></path>
-                            <path opacity=".4" fill="#393c54"
-                                d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                            <path fill="#4bc190"
-                                d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"></path>
-                            <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 88.75v9.75"></path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path fill="#bc5b57"
-                                d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                            </path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                            <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                            <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42"></ellipse>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58"></ellipse>
-                            <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                            </g>
-                            <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                            <path fill="#f85565"
-                                d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                            </path>
-                        </svg></div>
+    <section class="container reveal" >
+        <div class="card__container swiper">
+            <div class="card__content">
+                <div class="swiper-wrapper">
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/python.png" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Python</h3>
+    
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+    
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/excel.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Excel</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+                        </div>
+    
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/ruby.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Ruby</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/go.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de GO </h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/php.png" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name"> Curso de PHP</h3>
+                            <br>
+                            <br>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
-                <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20"
-                        fill="none">
-                        <g fill="#000">
-                            <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                            <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                            </path>
-                            <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                        </g>
-                    </svg></div>
             </div>
-            <br>
-            <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-            <div class="card__title">Curso de Java</div>
-        
-            <div class="card__subtitle">En este curso se arendera java con POO.</div>
-            <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                    class="card__indicator-percentage">De 100%</span></div>
-            <div class="card__progress"><progress max="100" value="40"></progress>
-                <div class="txt-center">
-                    <button>empezar</button>
-                </div>
-        
+    
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
             </div>
+    
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
- </div>
-        <div class="card"> <div class="card">
-            <div class="card__wrapper">
-                <div class="card___wrapper-acounts">
-                    <div class="card__score">+2k</div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                            <path fill="#393c54"
-                                d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                            <path fill="#00adfe"
-                                d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                            </path>
-                            <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z"></path>
-                            <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                            <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 83v12"></path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 64.75v6.5"></path>
-                            <path fill="#515570"
-                                d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                            </path>
-                            <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                            <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                            <path opacity=".7" fill="#ff8475"
-                                d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z"></path>
-                            <path opacity=".7" fill="#f85565"
-                                d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                            <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                            <g stroke-linecap="round" fill="none">
-                                <path stroke-linejoin="round" stroke="#515570" d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                </path>
-                                <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                    d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                <path stroke-miterlimit="10" stroke="#f85565"
-                                    d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                            </g>
-                        </svg></div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                            <path fill="#7f3838"
-                                d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"></path>
-                            <path opacity=".4" fill="#393c54"
-                                d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                            <path fill="#4bc190"
-                                d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"></path>
-                            <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 88.75v9.75"></path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path fill="#bc5b57"
-                                d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                            </path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                            <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                            <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42"></ellipse>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58"></ellipse>
-                            <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                            </g>
-                            <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                            <path fill="#f85565"
-                                d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                            </path>
-                        </svg></div>
-                </div>
-                <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20"
-                        fill="none">
-                        <g fill="#000">
-                            <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                            <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                            </path>
-                            <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                        </g>
-                    </svg></div>
-            </div>
-            <br>
-            <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-            <div class="card__title">Curso de Java</div>
-        
-            <div class="card__subtitle">En este curso se arendera java con POO.</div>
-            <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                    class="card__indicator-percentage">De 100%</span></div>
-            <div class="card__progress"><progress max="100" value="40"></progress>
-                <div class="txt-center">
-                    <button>empezar</button>
-                </div>
-        
-            </div>
-        </div>
-</div>
-        <div class="card"> <div class="card">
-            <div class="card__wrapper">
-                <div class="card___wrapper-acounts">
-                    <div class="card__score">+3</div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                            <path fill="#393c54"
-                                d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                            <path fill="#00adfe"
-                                d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                            </path>
-                            <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z"></path>
-                            <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                            <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 83v12"></path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 64.75v6.5"></path>
-                            <path fill="#515570"
-                                d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                            </path>
-                            <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                            <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                            <path opacity=".7" fill="#ff8475"
-                                d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z"></path>
-                            <path opacity=".7" fill="#f85565"
-                                d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                            <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                            <g stroke-linecap="round" fill="none">
-                                <path stroke-linejoin="round" stroke="#515570" d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                </path>
-                                <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                    d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                <path stroke-miterlimit="10" stroke="#f85565"
-                                    d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                            </g>
-                        </svg></div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                            <path fill="#7f3838"
-                                d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"></path>
-                            <path opacity=".4" fill="#393c54"
-                                d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                            <path fill="#4bc190"
-                                d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"></path>
-                            <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 88.75v9.75"></path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path fill="#bc5b57"
-                                d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                            </path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                            <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                            <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42"></ellipse>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58"></ellipse>
-                            <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                            </g>
-                            <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                            <path fill="#f85565"
-                                d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                            </path>
-                        </svg></div>
-                </div>
-                <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20"
-                        fill="none">
-                        <g fill="#000">
-                            <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                            <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                            </path>
-                            <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                        </g>
-                    </svg></div>
-            </div>
-            <br>
-            <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-            <div class="card__title">Curso de Java</div>
-        
-            <div class="card__subtitle">En este curso se arendera java con POO.</div>
-            <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                    class="card__indicator-percentage">De 100%</span></div>
-            <div class="card__progress"><progress max="100" value="40"></progress>
-                <div class="txt-center">
-                    <button>empezar</button>
-                </div>
-        
-            </div>
-        </div>
- </div>
-        <div class="card"> <div class="card">
-            <div class="card__wrapper">
-                <div class="card___wrapper-acounts">
-                    <div class="card__score">+3</div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                            <path fill="#393c54"
-                                d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                            <path fill="#00adfe"
-                                d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                            </path>
-                            <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z"></path>
-                            <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                            <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 83v12"></path>
-                            <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 64.75v6.5"></path>
-                            <path fill="#515570"
-                                d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                            </path>
-                            <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                            <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                            <path opacity=".7" fill="#ff8475"
-                                d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z"></path>
-                            <path opacity=".7" fill="#f85565"
-                                d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                            <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                            <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                            <g stroke-linecap="round" fill="none">
-                                <path stroke-linejoin="round" stroke="#515570" d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                </path>
-                                <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                    d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                <path stroke-miterlimit="10" stroke="#f85565"
-                                    d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                            </g>
-                        </svg></div>
-                    <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                            <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                            <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                            <path fill="#7f3838"
-                                d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z"></path>
-                            <path opacity=".4" fill="#393c54"
-                                d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                            </path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                            <path fill="#4bc190"
-                                d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                            </path>
-                            <path opacity=".3" fill="#356cb6"
-                                d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z"></path>
-                            <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                            <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa" fill="none"
-                                d="m64 88.75v9.75"></path>
-                            <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                            <path fill="#ffd8c9"
-                                d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z"></path>
-                            <path fill="#bc5b57"
-                                d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                            </path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                            <path
-                                style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                            <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                            <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42"></ellipse>
-                            <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58"></ellipse>
-                            <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                            </g>
-                            <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                            <path fill="#f85565"
-                                d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                            </path>
-                        </svg></div>
-                </div>
-                <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20" height="20"
-                        fill="none">
-                        <g fill="#000">
-                            <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                            <path d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                            </path>
-                            <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                        </g>
-                    </svg></div>
-            </div>
-            <br>
-            <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-            <div class="card__title">Curso de Java</div>
-        
-            <div class="card__subtitle">En este curso se arendera java con POO.</div>
-            <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                    class="card__indicator-percentage">De 100%</span></div>
-            <div class="card__progress"><progress max="100" value="40"></progress>
-                <div class="txt-center">
-                    <button>empezar</button>
-                </div>
-        
-            </div>
-        </div>
- </div>
+    </section>
+    <div class="content-text reveal">
+        <p>Mas para ti</p>
     </div>
-    <button class="prev-button">&#10094;</button>
-    <button class="next-button">&#10095;</button>
-</div>
-<div class="carousel-container">
-    <div class="carousel">
-        <div class="card">
-            <div class="card">
-                <div class="card__wrapper">
-                    <div class="card___wrapper-acounts">
-                        <div class="card__score">+</div>
-                        <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                                <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                                <path fill="#393c54"
-                                    d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                                </path>
-                                <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                                <path fill="#00adfe"
-                                    d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                                </path>
-                                <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z">
-                                </path>
-                                <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                                <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                                <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 83v12"></path>
-                                <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                                <path fill="#ffd8c9"
-                                    d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z">
-                                </path>
-                                <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 64.75v6.5"></path>
-                                <path fill="#515570"
-                                    d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                                </path>
-                                <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                                <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                                <path opacity=".7" fill="#ff8475"
-                                    d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z">
-                                </path>
-                                <path opacity=".7" fill="#f85565"
-                                    d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z">
-                                </path>
-                                <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                                <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                    d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                    d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                                <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                                <g stroke-linecap="round" fill="none">
-                                    <path stroke-linejoin="round" stroke="#515570"
-                                        d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                    </path>
-                                    <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                        d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                    <path stroke-miterlimit="10" stroke="#f85565"
-                                        d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                                </g>
-                            </svg></div>
-                        <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                                <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                                <path fill="#7f3838"
-                                    d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z">
-                                </path>
-                                <path opacity=".4" fill="#393c54"
-                                    d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                                </path>
-                                <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                                <path fill="#4bc190"
-                                    d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                                </path>
-                                <path opacity=".3" fill="#356cb6"
-                                    d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                                </path>
-                                <path opacity=".3" fill="#356cb6"
-                                    d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z">
-                                </path>
-                                <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                                <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 88.75v9.75"></path>
-                                <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                                <path fill="#ffd8c9"
-                                    d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z">
-                                </path>
-                                <path fill="#bc5b57"
-                                    d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                                </path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                    d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                    d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                                <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                                <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                                <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42">
-                                </ellipse>
-                                <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58">
-                                </ellipse>
-                                <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                    <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                    <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                    <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                                </g>
-                                <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                                <path fill="#f85565"
-                                    d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                                </path>
-                            </svg></div>
-                    </div>
-                    <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20"
-                            height="20" fill="none">
-                            <g fill="#000">
-                                <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                                <path
-                                    d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                                </path>
-                                <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                            </g>
-                        </svg></div>
-                </div>
-                <br>
-                <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-                <div class="card__title">Curso de Java</div>
-
-                <div class="card__subtitle">En este curso se arendera java con POO.</div>
-                <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                        class="card__indicator-percentage">De 100%</span></div>
-                <div class="card__progress"><progress max="100" value="40"></progress>
-                    <div class="txt-center">
-                        <button>empezar</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card">
-               
-                <br>
-                <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-                <div class="card__title">Curso de Java</div>
-
-                <div class="card__subtitle">En este curso se arendera java con POO.</div>
-                <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                        class="card__indicator-percentage">De 100%</span></div>
-                <div class="card__progress"><progress max="100" value="40"></progress>
-                    <div class="txt-center">
-                        <button>empezar</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <div class="card">
-                <div class="card__wrapper">
-                    <div class="card___wrapper-acounts">
-                        <div class="card__score">+3</div>
-                        <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                                <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                                <path fill="#393c54"
-                                    d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                                </path>
-                                <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                                <path fill="#00adfe"
-                                    d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                                </path>
-                                <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z">
-                                </path>
-                                <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                                <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                                <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 83v12"></path>
-                                <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                                <path fill="#ffd8c9"
-                                    d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z">
-                                </path>
-                                <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 64.75v6.5"></path>
-                                <path fill="#515570"
-                                    d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                                </path>
-                                <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                                <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                                <path opacity=".7" fill="#ff8475"
-                                    d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z">
-                                </path>
-                                <path opacity=".7" fill="#f85565"
-                                    d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z">
-                                </path>
-                                <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                                <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                    d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                    d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                                <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                                <g stroke-linecap="round" fill="none">
-                                    <path stroke-linejoin="round" stroke="#515570"
-                                        d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                    </path>
-                                    <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                        d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                    <path stroke-miterlimit="10" stroke="#f85565"
-                                        d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                                </g>
-                            </svg></div>
-                        <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                                <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                                <path fill="#7f3838"
-                                    d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z">
-                                </path>
-                                <path opacity=".4" fill="#393c54"
-                                    d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                                </path>
-                                <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                                <path fill="#4bc190"
-                                    d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                                </path>
-                                <path opacity=".3" fill="#356cb6"
-                                    d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                                </path>
-                                <path opacity=".3" fill="#356cb6"
-                                    d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z">
-                                </path>
-                                <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                                <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 88.75v9.75"></path>
-                                <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                                <path fill="#ffd8c9"
-                                    d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z">
-                                </path>
-                                <path fill="#bc5b57"
-                                    d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                                </path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                    d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                    d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                                <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                                <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                                <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42">
-                                </ellipse>
-                                <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58">
-                                </ellipse>
-                                <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                    <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                    <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                    <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                                </g>
-                                <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                                <path fill="#f85565"
-                                    d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                                </path>
-                            </svg></div>
-                    </div>
-                    <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20"
-                            height="20" fill="none">
-                            <g fill="#000">
-                                <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                                <path
-                                    d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                                </path>
-                                <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                            </g>
-                        </svg></div>
-                </div>
-                <br>
-                <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-                <div class="card__title">Curso de Java</div>
-
-                <div class="card__subtitle">En este curso se arendera java con POO.</div>
-                <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                        class="card__indicator-percentage">De 100%</span></div>
-                <div class="card__progress"><progress max="100" value="40"></progress>
-                    <div class="txt-center">
-                        <button>empezar</button>
-                    </div>
-
+    <section class="container reveal" >
+        <div class="card__container swiper">
+            <div class="card__content">
+                <div class="swiper-wrapper">
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/python.png" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Python</h3>
+    
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+    
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/excel.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Excel</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+                        </div>
+    
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/ruby.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Ruby</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/go.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de GO </h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+    
+                    <article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/php.png" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+    
+                        <div class="card__data">
+                            <h3 class="card__name"> Curso de PHP</h3>
+                            <br>
+                            <br>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <button class="Btn-pre">
+                                    <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
+                                        <path
+                                            d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
+                                        </path>
+                                    </svg>
+                                    GO PREMIUM
+                                </button>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
+    
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next">
+                <i class="ri-arrow-right-s-line"></i>
+            </div>
+    
+            <div class="swiper-button-prev">
+                <i class="ri-arrow-left-s-line"></i>
+            </div>
+    
+            <!-- Pagination -->
+            <div class="swiper-pagination"></div>
         </div>
-        <div class="card">
-            <div class="card">
-                <div class="card__wrapper">
-                    <div class="card___wrapper-acounts">
-                        <div class="card__score">+3</div>
-                        <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <circle r="60" fill="#ffd8c9" cy="64" cx="64"></circle>
-                                <circle r="48" opacity=".3" fill="#fff" cy="64" cx="64"></circle>
-                                <path fill="#393c54"
-                                    d="m64 14a31 31 0 0 1 31 31v41.07a9.93 9.93 0 0 1 -9.93 9.93h-42.14a9.93 9.93 0 0 1 -9.93-9.93v-41.07a31 31 0 0 1 31-31z">
-                                </path>
-                                <circle r="7" fill="#fbc0aa" cy="60" cx="89"></circle>
-                                <path fill="#00adfe"
-                                    d="m64 124a59.7 59.7 0 0 0 34.7-11.07l-3.33-10.29a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.33 10.29a59.7 59.7 0 0 0 34.7 11.07z">
-                                </path>
-                                <path fill="#ff8475" d="m46.54 121.45a59.93 59.93 0 0 0 34.92 0l-2.46-25.45h-30z">
-                                </path>
-                                <path fill="#f85565" d="m48.13 105h31.74l-.39-4h-30.96z"></path>
-                                <path fill="#ffd8c9" d="m76 96a12 12 0 0 1 -24 0z"></path>
-                                <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 83v12"></path>
-                                <circle r="7" fill="#fbc0aa" cy="60" cx="39"></circle>
-                                <path fill="#ffd8c9"
-                                    d="m64 90a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z">
-                                </path>
-                                <path stroke-width="5" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 64.75v6.5"></path>
-                                <path fill="#515570"
-                                    d="m64.83 18.35a27.51 27.51 0 0 0 -28.32 27.47v4.76a2 2 0 0 0 2 2h.58a1 1 0 0 0 .86-.49l4.05-7.09 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 2.47 4.13a1 1 0 0 0 1.72 0l2.47-4.13 2.48 4.13a1 1 0 0 0 1.71 0l2.48-4.13 4 7.09a1 1 0 0 0 .86.49h.58a2 2 0 0 0 2-2v-4.18c.05-14.95-11.66-27.61-26.61-28.05z">
-                                </path>
-                                <path fill="#f85565" d="m47.35 113h33.29l-.38-4h-32.52z"></path>
-                                <path fill="#f85565" d="m46.58 121h34.84l-.39-4h-34.06z"></path>
-                                <path opacity=".7" fill="#ff8475"
-                                    d="m58.52 79.39c0-.84 11-.84 11 0 0 1.79-2.45 3.25-5.48 3.25s-5.52-1.46-5.52-3.25z">
-                                </path>
-                                <path opacity=".7" fill="#f85565"
-                                    d="m69.48 79.29c0 .78-11 .78-11 0 .04-1.79 2.52-3.29 5.52-3.29s5.48 1.5 5.48 3.29z">
-                                </path>
-                                <circle r="3" fill="#515570" cy="58.75" cx="76.25"></circle>
-                                <path stroke-linejoin="round" stroke-linecap="round" stroke="#515570" fill="none"
-                                    d="m70.75 59.84a6.61 6.61 0 0 1 11.5-1.31"></path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke-linejoin:round;stroke:#515570;stroke-width:2;opacity:.2"
-                                    d="m72.11 51.46 5.68-.4a4.62 4.62 0 0 1 4.21 2.1l.77 1.21"></path>
-                                <circle r="3" fill="#515570" cy="58.75" cx="51.75"></circle>
-                                <g stroke-linecap="round" fill="none">
-                                    <path stroke-linejoin="round" stroke="#515570"
-                                        d="m57.25 59.84a6.61 6.61 0 0 0 -11.5-1.31">
-                                    </path>
-                                    <path stroke-width="2" stroke-linejoin="round" stroke="#515570" opacity=".2"
-                                        d="m55.89 51.45-5.68-.39a4.59 4.59 0 0 0 -4.21 2.11l-.77 1.21"></path>
-                                    <path stroke-miterlimit="10" stroke="#f85565"
-                                        d="m57.25 78.76a17.4 17.4 0 0 0 6.75 1.12 17.4 17.4 0 0 0 6.75-1.12"></path>
-                                </g>
-                            </svg></div>
-                        <div class="card__acounts"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
-                                <circle r="60" fill="#ff8475" cy="64" cx="64"></circle>
-                                <circle r="48" opacity=".4" fill="#f85565" cy="64" cx="64"></circle>
-                                <path fill="#7f3838"
-                                    d="m64 14a32 32 0 0 1 32 32v41a6 6 0 0 1 -6 6h-52a6 6 0 0 1 -6-6v-41a32 32 0 0 1 32-32z">
-                                </path>
-                                <path opacity=".4" fill="#393c54"
-                                    d="m62.73 22h2.54a23.73 23.73 0 0 1 23.73 23.73v42.82a4.45 4.45 0 0 1 -4.45 4.45h-41.1a4.45 4.45 0 0 1 -4.45-4.45v-42.82a23.73 23.73 0 0 1 23.73-23.73z">
-                                </path>
-                                <circle r="7" fill="#fbc0aa" cy="65" cx="89"></circle>
-                                <path fill="#4bc190"
-                                    d="m64 124a59.67 59.67 0 0 0 34.69-11.06l-3.32-9.3a10 10 0 0 0 -9.37-6.64h-43.95a10 10 0 0 0 -9.42 6.64l-3.32 9.3a59.67 59.67 0 0 0 34.69 11.06z">
-                                </path>
-                                <path opacity=".3" fill="#356cb6"
-                                    d="m45 110 5.55 2.92-2.55 8.92a60.14 60.14 0 0 0 9 1.74v-27.08l-12.38 10.25a2 2 0 0 0 .38 3.25z">
-                                </path>
-                                <path opacity=".3" fill="#356cb6"
-                                    d="m71 96.5v27.09a60.14 60.14 0 0 0 9-1.74l-2.54-8.93 5.54-2.92a2 2 0 0 0 .41-3.25z">
-                                </path>
-                                <path fill="#fff" d="m57 123.68a58.54 58.54 0 0 0 14 0v-25.68h-14z"></path>
-                                <path stroke-width="14" stroke-linejoin="round" stroke-linecap="round" stroke="#fbc0aa"
-                                    fill="none" d="m64 88.75v9.75"></path>
-                                <circle r="7" fill="#fbc0aa" cy="65" cx="39"></circle>
-                                <path fill="#ffd8c9"
-                                    d="m64 91a25 25 0 0 1 -25-25v-16.48a25 25 0 1 1 50 0v16.48a25 25 0 0 1 -25 25z">
-                                </path>
-                                <path fill="#bc5b57"
-                                    d="m91.49 51.12v-4.72c0-14.95-11.71-27.61-26.66-28a27.51 27.51 0 0 0 -28.32 27.42v5.33a2 2 0 0 0 2 2h6.81a8 8 0 0 0 6.5-3.33l4.94-6.88a18.45 18.45 0 0 1 1.37 1.63 22.84 22.84 0 0 0 17.87 8.58h13.45a2 2 0 0 0 2.04-2.03z">
-                                </path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                    d="m62.76 36.94c4.24 8.74 10.71 10.21 16.09 10.21h5"></path>
-                                <path
-                                    style="fill:none;stroke-linecap:round;stroke:#fff;stroke-miterlimit:10;stroke-width:2;opacity:.1"
-                                    d="m71 35c2.52 5.22 6.39 6.09 9.6 6.09h3"></path>
-                                <circle r="3" fill="#515570" cy="62.28" cx="76"></circle>
-                                <circle r="3" fill="#515570" cy="62.28" cx="52"></circle>
-                                <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="50.42">
-                                </ellipse>
-                                <ellipse ry="2.98" rx="4.58" opacity=".1" fill="#f85565" cy="69.67" cx="77.58">
-                                </ellipse>
-                                <g stroke-linejoin="round" stroke-linecap="round" fill="none">
-                                    <path stroke-width="4" stroke="#fbc0aa" d="m64 67v4"></path>
-                                    <path stroke-width="2" stroke="#515570" opacity=".2" d="m55 56h-9.25"></path>
-                                    <path stroke-width="2" stroke="#515570" opacity=".2" d="m82 56h-9.25"></path>
-                                </g>
-                                <path opacity=".4" fill="#f85565" d="m64 84c5 0 7-3 7-3h-14s2 3 7 3z"></path>
-                                <path fill="#f85565"
-                                    d="m65.07 78.93-.55.55a.73.73 0 0 1 -1 0l-.55-.55c-1.14-1.14-2.93-.93-4.27.47l-1.7 1.6h14l-1.66-1.6c-1.34-1.4-3.13-1.61-4.27-.47z">
-                                </path>
-                            </svg></div>
-                    </div>
-                    <div class="card__menu"><svg xmlns="http://www.w3.org/2000/svg" width="4" viewBox="0 0 4 20"
-                            height="20" fill="none">
-                            <g fill="#000">
-                                <path d="m2 4c1.10457 0 2-.89543 2-2s-.89543-2-2-2-2 .89543-2 2 .89543 2 2 2z"></path>
-                                <path
-                                    d="m2 12c1.10457 0 2-.8954 2-2 0-1.10457-.89543-2-2-2s-2 .89543-2 2c0 1.1046.89543 2 2 2z">
-                                </path>
-                                <path d="m2 20c1.10457 0 2-.8954 2-2s-.89543-2-2-2-2 .8954-2 2 .89543 2 2 2z"></path>
-                            </g>
-                        </svg></div>
-                </div>
-                <br>
-                <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-                <div class="card__title">Curso de Java</div>
-
-                <div class="card__subtitle">En este curso se arendera java con POO.</div>
-                <div class="card__indicator"><span class="card__indicator-amount">35%</span> Progreso / <span
-                        class="card__indicator-percentage">De 100%</span></div>
-                <div class="card__progress"><progress max="100" value="40"></progress>
-                    <div class="txt-center">
-                        <button>empezar</button>
-                    </div>
-
-                </div>
+    </section>
+    <script src="/Assets/js/AvanceScript.js"></script>
+    <footer class="pie-de-pagina reveal">
+        <div class="contenido-pie contenedor">
+            <div class="redes-sociales">
+    
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="enlaces-pie">
+                <a href="#">Términos y condiciones</a>
+                <a href="#">Política de privacidad</a>
+                <a href="#">Contacto</a>
             </div>
         </div>
-    </div>
-    <button class="prev-button">&#10094;</button>
-    <button class="next-button">&#10095;</button>
-</div>
-<div class="card-container">
-    <div class="card" id="card1" onmouseover="showCard2()" onmouseout="hideCard2()">
-        <!-- Contenido de la primera tarjeta -->
-        <div class="card">
-        
-            <br>
-            <img class="icon" src="/Assets/img/java_poo.jpg" alt="">
-            <div class="card__title">Curso de Java</div>
-        
-            <div class="card__subtitle">En este curso se arendera java con POO.</div>
-        
-            <div class="star-rating">
-                <i class="fas fa-star" style="color: gold;"></i>
-                <i class="fas fa-star" style="color: gold;"></i>
-                <i class="fas fa-star" style="color: gold;"></i>
-                <i class="fas fa-star" style="color: gold;"></i>
-                <i class="fas fa-star"></i>
-            </div>
-        
-        </div>
-        </div>
-    </div>
-    <div class="card3" id="card2">
-        <div class="card-container">
-            <div class="card2">
-                <div class="header">
-                    <span class="title">Beginner</span>
-                    <span class="price">Free</span>
-                </div>
-                <p class="desc">Etiam ac convallis enim, eget euismod dolor.</p>
-                <ul class="lists">
-                    <li class="list">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span>Aenean quis</span>
-                    </li>
-                    <li class="list">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span>Morbi semper</span>
-                    </li>
-                    <li class="list">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
-                                clip-rule="evenodd"></path>
-                        </svg>
-                        <span>Tristique enim nec</span>
-                    </li>
-                </ul>
-                <button type="button" class="action">Get Started</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-<script src="/Assets/js/AvanceScript.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-        crossorigin="anonymous"></script>
+    </footer>
+    
 </body>
 
 </html>
