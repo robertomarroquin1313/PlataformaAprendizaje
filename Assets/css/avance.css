@@ -191,13 +191,10 @@ a {
     }
 }
 /* fin de barra de navegacion*/
-/* parte de las tarjetas*/
 
-/*fin de las tarjetas*/
-/*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&display=swap");
 
-/*=============== VARIABLES CSS ===============*/
+
 :root {
     /*========== Colors ==========*/
     /*Color mode HSL(hue, saturation, lightness)*/
@@ -210,14 +207,13 @@ a {
     --body-color: hsl(212, 42%, 15%);
     --container-color: hsl(212, 42%, 20%);
 
-    /*========== Font and typography ==========*/
-    /*.5rem = 8px | 1rem = 16px ...*/
+   
     --body-font: "Bai Jamjuree", sans-serif;
     --h2-font-size: 1.25rem;
     --normal-font-size: 1rem;
 }
 
-/*=============== BASE ===============*/
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -365,15 +361,14 @@ img {
     background-color: var(--second-color);
 }
 
-/*=============== BREAKPOINTS ===============*/
-/* For small devices */
+
 @media screen and (max-width: 320px) {
     .card__data {
         padding: 1rem;
     }
 }
 
-/* For medium devices */
+
 @media screen and (min-width: 768px) {
     .card__content {
         margin-inline: 3rem;
@@ -479,21 +474,21 @@ img {
  /**/
  .rating {
      text-align: center;
-     /* Centra el contenido */
+ /
  }
 
  .rating>input {
      display: none;
-     /* Oculta los input */
+     
  }
 
  .rating>label {
      display: inline-block;
-     /* Muestra las etiquetas en línea */
+    
   
      font-size: 30px;
      color: #e58e09;
-     /* Color dorado */
+     
  }
 
  .rating>label:before {
@@ -506,7 +501,7 @@ img {
  .rating>input:checked~label:hover~label,
  .rating>label:hover~input:checked~label {
      color: #e58e09;
-     /* Color dorado para las estrellas */
+   
  }
  /*
  efecto de bajasa*/
