@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 /* barra de navegacion*/
 :root {
@@ -521,3 +522,17 @@ img {
      margin: 0;
      padding: 0;
  }
+=======
+.contenedor-fluit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 95%;
+}
+.card{
+    width: 90%;
+}
+
+   
+>>>>>>> 1ddfbb0b0d02e8132bcf532f7b0e60d05fec20d8
