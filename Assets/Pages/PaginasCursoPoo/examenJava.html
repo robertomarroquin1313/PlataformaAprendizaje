@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/css/styleExamenPoo.css">
+    <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Examen 1 </title>
+</head>
+<body bgcolor="white">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i> Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chalkboard"></i> Más Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> Cuenta
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class=" text-center" style="padding-top: 70px;"> 
+        <div class="info-title"><h4><span>Algunas reglas de este cuestionario</span></h4>
+        </div>
+        <div class="info-list">
+            <div class="info"><h5>1. Tendrás solo <span> 20 segundos</span> por cada pregunta.</h5></div>
+            <div class="info"><h5>2. Una vez que seleccione su respuesta, no se puede deshacer..</h5></div>
+            <div class="info"><h5>3. No puede seleccionar ninguna opción una vez que se acaba el tiempo.</h5></div>
+            <div class="info"><h5>4. No puedes salir del Quiz mientras estás jugando.</h5></div>
+            <div class="info"><h5>5. Obtendrás puntos en base a tus respuestas correctas.</h5></div>
+            <div class="info">
+
+                <h4>fecha de apertura 22/2/2023 0:00 cierra 22/2023 11:59</h4>
+                <button class="btn btn-success" id="examen-cambiar">
+                    <i class="fas fa-pencil-alt"></i> Modificar
+                </button>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+<div class="start_btn">
+    <button class="custom_button">Iniciar prueba</button>
+</div>
+<div id="editar-examen" class="editar-examen text-center" style="display: none">
+    <h3 style="color: white;">Cambiar Preguntas</h3>
+    <span style="color: white;">Deberá seleccionar cuantas preguntas quiere ingresar:</span>
+    <select id="cantidad-preguntas">
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="30">30</option>
+        <option value="40">40</option>
+    </select>
+    <div id="contenedor-preguntas"></div>
+    <br>
+    <div class="container text-xl-center">
+        <div class="text-center d-flex justify-content-center">
+            <button id="guardar-preguntas-examen" class="btn btn-primary" style="margin-right: 10px;">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                    </svg> Agregar
+                </span>
+            </button>
+            <button class="btn btn-secondary" id="rgresar" onclick="closeForm()">
+                <span>
+                    <i class="fas fa-arrow-left"></i> Regresar
+                </span>
+            </button>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- Caja de Informacion-->
+<div class="info_box">
+    <div class="info-title"><span>Algunas reglas de este cuestionario</span></div>
+    <div class="info-list">
+        <div class="info">1. Tendrás solo <span> 20 segundos</span> por cada pregunta.</div>
+        <div class="info">2. Una vez que seleccione su respuesta, no se puede deshacer..</div>
+        <div class="info">3. No puede seleccionar ninguna opción una vez que se acaba el tiempo.</div>
+        <div class="info">4. No puedes salir del Quiz mientras estás jugando.</div>
+        <div class="info">5. Obtendrás puntos en base a tus respuestas correctas.</div>
+        
+    </div>
+    <div class="buttons">
+        <button class="quit">Salir</button>
+        <button class="restart">Continuar</button>
+    </div>
+
+</div>
+
+
+<div class="quiz_box">
+    <header>
+        <div class="title">Examen de Programacion</div>
+        <div class="timer">
+            <div class="time_left_txt">Tiempo restante</div>
+            <div class="timer_sec">20</div>
+        </div>
+        <div class="time_line"></div>
+    </header>
+    <section>
+        <div class="que_text">
+            <!-- Aqui se cargan las preguntas  -->
+        </div>
+        <div class="option_list">
+            <!-- Aqui se meten las respuestas 
+            -->
+        </div>
+    </section>
+
+    <!-- pie de página de la prueba -->
+    <footer>
+        <div class="total_que">
+            <!-- Aquí he insertado Número de conteo de preguntas de JavaScript -->
+        </div>
+        <button class="next_btn">Siguiente</button>
+    </footer>
+</div>
+
+<!-- Result Box -->
+<div class="result_box">
+    <div class="icon">
+
+        <img src="/Assets/img/java_poo.jpg"
+            class="avatar" alt="">
+
+
+    </div>
+    <div class="complete_text">¡Has completado el cuestionario!</div>
+    <div class="score_text">
+        <!-- Aquí he insertado Score Result de JavaScript-->
+    </div>
+    <div class="buttons">
+        <button class="restart">Cuestionario de repetición</button>
+        <button class="quit">Salir </button>
+    </div>
+</div>
+
+
+<!-- Dentro de este archivo JavaScript, solo he insertado preguntas y opciones. -->
+<script src="/Assets/js/preguntas.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+
+<!-- Dentro de este archivo JavaScript he codificado todos los códigos de prueba -->
+<script src="/Assets/js/scriptPreguntas.js"></script>
+
+    
+</body>
+</html>

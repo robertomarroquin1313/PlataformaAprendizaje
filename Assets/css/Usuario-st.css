@@ -1,0 +1,24 @@
+img{
+    width: 200px;
+    border-radius: 50%;
+    border: 6px solid #AAA;
+}
+.container-fluid{
+    width: 80%;
+}
+p{
+    font-weight: bold;
+    display:inline;
+}
+h2{
+    color: brown;
+}
+.card a{
+
+    text-decoration-line: none;
+    color: blue;
+}
+
+.usuario{
+    text-align: center;
+}

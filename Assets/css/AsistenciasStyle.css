@@ -1,0 +1,9 @@
+.table-container {
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+.table-container table {
+    width: 100%;
+}

@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Assets/css/booststrapBasic/bootstrap.min.css">
+    <link rel="stylesheet" href="/Assets/css/StyleCursoDePOO.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">   
+    <title> Curso de Java con Poo</title>
+</head>
+
+<body class="ocul">
+    <nav class="navbar navbar-expand-lg  fixed-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-book"></i> Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-chalkboard"></i> Más Cursos
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="fas fa-user"></i> Cuenta
+                        </a>
+                    </li>
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="fas fa-bell"></i>
+                                <span class="notification-badge" style="color: red;">5</span>
+                            </a>
+                        </li>
+                    <!--<li>
+                        <button class="salir">
+                        
+                            <div class="sign"><svg viewBox="0 0 512 512">
+                                    <path
+                                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                                    </path>
+                                </svg></div>
+                        
+                            <div class="text">Logout</div>
+                        </button>
+
+                    </li>-->
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<!--preloader-->
+<div class="pre" id="preloader">
+    <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+        <circle class="pl__ring pl__ring--a" cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 660" stroke-dashoffset="-330" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 440" stroke-linecap="round"></circle>
+        <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20"
+            stroke-dasharray="0 440" stroke-linecap="round"></circle>
+    </svg>
+
+</div>
+
+  
+<!--
+    <div class="container text-center">
+        <h2 style="color: red;">Semanas</h2>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dos">
+        <div class="container">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-1x fa-1">1</i>
+                    </a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-2">2</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-3">3</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-4">4</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-5">5</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-6">6</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-7">7</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-8">8</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-9">9</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-10">10</i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        <i class="fas fa-2x fa-11">11</i>
+                    </a>
+                
+                </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-2x fa-12">12</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-2x fa-13">13</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-2x fa-14">14</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-2x fa-15">15</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-2x fa-16">16</i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-2x fa-17">17</i>
+                </a>
+            </li>
+            </ul>
+        </div>
+    </nav>-->
+   
+
+    <div class="container container-fluid text-center" style="padding-top: 70px;">
+        <h1 style="color: red;">Introducción a la programación orientada a objetos en Java </h1>
+    </div>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <img src="/Assets/img/java_poo.jpg" alt="Tu Imagen" class="img-fluid">
+            </div>
+        </div>
+        
+   
+    <div class="container-fluid text-center ">
+        <p class="mx-auto" style="max-width: 700px;">
+            <H1> Introducción a java con poo</H1>
+            Java es un lenguaje de programación ampliamente utilizado que se destaca por su capacidad para desarrollar aplicaciones
+            seguras, robustas y orientadas a objetos. La programación orientada a objetos es un enfoque de diseño de software que se
+            basa en la idea de que los programas se construyen a partir de "objetos", que son instancias de clases. Estos objetos
+            interactúan entre sí mediante mensajes, lo que permite una organización y estructura eficiente del código.
+            </p>
+            <p>
+            Aquí hay algunos conceptos clave en Java y la POO:
+            </p><p>
+            
+            1)Clases y Objetos: En Java, todo gira en torno a las clases y los objetos. Una clase es un plano o plantilla que define
+            las propiedades (atributos) y comportamientos (métodos) de los objetos que se crearán a partir de ella. Un objeto es una
+            instancia concreta de una clase.</p>
+            <p>
+            2)Encapsulación: La encapsulación es un principio de la POO que consiste en ocultar los detalles internos de una clase y
+            proporcionar una interfaz pública para interactuar con los objetos. En Java, se logra mediante el uso de modificadores
+            de acceso como public, private y protected.</p>
+            <p>
+            
+            3)Herencia: La herencia permite crear una nueva clase basada en una clase existente. La nueva clase hereda los atributos y
+            métodos de la clase base y puede agregar sus propios atributos y métodos o modificar los existentes.
+            </p><p>
+            4)Polimorfismo: El polimorfismo permite que diferentes objetos respondan de manera diferente a los mismos mensajes. Esto
+            se logra mediante la sobrecarga de métodos y la implementación de interfaces en Java.
+            </p><p>
+            4)Abstracción: La abstracción implica la creación de clases y objetos que representan conceptos del mundo real de manera
+            simplificada. Ayuda a reducir la complejidad del software y a concentrarse en los aspectos relevantes.
+            </p><p>
+            5)Métodos y Variables de Clase: Los métodos son funciones que realizan acciones y los atributos son variables que
+            almacenan datos. Java también admite variables y métodos de clase, que son compartidos por todas las instancias de una
+            clase.</p><p>
+            
+            6)Manejo de Excepciones: Java tiene un sistema de manejo de excepciones que permite controlar errores de manera efectiva y
+            prevenir que los programas se bloqueen.
+            </p><p>
+            7)Java es ampliamente utilizado en el desarrollo de aplicaciones de escritorio, aplicaciones web, aplicaciones móviles
+            (Android) y en sistemas embebidos. La POO en Java proporciona una estructura organizada y reutilizable para desarrollar
+            software de alta calidad y escalable.
+        </p>
+    </div>
+    </div>
+    
+    
+    <div class=" container-fluid text-center ">
+        <h2 >
+            contenido teorico
+        </h2>
+    </div>
+    <br>
+
+
+<!--componere de los anuncios-->
+    <div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-1"  data-component-name="Componente anuncios" style="display: block;">
+         <div class="container color-div">
+           <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        <button class="btn btn-primary ocultar-boton-componentes">
+            <i class="far fa-eye"></i> Ocultar
+        </button>
+            <button class="btn btn-danger eliminar">
+                <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+            <button class="btn btn-success" onclick="modificarElemento2(this)">
+                <i class="fas fa-pencil-alt"></i> Modificar
+            </button>
+        </div>
+        <div class="container img-large ">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                    <img src="/Assets/img/anuncios.png" alt="Tu Imagen" class="img-fluid img-large">
+                </div>
+            </div>
+        </div>
+        <div class="white-div mb-4">
+            <a href="#" class="btn btn-primary">
+                <i class="fas fa-bullhorn"></i> Avisos
+            </a>
+        </div>
+        </div>
+        </div>
+        
+        <!--componete de la asistencia-->
+        <div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-2"  data-component-name="Componente asistencia" style="display: block;">
+        <div class="container color-div">
+           
+            <div class="botones-profesor text-center toggle-buttons" style="display: none">
+                <button class="btn btn-primary ocultar-boton-componentes">
+                    <i class="far fa-eye"></i> Ocultar
+                </button>
+            <button class="btn btn-danger eliminar">
+                <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+               
+            </div>
+            <div class="container img-large ">
+                <div class="row justify-content-center mb-4">
+                    <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                        <img src="/Assets/img/Control de Asistencia.png" alt="Tu Imagen" class="img-fluid img-large">
+                    </div>
+                </div>
+            </div>
+            <div class="white-div mb-4">
+                <a href="/Assets/Pages/PaginasCursoPoo/Asitencia.html" class="btn btn-primary">
+                    <i class="fas fa-question-circle"></i> Asistencia
+                </a>
+            </div>
+            </div>
+        </div>
+            <!--compomente de la lectura-->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-3" data-component-name="Componente lectura" style="display: block;">
+    <div class="container color-div">
+        <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        <button class="btn btn-primary ocultar-boton-componentes">
+            <i class="far fa-eye"></i> Ocultar
+        </button>
+            <button class="btn btn-danger eliminar">
+                <i class="fas fa-trash-alt"></i> Eliminar
+            </button>
+            <button class="btn btn-success editar-enlace">
+                <i class="fas fa-pencil-alt"></i> Modificar
+            </button>
+        </div>
+        <div class="container img-large">
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                    <img src="/Assets/img/Lectura Principal.png" alt="Tu Imagen" class="img-fluid img-large">
+                </div>
+            </div>
+        </div>
+        <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+            <a href="https://developer.mozilla.org/es/docs/Web/JavaScript" class="btn btn-primary lectura-link" target="_blank">
+                <i class="fas fa-question-circle"></i> Lectura
+            </a>
+        </div>
+    </div>
+</div>
+
+
+        <!--Formulario de edicion de los links-->
+    <div id="editarlink" class="editarlink text-center" style="display: none;">
+        <div class="box" id="regresar-link">
+            <div class="arrow right"></div>
+            <div class="text">Regresar</div>
+        </div>
+        <br>
+        <br>
+        <h3 style="color: white;">Cambiar Link</h3>
+        <input type="text" id="nuevoLink">
+        <br>
+        <button id="guardarlink" class="my-2">
+            <span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+                </svg> Cambiar
+            </span>
+        </button>
+    </div>
+
+
+<!--componete del archivo-->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-4" data-component-name="Componente archivo" style="display: block;">
+<div class="container color-div">
+    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
+    <button class="btn btn-danger eliminar">
+        <i class="fas fa-trash-alt"></i> Eliminar
+    </button>
+        <button class="btn btn-success" onclick="modificarElemento2(this)">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="container img-large ">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+            </div>
+        </div>
+    </div>
+<div class="white-div mb-4 d-flex justify-content-between align-items-center">
+<a href="#" class="btn btn-primary">
+    <i class="fas fa-file"></i> subir archivo
+</a>
+
+    <button id="checkboxButton" class="btn btn-checkbox">
+        Marcar como hecho <i class="fas fa-check-circle"></i>
+    </button>
+</div>
+</div>
+</div>
+
+<!--conponete del foro-->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-5" data-component-name="Componente foro" style="display: block;">
+<div class="container color-div">
+    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <button class="btn btn-success" onclick="modificarElemento2(this)">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="container img-large ">
+        <div class="row justify-content-center mb-4">
+            <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                <img src="/Assets/img/foro.png" alt="Tu Imagen" class="img-fluid img-large">
+            </div>
+        </div>
+    </div>
+    <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+
+        <a href="/Assets/Pages/PaginasCursoPoo/foro.html" class="btn btn-primary">
+            <i class="fas fa-comments"></i> Foro
+        </a>
+
+
+        <button id="checkboxButton" class="btn btn-checkbox">
+            Marcar como hecho <i class="fas fa-check-circle"></i>
+        </button>
+    </div>
+</div>
+</div>
+
+
+<!-- Contenido del video -->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-6" data-component-name="Componente video" style="display: block;">
+    <div class="botones-profesor text-center toggle-buttons">
+    <button class="btn btn-primary ocultar-boton-componentes">
+        <i class="far fa-eye"></i> Ocultar
+    </button>
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <button class="btn btn-success editar">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </button>
+    </div>
+    <div class="elemento-contenedor">
+        <div class="video-container">
+            <div class="container color-div">
+                <div class="container img-large">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                            <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+                        </div>
+                    </div>
+                </div>
+                <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+                    <div class="container text-center">
+                        <div id="videoContainer">
+                            <iframe width="560" height="315"
+                                src="https://www.youtube.com/embed/0wMOptm9Q3U?si=e7IZwHRbk0Ry0AZs"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+
+<!-- Formulario para editar el video -->
+<div id="editarVideo" class="editarVideo text-center" style="display:none">
+    <div class="box" id="regresar">
+        <div class="arrow right"></div>
+        <div class="text">Regresar</div>
+    </div>
+    <br>
+    <br>
+    <h3 style="color: white;">Cambiar video o actualizarlo</h3>
+    <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
+    <br>
+    <input type="text" id="nuevoEnlaceVideo">
+    <br>
+    <input type="text" id="nuevoTitulo" placeholder="nuevo titulo">
+    <br>
+    <input type="datetime-local" id="nuevaFechaHora">
+
+   <div class="text-center">
+    <button id="guardar" class="my-2">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+            </svg> Cambiar
+        </span>
+    </button>
+   </div>
+</div>
+<!--para evitar probkemas con los nuevos como los del html del DOM
+<div id="editarVideo2" class="editarVideo text-center" style="display:none">
+    <div class="box" id="regresar2">
+        <div class="arrow right"></div>
+        <div class="text">Regresar</div>
+    </div>
+    <br>
+    <br>
+    <h3 style="color: white;">Cambiar video o actualizarlo segundo div</h3>
+    <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
+    <input type="text" id="nuevoEnlaceVideo2">
+    <br>
+    <input type="text" id="nuevoTitulo2" placeholder="Nuevo título">
+    <br>
+    <input type="datetime-local" id="nuevaFechaHora2">
+
+    <button id="guardar2" class="my-2" onclick="guardarCambios2()">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+            </svg> Cambiar
+        </span>
+    </button>
+</div>-->
+
+<!--comom no pude por medio generalizando hice esto de crear otra forma forzandolo -->
+<!-- Formulario para editar el video -
+<div id="formularioEdicionVideo" class="editarVideo text-center" style="display: none;">
+    <div class="box" id="regresarEdicionVideo">
+        <div class="arrow right"></div>
+        <div class="text">Regresar</div>
+    </div>
+    <h3 style="color: white;">Cambiar video o actualizarlo</h3>
+    <span style="color: white;">Recuerde que solo se admiten los iframes del video</span>
+    <input type="text" id="nuevaURLVideo" placeholder="Nueva URL del video">
+    <br>
+    <button id="guardarEdicionVideo" class="my-2">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                <path fill="none" d="M0 0h24v24H0z"></path>
+                <path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path>
+            </svg> Cambiar
+        </span>
+    </button>
+</div>-->
+        <!--componete del examen-->
+<div class="contenido-para-ocultar componente-comun ocultar-elemento" data-component-identifier="elemento-7"  data-component-name="Componente examen" style="display: block;">
+    <div class="botones-profesor text-center toggle-buttons" style="display: none">
+        
+<button class="btn btn-primary ocultar-boton-componentes">
+    <i class="far fa-eye"></i> Ocultar
+</button>
+
+
+        <button class="btn btn-danger eliminar">
+            <i class="fas fa-trash-alt"></i> Eliminar
+        </button>
+        <a class="btn btn-success" href="/Assets/Pages/PaginasCursoPoo/examenJava.html">
+            <i class="fas fa-pencil-alt"></i> Modificar
+        </a>
+
+    </div>
+            <div class="container color-div">
+                <div class="container img-large ">
+                    <div class="row justify-content-center mb-4">
+                        <div class="col-md-6 text-center d-flex justify-content-center align-items-center">
+                            <img src="/Assets/img/Actividad sumativa.png" alt="Tu Imagen" class="img-fluid img-large">
+                        </div>
+                    </div>
+                </div>
+                <div class=" container text-center">
+                    <h2 style="color: red;"> Examen sumativo 1</h2>
+
+                </div>
+                <div class="white-div mb-4 d-flex justify-content-between align-items-center">
+                    <a href="/Assets/Pages/PaginasCursoPoo/examenJava.html" class="btn btn-primary">
+                        <i class="fas fa-file-alt"></i> Examen
+                    </a>
+                        
+                        
+                        <button  id="checkboxButton" class="btn btn-checkbox" href="/Assets/Pages/PaginasCursoPoo/examenJava.html">
+                            Marcar como hecho <i class="fas fa-check-circle"></i>
+                        </button>
+            
+                   
+                    </div>
+            
+                </div>
+           
+                </div>
+                <!--bton del formulari nuevo-->
+              
+                <div >
+                    <button class="btn mostrar-boton-ocultos botones-profesor" style="display: no;">
+                        <i class="far fa-eye-slash"></i> Mostrar
+                    </button>
+                </div>
+                <!--valio verdura, no pode hacer ocultar toca hacer el plan C-->
+                <!--cmponete para ver los ocultos-->
+        <div class="formulario-ocultos" id="formulario-ocultos" style="display: none;">
+            <h1 class="text-xl-center">Gestión de componentes ocultos</h1>
+            <table id="tabla-componentes-ocultos"  class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Componente</th>
+                        <th scope="col">Mostrar</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody
+                class="table-group-divider">
+            </tbody>
+            </table>
+            <div class="text-center">
+                <button class="cerrar">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"></path>
+                    </svg>
+                    
+                    
+                    <div class="text-cerrar">
+                        Cerrar
+                    </div>
+                </button>
+            </div>
+                    
+        </div>
+            
+               
+
+<!--bton para agregar componentes -->
+
+               
+       <button id="agregarFormulario" class=" botones-profesor btn btn-success custom-button" style="display: none">
+    <i class="fas fa-plus"></i> Agregar
+</button>
+<!--div flotante-->
+<div id="formularioFlotante" class="formulario-flotante" style="display: none">
+   
+    <h3><creacion style="color: white;"></i><span class="sp">creacion de componetes</span></h3>
+    <!--botones-->
+    <button id="foro" data-label="Register" class="rainbow-hover text-xl-center">
+        <i class="fas fa-comments"></i><span class="sp">foros</span>
+    </button>
+
+    
+    <button id="videos" class="rainbow-hover"><i class="fas fa-video"></i><span class="sp"> Videos</span></button>
+    <button id="examen" class="rainbow-hover" >
+        <i class="fas fa-plus"></i> <span class="sp">Examen</span>
+    </button>
+    <button id="lectura"  class="rainbow-hover"> <i class="fas fa-question-circle"></i><span class="sp">Lectura</span></span></button>
+    <button id="buzon"  class="rainbow-hover"><i class="fas fa-file"></i><span class="sp">buzon</span></button>
+    <br>
+    <br>
+   
+    
+    <br>
+    <h2 style="color: white;" id="txt" class="sp">Parametros de los componentes</h2>
+    <br>
+    <div id="mensaje">
+        <h4 id="txt" class="sp"></h4>
+    </div>
+    <hr class="sp">
+    <div class="container-fluid text-xl-center" id="inputs" >
+   
+        
+        <input id="tituloEditable" type="text" placeholder="Título del Componente" class="form-control bg-dark sp text-light">
+        <br>
+        <input type="datetime-local" id="fechaEntrega" placeholder="Fecha de entrega" class="form-control sp bg-dark text-light">
+        <br>
+        <div class="links-oculto" style="display: block;">
+            <input type="text" id="link" class="sp form-control" placeholder="Links">
+        </div>
+        <br>
+        
+        <button id="guardarCambios" class="btn btn-success" >
+            
+            Guardar Cambios
+        </button>
+    </div>
+
+</div>
+
+
+
+
+<!---
+<div id="formulario"  style="display: none;">
+    <button id="foro" class="btn btn-primary   "style="background-color:black; color: white;"><i class="fas fa-comments"></i> Foro</button>
+    <button id="videos" class="btn btn-danger"style="background-color:black; color: white;"><i class="fas fa-video"></i> Videos</button>
+    <button id="examen" class="btn btn-danger " style="background-color:black; color: white;"id="agregarDiv">
+        <i class="fas fa-plus"></i> Examen
+    </button>
+    <button id="links" class="btn btn-secondary " style="background-color:black; color: white;"><i class="fas fa-link"></i> Links</button>
+</div>-->
+
+   
+        <!--aqui se cargaran los nuevos componetes-->
+        <div id="contenedorDivs"></div>
+
+
+
+    
+
+
+
+    <!--links de componetes requeridos -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="/Assets/js/inciarSesion.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="/Assets/js/ScriptDJAVAPOO.js"></script>
+ 
+ 
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</body>
+<!--pie de pagina -->
+<footer style="background-color:#19191a; padding: 20px 0; color: aliceblue;" >
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center">
+                <p>&copy; 2023 ITCA FEDEPAE Inc. Todos los derechos reservados</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-center">
+               
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-center">
+                <p>Email: infoITCA@gmail.com</p>
+            </div>
+        </div>
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-6 text-center">
+
+                <p>Teléfono: +(503) 2567-4467</p>
+                <p>Fax: +1 (1000) 112-6543</p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--fin de pie de pagina-->
+</html>
