@@ -11,36 +11,25 @@
     <title>Examen 1 </title>
 </head>
 <body bgcolor="white">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-book"></i> Cursos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-chalkboard"></i> Más Cursos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-user"></i> Cuenta
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<header class="encabezado" id="inicio">
+    <div class="contenido-navegacion">
+        <div class="logo">
+            <h2>ITCA <span>FEDEPAE</span></h2>
         </div>
-    </nav>
+
+        <nav class="navegacion ocultar">
+            <a href="/index.html">Inicio</a>
+            <a href="#nosotros">Nosotros</a>
+            <a href="#servicios">Servicios</a>
+            <a href="/Assets/Pages/Avance.html">Cursos</a>
+            <a class="cerrar-sesion" href="/Assets/Pages/InicioSesion.html"
+                style="border: 1px solid red; color: red;">Cerrar sesion</a>
+        </nav>
+        <div class="hamburguesa">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    </header>
     <div class=" text-center" style="padding-top: 70px;"> 
         <div class="info-title"><h4><span>Algunas reglas de este cuestionario</span></h4>
         </div>
@@ -176,6 +165,22 @@
 
 <!-- Dentro de este archivo JavaScript he codificado todos los códigos de prueba -->
 <script src="/Assets/js/scriptPreguntas.js"></script>
+<footer class="pie-de-pagina reveal"" style=" margin-top: 10px;">
+    <div class="contenido-pie contenedor">
+        <div class="redes-sociales">
+
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="enlaces-pie">
+            <a href="#">Términos y condiciones</a>
+            <a href="#">Política de privacidad</a>
+            <a href="#">Contacto</a>
+        </div>
+    </div>
+</footer>
 
     
 </body>
