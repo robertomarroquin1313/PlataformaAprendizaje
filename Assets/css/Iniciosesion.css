@@ -4,6 +4,7 @@
     align-items: center;
     min-height: 100vh;
 }
+<<<<<<<< HEAD:Assets/css/Iniciosesion.css
 *{
     color: white;
 }
@@ -14,6 +15,9 @@ body{
     background-attachment: fixed;
 
 }
+========
+
+>>>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead:Assets/css/styleExamen.css
 
 .wrapper {
     width: 420px;
@@ -30,6 +34,10 @@ body{
     text-align: center;
 }
 
+<<<<<<<< HEAD:Assets/css/Iniciosesion.css
+========
+
+>>>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead:Assets/css/styleExamen.css
 .wrapper .btn {
     width: 100%;
     height: 45px;
@@ -48,6 +56,7 @@ body{
     font-size: 14.5px;
     text-align: center;
     margin-top: 20px;
+<<<<<<<< HEAD:Assets/css/Iniciosesion.css
 
 }
 .wrapper .input-box{
@@ -63,11 +72,19 @@ body{
 .input-box input {
     width: 100%;
     height: 50px;
+========
+}
+
+.wrapper input {
+    width: 100%;
+    height: 100%;
+>>>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead:Assets/css/styleExamen.css
     background: transparent;
     border: none;
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
+<<<<<<<< HEAD:Assets/css/Iniciosesion.css
     font-size: 16px;
     color: white;
     padding: 20px 45px 20px 20px;
@@ -89,4 +106,19 @@ body{
 p{
     color: white;
     font-size: 15px;
+========
+}
+
+.form-floating svg {
+    position: absolute;
+    right:10px;
+    top: 35%;
+    transform: translate(-50%);
+    font-size: 70px;
+}
+
+.d-flex a{
+    color:#fff ;
+    text-decoration-line: none;
+>>>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead:Assets/css/styleExamen.css
 }
