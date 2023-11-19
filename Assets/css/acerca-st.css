@@ -1,24 +1,15 @@
-<<<<<<< HEAD
 /* *{
-=======
-*{
->>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 
-<<<<<<< HEAD
 } */
 
-=======
-}
->>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead
 .contenedor-fluit{
     position: absolute;
     top: 90x; left: 50px;
     width: 90%;
-<<<<<<< HEAD
     background-color: white;
  }
 
@@ -31,47 +22,23 @@ h1{
 }
 .parallax-1{
     background: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80') no-repeat;
-=======
- }
-
-h1{
-    font-size: 100px;
-    text-align: center;
-    color: rgba(255, 255, 255, .4);
-
-
-}
-.parallax-1{
-    background: url('../img/prueva.jpg') no-repeat;
->>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
     width: 100%;
-<<<<<<< HEAD
     height: 450px;
 
-=======
-    height: 100%;
->>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead
 }
 .parallax-inner{
     padding: 10% 0;
 }
 h2{
-<<<<<<< HEAD
     font-size:  40px;
     color: #555;
-=======
-    font-size:  32px;
-    color: #555;
-    text-align: center;
->>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead
     font-weight: 300;
     letter-spacing: 2px;
     margin: 20px 0;
 }
-<<<<<<< HEAD
 p{
     font-size: 20px;
 }
@@ -115,5 +82,3 @@ header {
     color: white;
      text-decoration: none ;
    }
-=======
->>>>>>> 28d80cb628d8a09052d344e5bb32a50028d11ead
