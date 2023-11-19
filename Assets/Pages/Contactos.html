@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="/Assets/css/bootstrap.min.css"> -->
+    <!-- CDN de sweetalert, que es una libreria de alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="/Assets/css/contacto.css">
+    <title>Contactos</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/index.html">Posible logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                    aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="acercade.html">Acerca de </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Contactos.html">Contacto </a>
+                        </li>
+
+
+                    </ul>
+                    <form class="d-flex">
+                        <a href="/Assets/Pages/InicioSesion.html">Iniciar Sesion</a></button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+        <section class="parallax-1">
+            <div class="parallax-inner">
+                <h1>Contacto</h1>
+            </div>
+        </section>
+        <br><b><br><br></b>
+        <center>
+            <h1>Envianos un mensaje</h1>
+
+            <h6>Sabemos que la opinion de nuestros usuarios es importante
+            </h6>
+            <h6>Te responderemos lo más pronto posible. Gracias!</h6>
+        </center>
+
+    </section>
+    <center>
+        <div class="contenedor-fluit">
+            <div class="cont">
+                <form class="formulario" id="formulario">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="Nombre" placeholder="Nombre" autocomplete="off">
+                        <label for="Nombre">Nombre</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="email" class="form-control" id="Correo" placeholder="name@example.com"
+                            autocomplete="off">
+                        <label for="Correo">Correo Electronico</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="Pregunta" class="form-label mt-4">Comentario</label>
+                        <textarea class="form-control" id="Pregunta" rows="3"></textarea>
+                    </div>
+                    <br><br>
+                    <div class="btn-enviar">
+                        <button type="button" class="btn btn-outline-dark" onclick="EnviarComentario()">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </center>
+    <script>
+        const EnviarComentario = () => {
+
+            //ID de los impust
+            var Nombre = document.querySelector("#Nombre").value;
+            var correo = document.querySelector("#Correo").value;
+            var Pregunta = document.querySelector("#Pregunta").value;
+            // Si algunos  de los campos esta vacio, surgira una alerta que dira que faltan campos
+            if (Nombre.trim() === '' ||
+                correo.trim() === '' ||
+                Pregunta.trim() === '') {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Algunos campos estan vacios'
+                })
+            } else {
+                // Sino que envie el mensaje 
+                swal({
+                    title: "¿Estas seguro de enviar este mensaje?",
+                    text: "Te contestaremos lo antes posible",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                })
+                    .then((EnviarMensaje) => {
+                        if (EnviarMensaje) {
+                            swal("Gracias por tu comentario!!", {
+                                icon: "success",
+
+                            })
+                            // Que Limpie los campos de el formulario atraves del ID
+                            document.querySelector("#formulario").reset();
+                        } else {
+                            swal("Menjase cancelado", {
+                                icon: "error"
+
+                            });
+                            // Que Limpie los campos de el formulario atraves del ID
+                            document.querySelector("#formulario").reset();
+                        }
+                    });
+            }
+        }
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

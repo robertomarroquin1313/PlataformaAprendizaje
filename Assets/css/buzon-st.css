@@ -1,0 +1,96 @@
+.contennedor-modal{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    width:100%;
+    background: #ffff;
+    background: linear-gradient(282deg, #009dff 0% #54dbff);
+}
+.box{
+    background: #ffff;
+    border-radius:5px ;
+    width: 100%;
+}
+.upload-area-title{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+}
+.uploadlabel{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 3px dashed #18a7ff82;
+}
+.uploadlabel span{
+    font-size: 70px;
+    color: #18a7ff;
+}
+.uploadlabel span svg{
+    font-size: 70px;
+    color: #18a7ff;
+}
+.uploadlabel p{
+    font-size: 20px;
+    color: #18a7ff;
+    font-weight: 800;
+    font-family: cursive;
+}
+.uploaded{
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 700;
+    color: #a5a5a5;
+}
+.showfilebox{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0px;
+    padding: 10px 15px;
+    box-shadow: #0000000d 0px 0px 0px 1px,
+    #d1d5db3d 0px 0px 0px 1px inset;
+}
+.showfilebox .left{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.filetype{
+    background: #18a7ff;
+    color: #ffff;
+    padding: 5px 15px;
+    font-size: 20px;
+    text-transform: capitalize;
+    font-size: 20px;
+    border-radius: 7px;
+}
+.left h4{
+    font-weight: 600;
+    font-size: 18px;
+    color: #292f42;
+    margin: 0;
+}
+.right span{
+    background-color: #18a7ff;
+    color: #ffff;
+    width: 25px;
+    height: 25px;
+    font-size: 30px;
+    line-height: 20px;
+    display: inline-block;
+    text-align: center;
+    font-weight: 00;
+    cursor: pointer;
+    border-radius: 50%;
+}

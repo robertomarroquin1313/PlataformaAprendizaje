@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Catálogo de Cursos</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Posible logo</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Acerca de </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="catalogo.html">Catalogo </a>
+              </li>
+  
+            </ul>
+            <form class="d-flex">
+              <button class="btn btn-secondary my-2 my-sm-0" type="button" ><a href="InicioSesion.html">Iniciar Sesion</a></button>
+  
+            </form>
+          </div>
+        </div>
+      </nav>
+    <h1>Catálogo de Cursos</h1>
+    <!-- Búsqueda categorías -->
+    <label for="categoria">Categoría:</label>
+    <select id="categoria">
+        <option value="todas">Todas</option>
+        <option value="programacion">Programación</option>
+        <option value="diseno">Diseño</option>
+        <option value="Manager">Manager Project</option>
+    </select>
+
+    <label for="nivel">Nivel:</label>
+    <select id="nivel">
+        <option value="todos">Todos</option>
+        <option value="principiante">Principiante</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="avanzado">Avanzado</option>
+    </select>
+    <!-- Lista de cursos -->
+    <ul id="lista-cursos">
+        <li data-categoria="programacion" data-nivel="intermedio">
+            <h2>Diseño Web Adaptable</h2>
+            <p>Este curso te enseñará a crear sitios web profesionales y responsivos.</p>
+        </li>
+        <li data-categoria="diseno" data-nivel="principiante">
+            <h2>Diseño de páginas Web activas</h2>
+            <p>Aprende a crear paginas Web con ASP.NET.</p>
+        </li>
+        <li data-categoria="Manager" data-nivel="avanzado">
+            <h2>Gestión de proyectos informáticos </h2>
+            <p>Domina las estrategias de manejo de proyectos, metodologías de desarrollo y Scrum master.</p>
+        </li>
+        <!--más cursos aquí -->
+    </ul>
+    <script>
+        // Función para filtrar cursos
+        function filtrarCursos() {
+            const categoriaSeleccionada = document.getElementById('categoria').value;
+            const nivelSeleccionado = document.getElementById('nivel').value;
+
+            const cursos = document.querySelectorAll('#lista-cursos li');
+
+            cursos.forEach(curso => {
+                const categoriaCurso = curso.getAttribute('data-categoria');
+                const nivelCurso = curso.getAttribute('data-nivel');
+
+                if ((categoriaSeleccionada === 'todas' || categoriaSeleccionada === categoriaCurso) &&
+                    (nivelSeleccionado === 'todos' || nivelSeleccionado === nivelCurso)) {
+                    curso.style.display = 'block';
+                } else {
+                    curso.style.display = 'none';
+                }
+            });
+        }
+        // Agrega un evento de cambio a los select de categoría y nivel
+        document.getElementById('categoria').addEventListener('change', filtrarCursos);
+        document.getElementById('nivel').addEventListener('change', filtrarCursos);
+    </script>
+</body>
+</html>
