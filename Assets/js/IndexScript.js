@@ -49,3 +49,22 @@ function reveal() {
     }
 }
 }
+///////
+
+
+//efecto del precarga 
+window.onload = function () { 
+    $("#preloader").fadeOut();
+    $("body").removeClass("ocul");
+}
+
+const botonHamburguesa = document.querySelector('.hamburguesa');
+const menuPrincipal = document.querySelector('.navegacion');
+const menuOcultar = document.querySelector('.navegacionOcultar');
+
+// Agrega un evento de clic al botón de hamburguesa
+botonHamburguesa.addEventListener('click', function() {
+    // Alternar la visibilidad del menú principal y el menú oculto
+    menuPrincipal.style.display = (menuPrincipal.style.display === 'none') ? 'block' : 'none';
+    menuOcultar.style.display = (menuOcultar.style.display === 'none') ? 'block' : 'none';
+});

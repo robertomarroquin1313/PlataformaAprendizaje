@@ -1,4 +1,4 @@
-self.addEventListener('fetch', (event) => {
+/*self.addEventListener('fetch', (event) => {
   // Usar la función preload para cargar recursos en caché
   const promise = self.caches.open('my-cache').then((cache) => {
     return cache.match(event.request);
@@ -11,9 +11,9 @@ self.addEventListener('fetch', (event) => {
     })
   );
 
-  // Asegurarse de que el Service Worker no sea desactivado antes de que se resuelva la promesa
+  // Asegurarse de que el Service Worker no 
   event.waitUntil(promise);
-});
+});*/
 
 
 ///funciones para cuando seleccione un componete sepa cual es//
@@ -24,7 +24,7 @@ var mensajes = {
     "lectura": "Seleccionaste la opción 'Lectura'.",
     "buzon": "Seleccionaste la opción 'Buzón'."
 };
-// Función para mostrar un mensaje con efecto de transición
+// Función para mostrar un mensaje de la agregar componete
 function mostrarMensaje(id) {
     var mensajeDiv = document.getElementById("txt");
     mensajeDiv.textContent = mensajes[id];
@@ -50,7 +50,12 @@ $(document).ready(function () {
         var nuevoCodigoIframe = $("#nuevoEnlaceVideo").val();
         $("#videoContainer").html(nuevoCodigoIframe);
         $("#editarVideo").hide();
-
+          Swal.fire({
+                    icon: 'success',
+                    title: 'Componente actualizado',
+                    showConfirmButton: false,
+                    timer: 1000
+                });
         // Guardar el nuevo enlace en el LocalStorage
         localStorage.setItem('videoIframe', nuevoCodigoIframe);
     }
@@ -96,6 +101,12 @@ $(document).ready(function () {
         var nuevoEnlace = $("#nuevoLink").val();
         var componente = $(".editarlink:visible").closest(".contenido-para-ocultar");
         componente.find(".lectura-link").attr("href", nuevoEnlace);
+        Swal.fire({
+                    icon: 'success',
+                    title: 'Componente actualizado',
+                    showConfirmButton: false,
+                    timer: 1000
+                });
         
         // Guardar el nuevo enlace en el almacenamiento local
         localStorage.setItem("lectura-link", nuevoEnlace);
@@ -732,7 +743,7 @@ $(document).ready(function () {
         componenteVisible = false;
     });
 
-    // Manejador de clic para eliminar un componente
+    /*// Manejador de clic para eliminar un componente
     $(document).on("click", ".eliminar", function () {
     if (window.confirm("¿Seguro que deseas eliminar este componente?")) {
         // Elimina el componente del DOM
@@ -742,7 +753,7 @@ $(document).ready(function () {
         const nuevosComponentes = componentesGuardados.filter((componente) => !componente.includes(componenteID));
         localStorage.setItem('componentes', JSON.stringify(nuevosComponentes));
     }
-});
+});*/
     // Función para guardar componentes en el almacenamiento local
     function guardarComponenteEnLocalStorage(componente) {
         var componentesGuardados = JSON.parse(localStorage.getItem('componentes')) || [];
@@ -1415,7 +1426,7 @@ $(document).ready(function () {
 
 });*/
 ///pruebas para la funcion eliminar. si se preguntan xq hay  2 elimnar es proque uno en realidad oculta en el html porque no pude romever del html y el otro elimina del LocalStrae
-
+/*
 document.addEventListener("DOMContentLoaded", function () {
     // Obtener todos los botones "Eliminar"
     let botonesEliminar = document.querySelectorAll(".eliminar");
@@ -1435,7 +1446,50 @@ document.addEventListener("DOMContentLoaded", function () {
                 localStorage.setItem(`ocultar-${componentId}`, "true");
             }
         });
+    });*/
+////mejorado con el elert
+    document.addEventListener("DOMContentLoaded", function () {
+    // Obtener todos los botones "Eliminar"
+    let botonesEliminar = document.querySelectorAll(".eliminar");
+
+    // Iterar sobre los botones
+    botonesEliminar.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            // Utilizar SweetAlert2 en lugar de confirm
+            Swal.fire({
+                title: '¿Seguro que deseas eliminar este componente?',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#3085d6',
+                confirmButtonText: 'Sí, eliminar',
+                cancelButtonText: 'Cancelar'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Si elige eliminar, obtener el componente que se está eliminando
+                    let componente = boton.closest(".contenido-para-ocultar");
+                    let componentId = componente.getAttribute("data-component-identifier");
+
+                    // Eliminar el componente del DOM
+                    componente.remove();
+
+                    // Guardar el estado de visibilidad en el almacenamiento local
+                    localStorage.setItem(`ocultar-${componentId}`, "true");
+
+                    // Muestra una alerta de éxito
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Componente eliminado exitosamente',
+                        showConfirmButton: false,
+                        timer: 1500
+                    });
+                }
+            });
+        });
     });
+});
+
+    
 
     // Comprobar y ocultar componentes en base al almacenamiento local
     let componentes = document.querySelectorAll(".contenido-para-ocultar");
@@ -1446,7 +1500,7 @@ document.addEventListener("DOMContentLoaded", function () {
             componente.style.display = "none";
         }
     });
-});
+
 
 
 //efecto del precarga 
@@ -1491,24 +1545,48 @@ function guardarCambios2() {
 //funcion de pra ocultar compentes
 // Cuando el estudiante oculta el componente
 ///////////////////////////////////////// Función para ocultar el componente/////////////////////////////////////////////////////////////////////////////////////////////
-
-
 $(document).on("click", ".ocultar-boton-componentes", function () {
     const componenteID = $(this).closest(".contenido-para-ocultar").data("component-identifier");
     const componentesOcultos = JSON.parse(localStorage.getItem('componentesOcultos')) || [];
 
     // Verificar si el componente ya existe en la lista
     if (!componentesOcultos.includes(componenteID)) {
-        componentesOcultos.push(componenteID);
-        localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
-        alert("Componente ocultado para estudiantes");
+        Swal.fire({
+            title: '¿Desea ocultar este componente para estudiantes?',
+            icon: 'question',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Sí, ocultar',
+            cancelButtonText: 'No'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                
+                componentesOcultos.push(componenteID);
+                localStorage.setItem('componentesOcultos', JSON.stringify(componentesOcultos));
 
-        // Ocultar el componente y mostrar el botón "Mostrar" inmediatamente
-        const $componente = $(this).closest(".ocultar-elemento");
-        $componente.hide();
-        $componente.find(".mostrar-boton").show();
+               
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Componente ocultado para estudiantes',
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+
+              
+                const $componente = $(this).closest(".ocultar-elemento");
+                $componente.hide();
+                $componente.find(".mostrar-boton").show();
+            }
+        });
     } else {
-        alert("El componente ya está oculto para estudiantes");
+        
+        Swal.fire({
+            icon: 'info',
+            title: 'El componente ya está oculto para estudiantes',
+            showConfirmButton: false,
+            timer: 1500
+        });
     }
 });
 
@@ -1605,7 +1683,14 @@ $(document).on("click", ".mostrar-componente", function () {
         $componente.show();
 
         // Eliminar la fila de la tabla
-        $(this).closest("tr").remove();}
+        $(this).closest("tr").remove();
+    }
+      Swal.fire({
+                    icon: 'success',
+                    title: 'Componente visible para los estudiantes',
+                    showConfirmButton: false,
+                    timer: 1000
+                });
 });
 
 $(document).ready(function () {
@@ -1630,7 +1715,99 @@ $(document).ready(function () {
         $(".links-oculto").hide();
     });
 });*/
+const botonHamburguesa = document.querySelector('.hamburguesa');
+const menuPrincipal = document.querySelector('.navegacion');
+const menuOcultar = document.querySelector('.navegacionOcultar');
 
+// Agrega un evento de clic al botón de hamburguesa
+botonHamburguesa.addEventListener('click', function() {
+    // Alternar la visibilidad del menú principal y el menú oculto
+    menuPrincipal.style.display = (menuPrincipal.style.display === 'none') ? 'block' : 'none';
+    menuOcultar.style.display = (menuOcultar.style.display === 'none') ? 'block' : 'none';
+});
 
+/**alert para salir de la pagina osea cerrar sesion */
+document.addEventListener('DOMContentLoaded', function () {
+    var cerrarSesionBtn = document.querySelector('.cerrar-sesion');
+    cerrarSesionBtn.addEventListener('click', function () {
+        Swal.fire({
+            title: '¿Estás seguro de que deseas cerrar sesión?',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Sí, cerrar sesión',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "/index.html";
+            }
+        });
+    });
+});
+   const userType = getCookie("tipoUsuario");
+console.log("User Type:", userType);
+/////////////////////////////////////////////////////////////////////componete del chat 
+const chatbotToggler = document.querySelector(".chatbot-toggler");
+const closeBtn = document.querySelector(".close-btn");
+const chatbox = document.querySelector(".chatbox");
+const chatInput = document.querySelector(".chat-input textarea");
+const sendChatBtn = document.getElementById("send-btn");
 
+const inputInitHeight = chatInput.scrollHeight;
 
+const createChatLi = (message, role) => {
+    const chatLi = document.createElement("li");
+    chatLi.classList.add("chat", role);
+    let chatContent = role === "outgoing" ? `<p></p>` : `<span></span><p></p>`;
+    chatLi.innerHTML = chatContent;
+    chatLi.querySelector("p").textContent = message;
+    return chatLi;
+    
+}
+
+const saveMessageToLocalStorage = (role, content) => {
+    let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+    messages.push({ role, content });
+    localStorage.setItem("chatMessages", JSON.stringify(messages));
+}
+
+const loadMessagesFromLocalStorage = () => {
+    let messages = JSON.parse(localStorage.getItem("chatMessages")) || [];
+    messages.forEach((message) => {
+        chatbox.appendChild(createChatLi(message.content, message.role));
+    });
+}
+const handleChat = () => {
+    const userMessage = chatInput.value.trim();
+    if (!userMessage) return;
+
+    chatInput.value = "";
+    chatInput.style.height = `${inputInitHeight}px`;
+
+    const userType = getCookie("tipoUsuario");
+    const role = userType === "profesor" ? "outgoing" : "incoming";
+
+    saveMessageToLocalStorage(role, userMessage);
+    chatbox.appendChild(createChatLi(userMessage, role));
+
+    // Desplazamiento hacia abajo después de agregar el mensaje
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+chatInput.addEventListener("input", () => {
+    chatInput.style.height = `${inputInitHeight}px`;
+    chatInput.style.height = `${chatInput.scrollHeight}px`;
+});
+
+chatInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter" && !e.shiftKey && window.innerWidth > 800) {
+        e.preventDefault();
+        handleChat();
+    }
+});
+
+sendChatBtn.addEventListener("click", handleChat);
+closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
+chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+document.addEventListener("DOMContentLoaded", loadMessagesFromLocalStorage);

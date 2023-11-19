@@ -1,12 +1,175 @@
+
+:root {
+    --oscuro: #07070A;
+    --azulOscuro: #0A1128;
+    --azulClaro: #006FE6;
+    --blanco: #FEFCFB;
+    --titulos: 'Baloo 2', cursive;
+    --parrafos: 'Montserrat', sans-serif;
+}
+
+
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/*Estilos globales*/
+h1,
+h2,
+h3 {
+    font-family: var(--titulos);
+}
+
+p,
+a {
+    font-family: var(--parrafos);
+}
+
+.ocultar {
+    display: none;
+}
+
+@media(min-width: 768px) {
+    .bordes {
+        display: inline-block;
+        margin-top: 2rem;
+    }
+}
+
+
+/* Encabezado */
+
+.logo h2 {
+    font-size: 2rem;
+   
+}
+
+.logo h2 span {
+    color: var(--azulClaro);
+}
+
+
+.contenido-navegacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--blanco);
+    box-shadow: 10px 10px 16px -6px rgba(0, 0, 0, 0.45);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 3;
+    height: 70px;
+ 
+
+}
+
+
+.navegacion {
+    background-color: var(--blanco);
+    position: absolute;
+    left: 0;
+    top: 60px;
+    width: 100%;
+    animation: desplazamiento .5s ease-in-out;
+}
+
+@media(min-width: 768px) {
+    .ocultar {
+        display: inline;
+    }
+}
+
+.navegacion a {
+    display: block;
+    font-size: 2rem;
+    padding: 1.1rem;
+    color: var(--oscuro);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    font-size: 1.2rem;
+
+}
+
+.navegacion a:hover {
+    border-color: var(--azulClaro);
+    color: var(--azulClaro);
+}
+
+@media(min-width: 768px) {
+    .navegacion a {
+        display: inline;
+    }
+
+}
+
+@media(min-width: 768px) {
+    .navegacion {
+        position: relative;
+        top: unset;
+        width: auto;
+        background-color: unset;
+        animation: unset;
+    }
+}
+
+.hamburguesa span {
+    width: 5rem;
+    height: 1rem;
+    border: 3px solid white;
+    background-color: var(--oscuro);
+    display: block;
+}
+
+@media(min-width: 768px) {
+    .hamburguesa {
+        display: none;
+    }
+}
+
+/*contenido del encabezado*/
+
+@media(min-width: 768px) {
+    .contenido-encabezado {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 85%;
+    }
+
+    .contenido-encabezado,
+    .formulario-encabezado {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+
+
+@media(min-width: 768px) {
+    .texto-encabezado h1 {
+        font-size: 7rem;
+        text-align: left;
+        padding-top: 0;
+    }
+
+}
+
+
+@media(min-width: 768px) {
+    .formulario-encabezado h2 {
+        font-size: 3rem;
+    }
+}
+
+
 /* importando google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
+
 
 
 
@@ -488,4 +651,34 @@ border: 2px solid #e80f5e;
   
          
 
+}
+/* pie de pagina*/
+/*pieee*/
+.pie-de-pagina {
+    background-color: var(--azulOscuro);
+    color: var(--blanco);
+    padding: 8rem 0;
+}
+
+.contenido-pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.redes-sociales a {
+    font-size: 2rem;
+    margin-right: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+}
+
+.enlaces-pie a {
+    color: var(--blanco);
+    text-decoration: none;
+    margin-right: 1.5rem;
+}
+
+.enlaces-pie a:hover {
+    text-decoration: underline;
 }
