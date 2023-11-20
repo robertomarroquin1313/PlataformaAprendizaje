@@ -8,7 +8,9 @@
     --titulos: 'Baloo 2', cursive;
     --parrafos: 'Montserrat', sans-serif;
 }
-
+body{
+    background-color: var(--azulOscuro) !important;
+}
 
 *,
 *::before,
@@ -555,9 +557,22 @@ img {
             height: 70px;
             padding: 0;
             border: 1px solid #f3f1f1;
+            z-index: 1000;
 
 
         } 
+        .editar-crud{
+            position: fixed;
+                top: 400px;
+                right: 10px;
+                border-radius: 50%;
+                width: 70px;
+                height: 70px;
+                padding: 0;
+                border: 1px solid #f3f1f1;
+                z-index: 1000;
+
+        }
 .inputs-agregar{
     font-size: 1rem;
     border-radius: 10px;
@@ -577,5 +592,215 @@ img {
     width: 90%;
 }
 
-   
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    min-height: 100vh;
+    top: 50%;
+    left: 50%;
+   
+    
+}
+
+.container form {
+    padding: 20px;
+    width: 700px;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+.container form .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.container form .row .col {
+    flex: 1 1 250px;
+}
+
+.container form .row .col .title {
+    font-size: 20px;
+    color: black;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+.agreCurso{
+    position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    
+        width: 400px;
+        height: 300px;
+        padding: 40px;
+        margin: 20px auto;
+        transform: translate(-50%, -55%);
+        background: var(--blanco);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 40px;
+        color: black;
+}
+.inputs-agregar,.inputs-agregar{
+    width: 80%;
+    height: 35px;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid black;
+    left: 50%;
+
+}
+#cursoA{
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid #24b4fb;
+        background-color: #24b4fb;
+        border-radius: 0.9em;
+        padding: 0.8em 1.2em 0.8em 1em;
+        transition: all ease-in-out 0.2s;
+        font-size: 16px;
+        display: block;
+        margin: 0 auto;
+        border: 1px solid black;
+}
+.texto{
+    text-align: center;
+    color: black;
+}
+#cursoA span {
+    color: #fff;
+    font-weight: 600;
+}
+
+.container form .row .col .inputBox {
+    margin: 15px 0;
+}
+
+.container form .row .col .inputBox span {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.container form .row .col .inputBox input {
+    width: 100%;
+    border: 1px solid #ccc;
+    padding: 10px 15px;
+    font-size: 15px;
+    text-transform: none;
+}
+
+.container form .row .col .inputBox input:focus {
+    border: 1px solid #000;
+}
+
+.container form .row .col .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.container form .row .col .flex .inputBox {
+    margin-top: 5px;
+}
+
+.container form .row .col .inputBox img {
+    height: 34px;
+    margin-top: 5px;
+    filter: drop-shadow(0 0 1px #000);
+}
+
+.container form .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background: #27ae60;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.container form .submit-btn-c {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    background:rgb(206, 15, 15);
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+.container form .submit-btn:hover {
+    background: #2ecc71;
+}
+.container form .submit-btn-c:hover {
+    background:rgb(237, 8, 8);
+}
+#pasarela {
+    display: none;
+
+}
+#pasarela {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 3;
+    
+}
+   /*crud tarjetas*/
+        .custom-card {
+            max-width: 300px;
+            /* Ajusta el ancho máximo de la tarjeta según tus necesidades */
+            margin: 20px;
+        }
+     
+
+
+
+          .crud-conteiner{
+            display: none;
+            position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                padding: 20px;
+                border: 1px solid #ccc;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                z-index: 1000;
+            
+                width: 1000px;
+                height: 600px;
+                padding: 40px;
+                margin: 20px auto;
+                transform: translate(-50%, -55%);
+                background: var(--blanco);
+                box-sizing: border-box;
+                box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+                border-radius: 10px;
+                color: black;
+                overflow-y: auto !important;
+            
+        }
+     
