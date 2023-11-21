@@ -802,5 +802,31 @@ img {
                 color: black;
                 overflow-y: auto !important;
             
-        }
-     
+        }                
+.search-container {
+    position: relative;
+    display: inline-block;
+    /* Añadido para que el contenedor sea del tamaño del contenido */
+}
+
+#buscador {
+    width: 800px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    /* Cambiado a un solo border-radius */
+    position: relative;
+    /* Añadido para que el icono sea relativo a este contenedor */
+        border-radius: 20px;
+        margin-left: 300px;
+
+}
+
+.fa-search {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    color: #555;
+    cursor: pointer;
+}
