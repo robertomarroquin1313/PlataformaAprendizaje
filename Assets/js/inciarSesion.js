@@ -1,5 +1,6 @@
 const usuario = [
-    { correo: "juan@gmail.com", contraseña: "juan123" }
+    { correo: "juan@gmail.com", contraseña: "juan123" },
+    { correo: "robertomarroquin1313@gmail.com", contraseña: "#1425368dd"}
 ];
 const profesor = [{
     correo: "edwar@gmail.com", contraseña: "edwar123"
