@@ -188,8 +188,8 @@ $(document).on("click", ".borrar-curso", function () {
 
     // Obtener el  usuario almacenado en la cookie
 const tipoUsuario = getCookie("tipoUsuario");
-const botonesProfesor = document.querySelectorAll('.botones-profesor');
-if (tipoUsuario === "profesor") {
+const botonesProfesor = document.querySelectorAll('.botones-admin');
+if (tipoUsuario === "admin") {
     botonesProfesor.forEach(elemento => {
         elemento.style.display = "block";
     });
