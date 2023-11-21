@@ -4,10 +4,13 @@
     align-items: center;
     min-height: 100vh;
 }
+<<<<<<< HEAD
 
 *{
     color: white;
 }
+=======
+>>>>>>> 971fb9101c1c01e5236f70968813251fc64fa583
 
 body{
     background: url('https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1925&q=80') no-repeat;
@@ -15,7 +18,10 @@ body{
     background-attachment: fixed;
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 971fb9101c1c01e5236f70968813251fc64fa583
 .wrapper {
     width: 420px;
     background: transparent;
@@ -31,7 +37,10 @@ body{
     text-align: center;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 971fb9101c1c01e5236f70968813251fc64fa583
 .wrapper .btn {
     width: 100%;
     height: 45px;
@@ -50,6 +59,10 @@ body{
     font-size: 14.5px;
     text-align: center;
     margin-top: 20px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 971fb9101c1c01e5236f70968813251fc64fa583
 
 }
 .wrapper .input-box{
@@ -97,6 +110,10 @@ body{
 p{
     color: white;
     font-size: 15px;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 971fb9101c1c01e5236f70968813251fc64fa583
 }
 
 .form-floating svg {
@@ -110,4 +127,8 @@ p{
 .d-flex a{
     color:#fff ;
     text-decoration-line: none;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 971fb9101c1c01e5236f70968813251fc64fa583
 }
