@@ -20,12 +20,12 @@ function loging() {
     if (encontrado) {
         window.location = "/Assets/Pages/Avance.html";
          setCookie("tipoUsuario", "alumno", 2);
-    } else if (encontradoAdmin) {
+    } else if (encontradoProfesor) {
         window.location = "/Assets/Pages/Avance.html"; 
         setCookie("tipoUsuario", "profesor", 1);
-    } else if (encontradoProfesor) {
+    } else if (encontradoAdmin) {
         window.location = "/Assets/Pages/Avance.html";
-         setCookie("tipoUsuario", "profesor", 1);
+         setCookie("tipoUsuario", "admin", 3);
     }
     else {
         alert("Usuario o contraseña incorrectos");

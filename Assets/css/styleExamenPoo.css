@@ -589,6 +589,7 @@ footer button.next_btn {
         border: 1px solid #ccc;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         z-index: 1000;
+        overflow-y: auto;
     
         width: 2000px;
        
@@ -628,8 +629,8 @@ footer button.next_btn {
 
 }
 .inputs-examen {
-    background-color: black;
-    border: 2px solid #0071e2;
+    background-color: rgb(227, 219, 219);
+    border: 2px solid black;
     color: wheat;
     border-radius: 30px;
     padding: 2px; 

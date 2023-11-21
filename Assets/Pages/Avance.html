@@ -16,7 +16,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/Assets/js/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="/Assets/css/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+ 
     <title>Cursos</title>
 </head>
 
@@ -195,6 +199,15 @@
     <div class="content-text">
         <p>Más Contenido Similar</p>
     </div>
+    <br>
+
+    <div class="search-container" style="margin-top:40px">
+        <input type="text" id="buscador" placeholder="Buscar cursos">
+        <i class="fas fa-search"></i>
+    </div>
+
+    
+
 
 
     <section class="container reveal" >
@@ -223,7 +236,7 @@
                                 <label title="text" for="star1"></label>
                             </div>
                     <div style="text-align: center;">
-                        <button class="Btn-pre" >
+                        <button class="Btn-pre" id="mostrarPasarela">
                             <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
                                 <path
                                     d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
@@ -423,7 +436,7 @@
                                 <label title="text" for="star1"></label>
                             </div>
                             <div style="text-align: center;">
-                                <button class="Btn-pre">
+                                <button class="Btn-pre" id="comprar">
                                     <svg viewBox="0 0 576 512" height="1em" class="logoIcon">
                                         <path
                                             d="M309 106c11.4-7 19-19.7 19-34c0-22.1-17.9-40-40-40s-40 17.9-40 40c0 14.4 7.6 27 19 34L209.7 220.6c-9.1 18.2-32.7 23.4-48.6 10.7L72 160c5-6.7 8-15 8-24c0-22.1-17.9-40-40-40S0 113.9 0 136s17.9 40 40 40c.2 0 .5 0 .7 0L86.4 427.4c5.5 30.4 32 52.6 63 52.6H426.6c30.9 0 57.4-22.1 63-52.6L535.3 176c.2 0 .5 0 .7 0c22.1 0 40-17.9 40-40s-17.9-40-40-40s-40 17.9-40 40c0 9 3 17.3 8 24l-89.1 71.3c-15.9 12.7-39.5 7.5-48.6-10.7L309 106z">
@@ -786,26 +799,24 @@
                 <i class="ri-arrow-left-s-line"></i>
             </div>
     
-            <!-- Pagination -->
+            
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
 
-    <button id="agregarCurso">agregar</button>
+    <button id="agregarCurso" class="botones-admin" style="display: none;">agregar</button>
 
     <div class="agreCurso" style="display: none;">
         <div>
-            <input type="file" name="foto" id="foto" accept="image/*" />
-            <label for="foto">Cambiar foto</label>
+            <h1 class="texto">Agregar nuevos cursos</h1>
+        
             <input type="text" id="nombrecurso" class="inputs-agregar" placeholder="nombre del curso">
             
             <br>
-            <button id="gratis">grtais</button>
-         
-            <button id="paga">de paga</button>
             <br>
             <input type="text" class="inputs-agregar" placeholder="precio del curso">
+            <br>
         <button id="cursoA">agregar</button>
 </div>
  </div>
@@ -904,12 +915,224 @@
         });
 
  </script>
-  
+ 
+
+<div class="container" id="pasarela">
+
+    <form action="">
+
+        <div class="row">
+
+            <div class="col">
+
+                <h3 class="title" style="color: red;">TOTAL A pagar:$56.98</h3>
+
+                <div class="inputBox">
+                    <span>full name :</span>
+                    <input type="text" placeholder="john deo">
+                </div>
+                <div class="inputBox">
+                    <span>email :</span>
+                    <input type="email" placeholder="example@example.com">
+                </div>
+                <div class="inputBox">
+                    <span>address :</span>
+                    <input type="text" placeholder="room - street - locality">
+                </div>
+                <div class="inputBox">
+                    <span>city :</span>
+                    <input type="text" placeholder="mumbai">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>state :</span>
+                        <input type="text" placeholder="india">
+                    </div>
+                    <div class="inputBox">
+                        <span>zip code :</span>
+                        <input type="text" placeholder="123 456">
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col">
+
+                <h3 class="title">payment</h3>
+
+                <div class="inputBox">
+                    <span>cards accepted :</span>
+                    <img src="/Assets/img/card_img.png" alt="">
+                </div>
+                <div class="inputBox">
+                    <span>name on card :</span>
+                    <input type="text" placeholder="mr. john deo">
+                </div>
+                <div class="inputBox">
+                    <span>credit card number :</span>
+                    <input type="number" placeholder="1111-2222-3333-4444">
+                </div>
+                <div class="inputBox">
+                    <span>exp month :</span>
+                    <input type="text" placeholder="january">
+                </div>
+
+                <div class="flex">
+                    <div class="inputBox">
+                        <span>exp year :</span>
+                        <input type="number" placeholder="2022">
+                    </div>
+                    <div class="inputBox">
+                        <span>CVV :</span>
+                        <input type="text" placeholder="1234">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <input type="submit" value="Terminar Compra" id="comprado" class="submit-btn">
+        <input type="submit" value="cancelar"  id="cancelar-c" class="submit-btn-c">
+
+    </form>
+
+</div>
+<button class="editar-crud botones-admin" style="display: none;">editar</button>
+<!--modo crud-->
+<div class="crud-conteiner">
+    <h1 style="text-align: center; top: 70%;">Cursos Actuales</h1>
+    <div class="container mt-5" >
+        <div class="d-flex justify-content-center">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="w-25 cd">Tarjeta</th>
+                    <th class="w-25 cd">Eliminar</th>
+                    <th class="w-25 cd">Modificar</th>
+                    <th class="w-25 cd">Cambiar Precio</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="w-25 text-truncate">
+                        <article class="card__article swiper-slide">
+                            <div class="card__image">
+                                <img src="/Assets/img/go.jpg" alt="image" class="card__img">
+                                <div class="card__shadow"></div>
+                            </div>
+    
+                            <div class="card__data">
+                                <h3 class="card__name">Curso de GO </h3>
+                                <div class="rating" style="text-align: center;">
+                                    <input value="5" name="rate" id="star5" type="radio">
+                                    <label title="text" for="star5"></label>
+                                    <input value="4" name="rate" id="star4" type="radio">
+                                    <label title="text" for="star4"></label>
+                                    <input value="3" name="rate" id="star3" type="radio" checked="">
+                                    <label title="text" for="star3"></label>
+                                    <input value="2" name="rate" id="star2" type="radio">
+                                    <label title="text" for="star2"></label>
+                                    <input value="1" name="rate" id="star1" type="radio">
+                                    <label title="text" for="star1"></label>
+                                </div>
+                                <div style="text-align: center;">
+                                    <a href="/Assets/Pages/CursoPooJava.html" class="card__button">ver curso</a>
+                                </div>
+                            </div>
+                        </article>
+                    </td>
+                    <td class="w-25"><button class="btn btn-danger btn-c borrar-curso">Eliminar</button></td>
+                    <td class="w-25"><button class="btn btn-warning btn-c">Modificar</button></td>
+                    <td class="w-25"><button class="btn btn-info btn-c">Cambiar Precio</button></td>
+                </tr>
+                <tr>
+                    <td class="w-25 text-truncate"><article class="card__article swiper-slide">
+                        <div class="card__image">
+                            <img src="/Assets/img/ruby.jpg" alt="image" class="card__img">
+                            <div class="card__shadow"></div>
+                        </div>
+                    
+                        <div class="card__data">
+                            <h3 class="card__name">Curso de Ruby</h3>
+                            <div class="rating" style="text-align: center;">
+                                <input value="5" name="rate" id="star5" type="radio">
+                                <label title="text" for="star5"></label>
+                                <input value="4" name="rate" id="star4" type="radio">
+                                <label title="text" for="star4"></label>
+                                <input value="3" name="rate" id="star3" type="radio" checked="">
+                                <label title="text" for="star3"></label>
+                                <input value="2" name="rate" id="star2" type="radio">
+                                <label title="text" for="star2"></label>
+                                <input value="1" name="rate" id="star1" type="radio">
+                                <label title="text" for="star1"></label>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="text-align: center;">
+                                    <a href="/Assets/Pages/CursoPooJava.html" class="card__button">ver curso</a>
+                                </div>
+                            </div>
+                      
+                    </article>
+                </td>
+                    <td class="w-25"><button class="btn btn-danger borrar-curso">Eliminar</button></td>
+                    <td class="w-25"><button class="btn btn-warning">Modificar</button></td>
+                    <td class="w-25"><button class="btn btn-info">Cambiar Precio</button></td>
+                </tr>
+                     <!--<tr>
+                <td class="w-25 text-truncate">
+                <article class="card__article swiper-slide">
+                    <div class="card__image">
+                        <img src="/Assets/img/excel.jpg" alt="image" class="card__img">
+                        <div class="card__shadow"></div>
+                    </div>
+                
+                    <div class="card__data">
+                        <h3 class="card__name">Curso de Excel</h3>
+                        <div class="rating" style="text-align: center;">
+                            <input value="5" name="rate" id="star5" type="radio">
+                            <label title="text" for="star5"></label>
+                            <input value="4" name="rate" id="star4" type="radio">
+                            <label title="text" for="star4"></label>
+                            <input value="3" name="rate" id="star3" type="radio" checked="">
+                            <label title="text" for="star3"></label>
+                            <input value="2" name="rate" id="star2" type="radio">
+                            <label title="text" for="star2"></label>
+                            <input value="1" name="rate" id="star1" type="radio">
+                            <label title="text" for="star1"></label>
+                        </div>
+                        <div style="text-align: center;">
+                            <a href="/Assets/Pages/CursoPooJava.html" class="card__button">ver curso</a>
+                        </div>
+                
+                    </div>
+                
+                </article>
+                </td>
+                <td class="w-25"><button class="btn btn-danger btn-c borrar-curso">Eliminar</button></td>
+                <td class="w-25"><button class="btn btn-warning btn-c">Modificar</button></td>
+                <td class="w-25"><button class="btn btn-info btn-c">Cambiar Precio</button></td>
+                </tr>
+                aqui mas copia todo el tr-->
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
    
     <script src="/Assets/js/AvanceScript.js"></script>
+
     <footer class="pie-de-pagina reveal">
         <div class="contenido-pie contenedor">
             <div class="redes-sociales">
+                <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     
                 <a href="#"><i class="fab fa-facebook"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -922,7 +1145,11 @@
                 <a href="#">Contacto</a>
             </div>
         </div>
+        
     </footer>
+   
+           
+           
     
 </body>
 

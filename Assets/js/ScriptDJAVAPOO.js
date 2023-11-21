@@ -1118,11 +1118,11 @@ botonAgregar.addEventListener("click", function() {
         formularioFlotante.style.display = "block";
     }
 });
-
-    // Obtener el  usuario almacenado en la cookie
+// Obtener el usuario almacenado en la cookie
 const tipoUsuario = getCookie("tipoUsuario");
 const botonesProfesor = document.querySelectorAll('.botones-profesor');
-if (tipoUsuario === "profesor") {
+
+if (tipoUsuario === "profesor" || tipoUsuario === "admin") {
     botonesProfesor.forEach(elemento => {
         elemento.style.display = "block";
     });
@@ -1131,6 +1131,7 @@ if (tipoUsuario === "profesor") {
         elemento.style.display = "none";
     });
 }
+
 
 //funcion  de la cookies
 function getCookie(name) {///aqui se llama la funcion

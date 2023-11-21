@@ -99,7 +99,94 @@ a {
         transform: translateX(0);
     }
 }
+/* estilos para pantalla pequeña*/
 
+/* Estilos para pantallas grandes */
+
+
+@media only screen and (max-width: 768px) {
+    .content {
+        font-size: 10px !important;
+        text-align: left !important;
+        margin-top: -80px;
+        margin-left: -90px;
+
+        .preview-card {
+            width: 50% !important;
+            height: 50% !important;
+            margin: 0 auto;
+        }
+    }
+
+    .name {
+        font-size: 16px !important;
+    }
+
+    .des {
+        font-size: 10px !important;
+        margin: 10px 0;
+    }
+
+    button {
+        font-size: 12px !important;
+    }
+
+    .item:nth-child(3) {
+        left: 70% !important;
+
+    }
+
+    .container {
+        height: 350px !important;
+        margin-left: 20px;
+    }
+
+}
+
+/* Estilos originales */
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .formulario-encabezado {
+        top: 50% !important;
+
+        margin-top: 10px !important;
+
+    }
+
+    .formulario-encabezado {
+
+
+        margin-top: 20px;
+
+        margin-left: 20px !important;
+    }
+
+    .encabezado {
+        overflow: visible !important;
+    }
+
+    .ventajas {
+        margin-top: 140px !important;
+    }
+
+    .titulo {
+        font-size: 3.5rem !important;
+        text-align: center !important;
+        left: 50% !important;
+
+        line-height: 1 !important;
+
+
+    }
+
+    .container {
+        margin-top: 220px !important;
+    }
+
+
+
+}
 
 /* Encabezado */
 

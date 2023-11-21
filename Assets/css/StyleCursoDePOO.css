@@ -325,7 +325,7 @@ a {
         transform: rotate(360deg);
     }
 }
-.editarVideo,.editarVideo2,.editarlink {
+.editarVideo,.editarVideo2 {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -346,6 +346,28 @@ a {
     border-radius: 40px;
     color: black;
     
+}
+.editarlink{
+    position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border: 1px solid #ccc;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    
+        width: 400px;
+        height: 300px;
+        padding: 40px;
+        margin: 20px auto;
+        transform: translate(-50%, -55%);
+        background: var(--blanco);
+        box-sizing: border-box;
+        box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
+        border-radius: 40px;
+        color: black;
+
 }
 #formulario-ocultos{
     position: fixed;
@@ -468,7 +490,12 @@ a {
     color: #fff;
     font-weight: 600;
 }
-
+#nuevoLink{
+    height: 40px;
+    width: 80%;
+  border-radius: 20px;
+   
+}
 #guardar,
 #guardarlink,
 .mostrar-componente:hover {
@@ -824,7 +851,6 @@ a {
     right: 0;
     bottom: 0;
     background: rgba(255, 255, 255, 0.9);
-    /* Fondo semitransparente */
 }
 
 .ocul{

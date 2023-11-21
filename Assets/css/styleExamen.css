@@ -31,7 +31,12 @@ body{
 }
 
 
+<<<<<<< HEAD
+
+.wrapper.btn {
+=======
 .wrapper .btn {
+>>>>>>> 7cd3fdfd850e146fb2e8177210790437ea5eeefa
     width: 100%;
     height: 45px;
     background: #fff;
@@ -49,6 +54,11 @@ body{
     font-size: 14.5px;
     text-align: center;
     margin-top: 20px;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 7cd3fdfd850e146fb2e8177210790437ea5eeefa
 
 }
 .wrapper .input-box{
@@ -64,16 +74,28 @@ body{
 .input-box input {
     width: 100%;
     height: 50px;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7cd3fdfd850e146fb2e8177210790437ea5eeefa
 }
 
 .wrapper input {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7cd3fdfd850e146fb2e8177210790437ea5eeefa
     background: transparent;
     border: none;
     outline: none;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: 40px;
+<<<<<<< HEAD
+
+=======
+>>>>>>> 7cd3fdfd850e146fb2e8177210790437ea5eeefa
     font-size: 16px;
     color: white;
     padding: 20px 45px 20px 20px;
