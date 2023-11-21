@@ -14,37 +14,26 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-shield-alt"></i> ITCA FEDEPAE
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-book"></i> Cursos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-chalkboard"></i> Más Cursos
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">
-                            <i class="fas fa-user"></i> Cuenta
-                        </a>
-                    </li>
-                </ul>
+
+    <header class="encabezado" id="inicio">
+        <div class="contenido-navegacion">
+            <div class="logo">
+                <h2 style="color: black;">ITCA <span>FEDEPAE</span></h2>
+            </div>
+            <nav class="navegacion ocultar">
+                <a href="/index.html">Inicio</a>
+                <a href="/Assets/Pages/Usuario.html">Mi perfil</a>
+                <a href="/Assets/Pages/Avance.html">Cursos</a>
+                <a class="cerrar-sesion" href="/Assets/Pages/InicioSesion.html"
+                    style="border: 1px solid red; color: red;">Cerrar
+                    sesion</a>
+            </nav>
+            <div class="hamburguesa">
+                <span></span><span></span><span></span>
             </div>
         </div>
-    </nav>
-
+    </header>
+    <br><b>
     <div class="container" style="padding-top: 70px;">
         <h1>Avisos</h1>
         <br>
@@ -52,9 +41,10 @@
     <div id="contenido">
         <h2>Aviso de suspencion de clases</h2>
         <div class="description">
-            <p>Se nos ha comunicado que se suspenden las clases hasta nuevo aviso, porfavor responder en este foro con la palabra "Enterado"</p>
+            <p>Se nos ha comunicado que se suspenden las clases hasta nuevo aviso, porfavor responder en este foro con
+                la palabra "Enterado"</p>
         </div>
-        
+
         <div class="botones-container">
             <button class="btn button2" data-bs-toggle="modal" data-bs-target="#exampleModal"
                 data-bs-whatever="@mdo">Responder</button>
@@ -67,7 +57,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar foro</h1>
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Respuesta</h1>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -83,10 +73,9 @@
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
-                            >Salir</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
                         <input type="button" id="btnxd" value="Crear foro" class="btn btn-primary btn-block"
-                            data-bs-dismiss="modal"  onclick="limpiar();">
+                            data-bs-dismiss="modal" onclick="limpiar();">
                     </div>
                 </div>
             </div>
