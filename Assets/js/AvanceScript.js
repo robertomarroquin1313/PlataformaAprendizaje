@@ -103,9 +103,9 @@ botonHamburguesa.addEventListener('click', function() {
         }
       });
  });*/
+
  $(document).ready(function () {
   var formularioVisible = false;
-
   $("#comprado").click(function (event) {
     event.preventDefault(); 
 
@@ -132,6 +132,7 @@ botonHamburguesa.addEventListener('click', function() {
       $("#pasarela").hide();
     }, 2000);
   });
+   
   $("#mostrarPasarela").click(function () {
     $("#pasarela").toggle();
   });
@@ -145,7 +146,10 @@ botonHamburguesa.addEventListener('click', function() {
     });
     $("#pasarela").hide();
   });
-});
+ });
+function mostrarpasarela() {
+     $("#pasarela").show();
+}
 
 $(document).on("click", ".editar-crud", function (e) {
   e.preventDefault();
