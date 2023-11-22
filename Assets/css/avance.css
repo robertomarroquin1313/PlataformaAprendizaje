@@ -35,8 +35,12 @@ a {
 }
 
 
+
+
+
+
 .bordes {
-    border: 0px solid var(--azulClaro);
+    border: 2px solid var(--azulClaro);
     color: var(--azulClaro);
     text-decoration: none;
     display: block;
