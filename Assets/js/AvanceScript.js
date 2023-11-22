@@ -165,6 +165,14 @@ $(document).on("click", ".borrar-curso", function () {
     confirmButtonText: 'Sí, eliminar'
   }).then((result) => {
     if (result.isConfirmed) {
+      var slideId = boton.closest("tr").find(".card__article").attr("id");
+      var swiper = new Swiper('#miSwiper'); 
+      var index = swiper.slides.findIndex((slide) => slide.id === slideId);
+
+      if (index !== -1) {
+        swiper.removeSlide(index);
+      }
+      
       boton.closest("tr").remove();
       Swal.fire('Eliminado', 'El curso ha sido eliminado', 'success');
     }

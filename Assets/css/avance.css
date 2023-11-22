@@ -772,13 +772,8 @@ img {
    /*crud tarjetas*/
         .custom-card {
             max-width: 300px;
-            /* Ajusta el ancho máximo de la tarjeta según tus necesidades */
             margin: 20px;
         }
-     
-
-
-
           .crud-conteiner{
             display: none;
             position: fixed;
